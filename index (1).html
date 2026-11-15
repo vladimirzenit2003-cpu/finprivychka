@@ -1,0 +1,1708 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+<!-- ================= НАСТРОЙКИ: впишите свои значения между кавычками ================= -->
+<script>
+  window.FP_METRIKA  = "114261845";   // номер счётчика Яндекс Метрики, например "98765432"
+  window.FP_FEEDBACK = "";   // ссылка для отзывов: Яндекс Форма или Telegram, например "https://t.me/ваш_ник"
+</script>
+<!-- ===================================================================================== -->
+
+<script>
+  if (window.FP_METRIKA) {
+    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();
+    for (var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r){return;}}
+    k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+    (window,document,"script","https://mc.yandex.ru/metrika/tag.js","ym");
+    ym(window.FP_METRIKA, "init", {clickmap:true, trackLinks:true, accurateTrackBounce:true});
+  }
+</script>
+
+<meta name="theme-color" content="#1B1430">
+<meta name="description" content="Финансовая грамотность бывает интересной. Бесплатный игровой курс со слонёнком Вовой: 36 серий по 3–5 минут и личный план накоплений.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://vladimirzenit2003-cpu.github.io/finprivychka/">
+<meta property="og:title" content="Финпривычка — финансовая грамотность, которая бывает интересной">
+<meta property="og:description" content="Игровой курс со слонёнком Вовой: 36 серий по 3–5 минут о кредитках, вкладах, кредитах, вычетах и мошенниках. Бесплатно.">
+<meta property="og:image" content="https://vladimirzenit2003-cpu.github.io/finprivychka/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="ru_RU">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://vladimirzenit2003-cpu.github.io/finprivychka/og.png">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231B1430'/%3E%3Ccircle cx='32' cy='32' r='20' fill='%23F2B632'/%3E%3Ctext x='32' y='42' font-size='28' text-anchor='middle' fill='%231B1430' font-family='Arial' font-weight='700'%3E%E2%82%BD%3C/text%3E%3C/svg%3E">
+<style>*,*::before,*::after{box-sizing:border-box}:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Финпривычка</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Oswald:wght@500;600;700&family=Rubik:wght@400;500;600;700&display=swap">
+<style>
+/* Layout: «кинотеатр» — шапка с жетонами, лента-киноплёнка с кадрами-уроками и антрактами, серии с хлопушкой, урок как съёмка (сцена → дубли → премьера), нижнее меню «Лента / Буфет / Премии» */
+:root{
+  --bg:#1B1430; --surface:#271E42; --raise:#32285A; --line:#3E3366; --film:#0E0A1A;
+  --ink:#FFF4E2; --muted:#B5A9CF;
+  --gold:#F2B632; --gold-d:#BF8710; --tomato:#E8553D; --tomato-d:#B23A26;
+  --teal:#2CB8A2; --teal-d:#1D8676; --sky:#7F96FF;
+  --display:"Oswald","Arial Narrow",sans-serif; --body:"Rubik",system-ui,sans-serif;
+  color-scheme:dark;
+}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.45;
+  background-image:radial-gradient(circle at 50% -10%,rgba(242,182,50,.12),transparent 55%)}
+button{font-family:inherit}
+p{margin:0}
+.wrap{max-width:560px;margin:0 auto;padding-block:10px 110px;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));
+  display:flex;flex-direction:column;gap:18px}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+.disp{font-family:var(--display);text-transform:uppercase;letter-spacing:.04em}
+/* top */
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);display:flex;align-items:center;justify-content:space-between;gap:8px;padding-block:8px}
+.ava{width:46px;height:46px;border-radius:12px;background:var(--surface);border:2px solid var(--gold);overflow:hidden;flex:none;display:flex;align-items:flex-start;justify-content:center}
+.ava svg{width:58px;height:58px;margin-top:-2px}
+.counter{display:flex;align-items:center;gap:6px;font-family:var(--display);font-weight:600;font-size:20px;font-variant-numeric:tabular-nums}
+.counter svg{width:26px;height:26px;flex:none}
+.c-streak{color:var(--tomato)}.c-coin{color:var(--gold)}.c-xp{color:var(--sky)}
+/* clapper banner */
+.clap{border-radius:14px;overflow:hidden;background:var(--film);border:2px solid var(--line)}
+.clap-top{height:22px;background:repeating-linear-gradient(-45deg,var(--ink) 0 16px,var(--film) 16px 32px)}
+.clap-body{padding:12px 16px;display:flex;flex-direction:column;gap:2px}
+.clap-body small{font-family:var(--display);font-size:14px;letter-spacing:.12em;color:var(--gold);text-transform:uppercase}
+.clap-body b{font-family:var(--display);font-size:22px;font-weight:600;line-height:1.15;text-transform:uppercase;letter-spacing:.02em}
+.clap-body span{font-size:14px;color:var(--muted)}
+/* film strip */
+.strip{position:relative;background:var(--film);border-radius:12px;padding:16px 34px;display:flex;flex-direction:column;gap:16px}
+.strip::before,.strip::after{content:"";position:absolute;top:10px;bottom:10px;width:14px;
+  background:repeating-linear-gradient(to bottom,var(--bg) 0 12px,transparent 12px 26px);border-radius:3px}
+.strip::before{left:10px}.strip::after{right:10px}
+.frame{position:relative;display:flex;align-items:center;gap:14px;text-align:left;width:100%;cursor:pointer;
+  background:var(--surface);border:2px solid var(--line);border-radius:10px;padding:14px;color:var(--ink);transition:transform .1s,border-color .15s}
+.frame:hover:not(.locked){border-color:var(--gold)}
+.frame:active:not(.locked){transform:scale(.98)}
+.frame .num{flex:none;width:52px;height:52px;border-radius:8px;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  background:var(--raise);font-family:var(--display);font-size:22px;font-weight:600;line-height:1}
+.frame .num small{font-size:10px;letter-spacing:.1em;color:var(--muted)}
+.frame .txt{flex:1;min-width:0;display:flex;flex-direction:column;gap:2px}
+.frame .txt b{font-family:var(--display);font-size:18px;font-weight:600;line-height:1.15;text-transform:uppercase;letter-spacing:.02em}
+.frame .txt span{font-size:13px;color:var(--muted)}
+.frame .st{flex:none;display:flex;gap:2px}
+.frame .st svg{width:18px;height:18px}
+.frame.done .num{background:var(--teal);color:var(--film)}
+.frame.done .num small{color:var(--film);opacity:.7}
+.frame.cur{border-color:var(--gold);background:var(--raise);box-shadow:0 0 0 4px rgba(242,182,50,.18)}
+.frame.cur .num{background:var(--gold);color:var(--film)}
+.frame.cur .num small{color:var(--film)}
+.frame.cur::after{content:"";position:absolute;inset:-9px;border-radius:14px;pointer-events:none;
+  background:radial-gradient(circle,var(--gold) 2.2px,transparent 2.8px) 0 0/14px 14px;
+  -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;padding:4px;animation:marquee 1.2s steps(2) infinite}
+@keyframes marquee{50%{opacity:.35}}
+.frame.locked{opacity:.5;cursor:not-allowed}
+.go-tag{font-family:var(--display);font-size:13px;letter-spacing:.1em;background:var(--gold);color:var(--film);border-radius:6px;padding:4px 8px;flex:none}
+.intermission{justify-content:center;text-align:center;border-style:dashed}
+.intermission .txt{align-items:center}
+.intermission svg.big{width:44px;height:44px;flex:none}
+.intermission.ready{border-color:var(--gold);border-style:solid}
+.cameo{display:flex;align-items:center;gap:10px;color:var(--muted);font-size:14px;padding-inline:4px}
+.cameo svg{width:70px;height:70px;flex:none}
+.cameo p{background:var(--surface);border:2px solid var(--line);border-radius:14px;padding:10px 12px;color:var(--ink)}
+.frame:focus-visible,.btn:focus-visible,.opt:focus-visible,.nav button:focus-visible{outline:3px solid var(--sky);outline-offset:3px}
+/* buttons */
+.btn{font-family:var(--display);font-weight:600;font-size:18px;letter-spacing:.08em;text-transform:uppercase;border:none;border-radius:12px;padding:13px 20px;cursor:pointer;
+  background:var(--c,var(--gold));color:var(--t,var(--film));box-shadow:0 4px 0 var(--cd,var(--gold-d));transition:transform .08s,box-shadow .08s}
+.btn:active:not(:disabled){transform:translateY(3px);box-shadow:0 1px 0 var(--cd,var(--gold-d))}
+.btn:disabled{--c:var(--raise);--cd:var(--line);--t:var(--muted);cursor:not-allowed}
+.btn.ghost{--c:transparent;--cd:transparent;--t:var(--gold);border:2px solid var(--line)}
+.btn.teal{--c:var(--teal);--cd:var(--teal-d)}
+.btn.tomato{--c:var(--tomato);--cd:var(--tomato-d);--t:var(--ink)}
+.btn.small{font-size:15px;padding:10px 14px}
+.btn.wide{width:100%}
+.card{background:var(--surface);border:2px solid var(--line);border-radius:14px;padding:16px;display:flex;flex-direction:column;gap:12px}
+.h{font-family:var(--display);font-size:26px;font-weight:600;margin:0;line-height:1.15;text-transform:uppercase;letter-spacing:.02em;text-wrap:balance}
+.muted{color:var(--muted)}
+.note{font-size:13px;color:var(--muted)}
+/* intro */
+.poster{position:relative;border-radius:16px;border:3px solid var(--gold);background:linear-gradient(180deg,var(--raise),var(--surface));padding:22px 18px 18px;
+  display:flex;flex-direction:column;align-items:center;text-align:center;gap:10px;overflow:hidden}
+.poster .studio{font-family:var(--display);font-size:13px;letter-spacing:.24em;color:var(--gold)}
+.poster svg.hero{width:200px;height:200px}
+.poster h1{font-family:var(--display);font-size:clamp(26px,8.5vw,46px);white-space:nowrap;font-weight:700;line-height:1;margin:0;text-transform:uppercase;letter-spacing:.03em}
+.poster h1 span{color:var(--gold)}
+.poster .tag{font-size:16px;color:var(--muted);max-width:40ch}
+.credits{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.credit{background:var(--surface);border:2px solid var(--line);border-radius:12px;padding:12px;display:flex;flex-direction:column;min-width:0}
+.credit small{font-family:var(--display);font-size:12px;letter-spacing:.12em;color:var(--muted);text-transform:uppercase}
+.credit b{font-family:var(--display);font-size:24px;font-weight:600}
+/* lesson */
+.lesson{position:fixed;inset:0;z-index:20;background:var(--bg);overflow-y:auto;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+.lesson-in{max-width:560px;margin:0 auto;min-height:100%;display:flex;flex-direction:column;gap:16px;padding-block:14px 170px;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.lbar{display:flex;align-items:center;gap:12px}
+.x{background:none;border:none;color:var(--muted);cursor:pointer;padding:4px;display:flex}
+.x svg{width:26px;height:26px}
+.reel{flex:1;display:flex;gap:6px}
+.reel i{flex:1;height:14px;border-radius:3px;background:var(--line);position:relative}
+.reel i.on{background:var(--gold)}
+.reel i::after{content:"";position:absolute;inset:4px 6px;background:repeating-linear-gradient(90deg,rgba(0,0,0,.25) 0 4px,transparent 4px 9px)}
+.title-card{background:var(--film);border:2px solid var(--gold);border-radius:6px;outline:2px solid var(--film);outline-offset:3px;box-shadow:0 0 0 5px var(--gold);
+  margin:6px;padding:18px;text-align:center;display:flex;flex-direction:column;gap:6px}
+.title-card small{font-family:var(--display);letter-spacing:.2em;color:var(--gold);font-size:13px;text-transform:uppercase}
+.title-card b{font-family:var(--display);font-size:26px;font-weight:600;text-transform:uppercase;line-height:1.1}
+.title-card span{color:var(--muted);font-size:15px}
+.talk{display:flex;align-items:flex-end;gap:10px}
+.talk svg{width:94px;height:94px;flex:none}
+.speech{position:relative;background:var(--surface);border:2px solid var(--line);border-radius:16px;padding:14px 16px;min-width:0}
+.speech.tail::before{content:"";position:absolute;left:-10px;bottom:22px;width:16px;height:16px;background:var(--surface);border-left:2px solid var(--line);border-bottom:2px solid var(--line);transform:rotate(45deg)}
+.subtitle{background:rgba(0,0,0,.35);border-left:4px solid var(--gold);border-radius:6px;padding:12px 14px;font-size:16px}
+.rule{border:2px solid var(--gold);border-radius:12px;padding:14px 16px;display:flex;flex-direction:column;gap:4px;background:rgba(242,182,50,.08)}
+.rule small{font-family:var(--display);font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold)}
+.take{display:flex;align-items:center;gap:10px;font-family:var(--display);font-size:15px;letter-spacing:.12em;color:var(--muted);text-transform:uppercase}
+.take svg{width:28px;height:28px}
+.opts{display:flex;flex-direction:column;gap:10px}
+.opt{text-align:left;font-size:16px;font-weight:500;color:var(--ink);background:var(--surface);border:2px solid var(--line);border-radius:12px;padding:14px 16px;cursor:pointer;
+  display:flex;gap:12px;align-items:center;transition:transform .08s,border-color .15s}
+.opt .k{flex:none;width:28px;height:28px;border-radius:6px;background:var(--raise);display:flex;align-items:center;justify-content:center;font-family:var(--display);font-size:15px;color:var(--muted)}
+.opt:hover:not(:disabled){border-color:var(--muted)}
+.opt:active:not(:disabled){transform:scale(.99)}
+.opt.sel{border-color:var(--sky);background:rgba(127,150,255,.12)}
+.opt.sel .k{background:var(--sky);color:var(--film)}
+.opt.right{border-color:var(--teal);background:rgba(44,184,162,.14)}
+.opt.right .k{background:var(--teal);color:var(--film)}
+.opt.miss{border-color:var(--tomato);background:rgba(232,85,61,.12)}
+.opt.miss .k{background:var(--tomato);color:var(--ink)}
+.opt.gone{opacity:.3;text-decoration:line-through}
+.opt:disabled{cursor:default}
+.sheet{position:fixed;left:0;right:0;bottom:0;z-index:21;background:var(--bg);border-top:2px solid var(--line);padding-block:14px calc(14px + env(safe-area-inset-bottom,0px))}
+.sheet.ok{background:#173B3A;border-color:var(--teal)}
+.sheet.no{background:#3E1E26;border-color:var(--tomato)}
+.sheet-in{max-width:560px;margin:0 auto;display:flex;flex-direction:column;gap:12px;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.sheet-row{display:flex;gap:10px}
+.sheet-row .btn:last-child{flex:1}
+.verdict b{font-family:var(--display);font-size:24px;font-weight:600;text-transform:uppercase;letter-spacing:.04em}
+.sheet.ok .verdict b{color:var(--teal)} .sheet.no .verdict b{color:var(--tomato)}
+.verdict p{font-size:15px;margin-top:4px}
+/* result */
+.premiere{display:flex;flex-direction:column;align-items:center;text-align:center;gap:6px}
+.premiere svg.hero{width:160px;height:160px}
+.stars{display:flex;gap:6px}
+.stars svg{width:38px;height:38px}
+.tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.tile{background:var(--surface);border:2px solid var(--line);border-radius:12px;padding:10px 6px;text-align:center;display:flex;flex-direction:column;min-width:0}
+.tile small{font-family:var(--display);font-size:12px;letter-spacing:.1em;color:var(--muted);text-transform:uppercase}
+.tile b{font-family:var(--display);font-size:26px;font-weight:600;font-variant-numeric:tabular-nums}
+.check ul{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:10px}
+.check li{display:flex;gap:10px;align-items:flex-start;font-size:15px}
+.check input{flex:none;width:20px;height:20px;margin-top:2px;accent-color:var(--teal)}
+.check input:checked+label{color:var(--muted);text-decoration:line-through}
+.dir{border-color:var(--gold-d);background:rgba(242,182,50,.07)}
+.dir small{font-family:var(--display);font-size:13px;letter-spacing:.12em;color:var(--gold);text-transform:uppercase}
+/* shop / awards */
+.item{display:flex;align-items:center;gap:14px}
+.item svg.ic{width:54px;height:54px;flex:none}
+.item div{flex:1;min-width:0;display:flex;flex-direction:column;gap:2px}
+.item b{font-family:var(--display);font-size:18px;font-weight:600;text-transform:uppercase;letter-spacing:.02em}
+.item p{font-size:14px;color:var(--muted)}
+.lv-top{display:flex;justify-content:space-between;gap:8px;align-items:flex-end;font-size:14px;color:var(--muted)}
+.lv-top b{display:block;font-family:var(--display);font-size:24px;font-weight:600;color:var(--ink);text-transform:uppercase}
+.lvbar{height:14px;border-radius:4px;background:var(--line);overflow:hidden}
+.lvbar i{display:block;height:100%;background:var(--gold)}
+.awards{display:grid;grid-template-columns:repeat(auto-fill,minmax(100px,1fr));gap:12px}
+.award{display:flex;flex-direction:column;align-items:center;gap:6px;text-align:center;font-size:13px;color:var(--muted)}
+.award svg{width:64px;height:64px;opacity:.35;filter:grayscale(1)}
+.award b{font-family:var(--display);font-size:15px;font-weight:600;text-transform:uppercase;color:var(--muted)}
+.award.on svg{opacity:1;filter:none}
+.award.on b{color:var(--gold)}
+/* nav */
+.nav{position:fixed;left:0;right:0;bottom:0;z-index:6;background:var(--film);border-top:2px solid var(--line);
+  padding-bottom:env(safe-area-inset-bottom,0px);padding-left:env(safe-area-inset-left,0px);padding-right:env(safe-area-inset-right,0px)}
+.nav-in{max-width:560px;margin:0 auto;display:flex;justify-content:space-around;padding:8px 12px}
+.nav button{background:none;border:none;border-radius:10px;padding:6px 10px;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:2px;
+  color:var(--muted);font-family:var(--display);font-size:13px;letter-spacing:.08em;text-transform:uppercase}
+.nav button svg{width:28px;height:28px}
+.nav button.on{color:var(--gold);background:rgba(242,182,50,.12)}
+.toast{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(96px + env(safe-area-inset-bottom,0px));z-index:30;
+  background:var(--ink);color:var(--film);padding:10px 16px;border-radius:10px;font-weight:600;font-size:14px;max-width:calc(100% - 32px);text-align:center}
+@media (max-width:400px){.strip{padding:14px 28px}.strip::before{left:7px}.strip::after{right:7px}.frame{padding:12px;gap:10px}.frame .num{width:44px;height:44px;font-size:19px}.frame .txt b{font-size:16px}.talk svg{width:78px;height:78px}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+
+.dsteps{display:flex;gap:6px}.dsteps i{flex:1;height:8px;border-radius:4px;background:var(--line)}.dsteps i.on{background:var(--gold)}
+.tiles2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.gtile{text-align:left;background:var(--surface);border:2px solid var(--line);border-radius:12px;padding:14px;color:var(--ink);cursor:pointer;display:flex;flex-direction:column;gap:2px;min-width:0}
+.gtile b{font-family:var(--display);font-size:16px;font-weight:600;text-transform:uppercase;letter-spacing:.02em;line-height:1.15}
+.gtile span{font-size:13px;color:var(--muted)}
+.gtile.on{border-color:var(--gold);background:var(--raise);box-shadow:0 0 0 3px rgba(242,182,50,.2)}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{background:var(--surface);border:2px solid var(--line);color:var(--ink);border-radius:999px;padding:8px 14px;font-size:14px;cursor:pointer}
+.chip.on{border-color:var(--gold);background:var(--gold);color:var(--film);font-weight:600}
+.fl{font-family:var(--display);font-size:14px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-top:4px}
+.inp{width:100%;background:var(--film);border:2px solid var(--line);border-radius:10px;color:var(--ink);font:inherit;font-size:17px;padding:12px 14px}
+.inp:focus{outline:none;border-color:var(--gold)}
+.inp.sm{font-size:15px;padding:8px 10px;max-width:150px;text-align:right}
+.sheet-row .inp.sm{max-width:none;flex:1;text-align:left}
+.method{display:flex;flex-direction:column;gap:10px}
+.mcard{text-align:left;background:var(--surface);border:2px solid var(--line);border-radius:12px;padding:16px;color:var(--ink);cursor:pointer;display:flex;flex-direction:column;gap:4px}
+.mcard:hover{border-color:var(--gold)}
+.mcard b{font-family:var(--display);font-size:19px;font-weight:600;text-transform:uppercase}
+.mcard span{font-size:14px;color:var(--muted)}
+.drop{display:flex;flex-direction:column;align-items:center;gap:4px;border:2px dashed var(--gold);border-radius:14px;padding:26px 16px;cursor:pointer;text-align:center;background:rgba(242,182,50,.06)}
+.drop b{font-family:var(--display);font-size:20px;text-transform:uppercase;color:var(--gold)}
+.drop span{font-size:14px;color:var(--muted)}
+.qcat{display:flex;flex-direction:column;gap:8px;padding-block:6px}
+.qcat>b{font-weight:600}
+.erow{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.erow label{font-size:15px;min-width:0}
+.goal{gap:10px}
+.g-head{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.g-head b{font-family:var(--display);font-size:20px;font-weight:600;text-transform:uppercase;letter-spacing:.02em;min-width:0}
+.dreamlink{border-color:var(--gold-d)}
+.poster .h{text-wrap:balance}
+.motto{font-family:var(--display);font-size:17px;letter-spacing:.03em;text-transform:uppercase;color:var(--gold);max-width:34ch;line-height:1.3;border-top:1px solid var(--line);padding-top:12px}
+.fbk{display:flex;align-items:center;justify-content:space-between;gap:12px;background:var(--surface);border:2px dashed var(--line);border-radius:12px;padding:12px 14px;color:var(--ink);text-decoration:none}
+.fbk span{font-size:14px;color:var(--muted)}
+.fbk b{font-family:var(--display);font-size:15px;letter-spacing:.06em;text-transform:uppercase;color:var(--gold);white-space:nowrap}
+</style>
+<style>
+/* модули */
+.mod-head{display:flex;flex-direction:column;gap:2px}
+.mod-prog{display:flex;align-items:center;gap:10px;margin-top:8px}
+.mod-prog .bar{flex:1;height:8px;border-radius:4px;background:var(--line);overflow:hidden}
+.mod-prog .bar i{display:block;height:100%;background:var(--gold)}
+.mod-prog span{font-family:var(--display);font-size:14px;color:var(--muted);font-variant-numeric:tabular-nums}
+.btn-sheet{align-self:flex-start;margin-top:10px}
+.soon{opacity:.75}
+.soon .clap-top{background:repeating-linear-gradient(-45deg,var(--muted) 0 16px,var(--film) 16px 32px)}
+.soon ul{margin:8px 0 0;padding:0;list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:6px 12px}
+.soon li{font-size:13px;color:var(--muted);display:flex;gap:6px;align-items:baseline;min-width:0}
+.soon li::before{content:"";flex:none;width:6px;height:6px;border-radius:50%;background:var(--line);transform:translateY(-1px)}
+.badge-soon{font-family:var(--display);font-size:12px;letter-spacing:.12em;background:var(--raise);color:var(--muted);border-radius:6px;padding:3px 8px;align-self:flex-start;margin-top:4px}
+/* теория */
+.lprog{flex:1;height:14px;border-radius:4px;background:var(--line);overflow:hidden}
+.lprog i{display:block;height:100%;background:var(--gold);transition:width .3s}
+.stepcap{font-family:var(--display);font-size:14px;letter-spacing:.12em;color:var(--muted);text-transform:uppercase}
+.vz{display:flex;flex-direction:column;gap:8px;background:var(--film);border-radius:12px;padding:12px}
+.vbar{display:flex;height:34px;border-radius:6px;overflow:hidden;gap:2px}
+.vbar i{display:flex;align-items:center;justify-content:center;font-style:normal;font-size:12px;font-weight:600;color:var(--ink);white-space:nowrap;overflow:hidden;padding:0 6px;min-width:0}
+.vcap{font-size:14px;color:var(--muted)}
+.vrow{display:flex;justify-content:space-between;gap:10px;font-size:15px;padding:4px 2px}
+.vrow b{font-variant-numeric:tabular-nums;white-space:nowrap}
+.vrow.tot{border-top:1px solid var(--line);padding-top:8px;font-weight:600}
+.vflow{display:flex;align-items:center;gap:8px;font-size:14px;flex-wrap:wrap}
+.vflow span{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:6px 10px}
+.vflow i{font-style:normal;color:var(--gold);font-weight:700}
+.tfrow{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.tfrow .opt{justify-content:center;font-family:var(--display);font-size:20px;letter-spacing:.06em;text-transform:uppercase;padding:18px}
+.qtag{font-family:var(--display);font-size:13px;letter-spacing:.12em;color:var(--sky);text-transform:uppercase}
+.modal-bg{position:fixed;inset:0;z-index:25;background:rgba(14,10,26,.75);display:flex;align-items:flex-end;justify-content:center}
+.modal{background:var(--bg);border-top:2px solid var(--gold);border-radius:18px 18px 0 0;width:100%;max-width:560px;max-height:85%;overflow-y:auto;
+  padding:18px max(16px,env(safe-area-inset-right,0px)) calc(18px + env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px));display:flex;flex-direction:column;gap:14px}
+
+.journey{background:var(--surface);border:2px solid var(--line);border-radius:14px;padding:14px 16px;display:flex;flex-direction:column;gap:4px}
+.j-top{display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+.j-top b{font-family:var(--display);font-size:17px;font-weight:600;text-transform:uppercase;letter-spacing:.03em}
+.j-top span{font-family:var(--display);font-size:24px;color:var(--gold);font-variant-numeric:tabular-nums}
+.track{position:relative;height:66px;margin:0 16px 0 22px}
+.tline{position:absolute;left:0;right:0;top:48px;height:6px;border-radius:3px;background:var(--line);overflow:hidden}
+.tline i{display:block;height:100%;background:var(--gold);transition:width 1.2s ease}
+.tst{position:absolute;top:40px;width:22px;height:22px;margin-left:-11px;border-radius:50%;background:var(--raise);border:2px solid var(--line);
+  font-family:var(--display);font-size:12px;display:flex;align-items:center;justify-content:center;color:var(--muted)}
+.tst.on{background:var(--gold);border-color:var(--gold);color:var(--film)}
+.tst.flag{background:none;border:none;width:26px;height:32px;margin-left:-4px;top:20px}
+.tst.flag svg{width:26px;height:32px}
+.tme{position:absolute;top:0;width:46px;margin-left:-23px;transition:left 1.2s ease}
+.tme svg{width:46px;height:46px}
+.celebrate{display:flex;flex-direction:column;gap:14px;text-align:center;align-items:stretch}
+.cel-hero{display:flex;justify-content:center}
+.cel-hero svg{width:180px;height:180px;animation:jump 1s ease-in-out infinite alternate}
+@keyframes jump{to{transform:translateY(-10px)}}
+.cel-kicker{font-family:var(--display);font-size:14px;letter-spacing:.2em;color:var(--gold);text-transform:uppercase}
+.cheer{font-size:19px;font-weight:600;color:var(--ink)}
+.signature{font-family:"Caveat","Segoe Script",cursive;font-size:32px;line-height:1.1;color:var(--gold);text-align:right;transform:rotate(-3deg);padding-right:8px}
+.signature small{display:block;font-size:20px;color:var(--muted)}
+.confetti{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:22}
+.confetti i{position:absolute;top:-24px;width:9px;height:15px;border-radius:2px;animation:fall linear forwards}
+@keyframes fall{to{transform:translateY(115vh) rotate(760deg)}}
+@media (prefers-reduced-motion:reduce){.confetti{display:none}.cel-hero svg{animation:none}}
+</style>
+
+</head>
+<body>
+<div class="wrap">
+  <div class="top" id="top" hidden>
+    <div class="ava" id="topava"></div>
+    <span class="counter c-streak" id="streak"></span>
+    <span class="counter c-coin" id="coins"></span>
+    <span class="counter c-xp" id="xp"></span>
+  </div>
+
+  <section id="intro" style="display:flex;flex-direction:column;gap:16px">
+    <div class="poster">
+      <span class="studio">Киностудия «Копейка» представляет</span>
+      <div id="introVova"></div>
+      <h1>Фин<span>привычка</span></h1>
+      <p class="tag">Финансовая комедия в нескольких модулях. В главной роли — слонёнок Вова. Каждый модуль — один финансовый продукт, разобранный от и до, а вы режиссёр, который не даёт Вове ошибиться.</p>
+      <p class="motto">Плохих финансовых инструментов не бывает — бывает неправильное их использование.</p>
+    </div>
+    <div class="credits">
+      <div class="credit"><small>Серия</small><b>3–5 минут</b></div>
+      <div class="credit"><small>Программа</small><b>6 модулей, 36 серий</b></div>
+      <div class="credit"><small>В каждой</small><b>Теория + 5 заданий</b></div>
+      <div class="credit"><small>Билет</small><b>Бесплатно</b></div>
+    </div>
+    <div class="card">
+      <b class="disp" style="font-size:18px">Программа показа</b>
+      <p class="muted">Кредитная карта · Подушка и накопительный счёт · Вклады · Потребительский кредит и досрочное погашение · Налоги и вычеты · Защита от мошенников. Каждый модуль — один продукт, разобранный от и до.</p>
+    </div>
+    <button class="btn wide" id="start">Смотреть первую серию</button>
+    <p class="note" style="text-align:center">Обучающий курс, а не индивидуальная финансовая консультация. Условия банков и налоговые правила меняются — сверяйте их в тарифах своего банка.</p>
+  </section>
+
+  <section id="v-path" hidden style="display:flex;flex-direction:column;gap:18px">
+    <div id="path" style="display:flex;flex-direction:column;gap:18px"></div>
+  </section>
+
+  <section id="v-dream" hidden style="display:flex;flex-direction:column;gap:16px"></section>
+
+  <section id="v-shop" hidden style="display:flex;flex-direction:column;gap:16px">
+    <h2 class="h">Буфет</h2>
+    <div class="card" style="gap:16px">
+      <div class="item" id="it-freeze"></div>
+      <div class="item" id="it-hint"></div>
+      <div class="item" id="it-pro"></div>
+    </div>
+    <p class="note">Жетоны дают за каждую серию, за серию без ошибок и в антракте после модуля.</p>
+  </section>
+
+  <section id="v-awards" hidden style="display:flex;flex-direction:column;gap:16px">
+    <h2 class="h">Премии</h2>
+    <div class="card">
+      <div class="lv-top"><span>Ваше звание<b id="lvname">Статист</b></span><span id="lvnext" style="text-align:right"></span></div>
+      <div class="lvbar"><i id="lvbar"></i></div>
+    </div>
+    <div class="awards" id="awards"></div>
+    <div id="fbAwards"></div>
+    <button class="btn ghost" id="about">Афиша курса</button>
+    <p class="note">Прогресс хранится только в этом браузере. Посещения считаются анонимно — без имён и без содержимого ваших ответов и выписок.</p>
+  </section>
+</div>
+
+<nav class="nav" id="nav" hidden><div class="nav-in">
+  <button class="on" data-v="path" id="nv-path"><svg viewBox="0 0 32 32"><rect x="7" y="3" width="18" height="26" rx="2" fill="currentColor"/><g fill="#0E0A1A"><rect x="9" y="6" width="3" height="3"/><rect x="9" y="12" width="3" height="3"/><rect x="9" y="18" width="3" height="3"/><rect x="9" y="24" width="3" height="3"/><rect x="20" y="6" width="3" height="3"/><rect x="20" y="12" width="3" height="3"/><rect x="20" y="18" width="3" height="3"/><rect x="20" y="24" width="3" height="3"/></g></svg>Лента</button>
+  <button data-v="dream" id="nv-dream"><svg viewBox="0 0 32 32"><circle cx="16" cy="16" r="12" fill="none" stroke="currentColor" stroke-width="3"/><circle cx="16" cy="16" r="6.5" fill="none" stroke="currentColor" stroke-width="3"/><circle cx="16" cy="16" r="2.5" fill="currentColor"/></svg>Мечта</button>
+  <button data-v="shop" id="nv-shop"><svg viewBox="0 0 32 32"><path d="M8 12h16l-2 17H10z" fill="currentColor"/><circle cx="12" cy="10" r="4" fill="currentColor"/><circle cx="20" cy="10" r="4" fill="currentColor"/><circle cx="16" cy="7" r="4" fill="currentColor"/></svg>Буфет</button>
+  <button data-v="awards" id="nv-awards"><svg viewBox="0 0 32 32"><circle cx="16" cy="9" r="5" fill="currentColor"/><path d="M13 14h6l-1 9h-4z" fill="currentColor"/><rect x="10" y="24" width="12" height="5" rx="1" fill="currentColor"/></svg>Премии</button>
+</div></nav>
+
+<div class="lesson" id="lesson" hidden><div class="lesson-in" id="lessonIn"></div></div>
+<div class="sheet" id="sheet" hidden><div class="sheet-in" id="sheetIn"></div></div>
+<div class="modal-bg" id="modal" hidden><div class="modal" id="modalIn"></div></div>
+<div class="toast" id="toast" hidden></div>
+
+<script>
+const FEEDBACK_URL=(window.FP_FEEDBACK||"").trim();
+function track(goal,params){try{if(window.FP_METRIKA&&window.ym)ym(window.FP_METRIKA,"reachGoal",goal,params||{});}catch(e){}}
+function fbLink(text){return FEEDBACK_URL?`<a class="fbk" href="${FEEDBACK_URL}" target="_blank" rel="noopener" data-fb="1"><span>${text}</span><b>Написать</b></a>`:"";}
+document.addEventListener("click",e=>{const a=e.target.closest&&e.target.closest("[data-fb]");if(a)track("feedback");});
+const MODULES=[
+{id:"card",name:"Кредитная карта",tag:"«Операция „Льгота“»",
+ cheer:"Теперь кредитка работает на вас, а не вы на неё",
+ desc:"Лимит, льготный период, минимальный платёж, снятие наличных, стратегия с накопительным счётом и кредитная история",
+ check:{p:"кредитную карту",i:[
+  "Ставка вне льготного периода и ПСК",
+  "Как считается льготный период: от первой покупки или «расчётный + платёжный»",
+  "Размер минимального платежа и что будет при пропуске",
+  "Комиссия за снятие и переводы, действует ли на них льготный период",
+  "Плата за обслуживание и условия, при которых она не берётся",
+  "Кешбэк: категории и лимит в месяц"]},
+ lessons:[
+ {film:"Пролог",title:"Знакомство с кредиткой",min:4,
+  cards:[
+   {t:"Вове одобрили кредитную карту с лимитом 100 000 ₽. Он рад: «У меня теперь есть 100 тысяч!» Стоп. Это не его деньги, а деньги банка, которые можно брать в долг."},
+   {t:"Кредитный лимит — максимальная сумма, которую банк готов дать. Потратили — появился долг. Вернули — лимит снова доступен. Так можно пользоваться картой годами.",
+    viz:'<div class="vz"><div class="vbar"><i style="width:30%;background:var(--tomato)">Долг 30 000</i><i style="width:70%;background:var(--teal)">Доступно 70 000</i></div><p class="vcap">Лимит 100 000 ₽: потратил 30 000 — свободно 70 000. Вернул 10 000 — долг 20 000, свободно 80 000.</p></div>'},
+   {t:"Деньги банка стоят дорого. Ставка по кредитке обычно заметно выше, чем по обычному кредиту: часто 30–50% годовых. Реальную цену показывает ПСК — полная стоимость кредита. Ещё бывает плата за обслуживание карты и за СМС-уведомления."},
+   {t:"Главная особенность кредитки — льготный период. Если вернуть долг вовремя, проценты не начисляются совсем. Именно поэтому кредитка может быть бесплатной — или очень дорогой. Разберём в следующей серии."}],
+  rule:"Кредитный лимит — не ваши деньги, а долг, который банк готов дать. Цену карты показывает ПСК.",
+  pro:"Перед оформлением откройте тарифы и найдите три строки: ставка вне льготного периода, плата за обслуживание и условия её отмены, комиссия за снятие. Эти три цифры важнее рекламы.",
+  q:[
+   {q:"Лимит 100 000 ₽. Вова потратил 40 000 и вернул 15 000. Сколько он может потратить сейчас?",o:["75 000 ₽","60 000 ₽","85 000 ₽","100 000 ₽"],a:0,e:"Долг: 40 000 − 15 000 = 25 000 ₽. Свободно: 100 000 − 25 000 = 75 000 ₽."},
+   {tf:true,q:"«Кредитный лимит — это мои деньги, которые банк хранит для меня».",a:false,e:"Лимит — это сумма, которую банк готов дать в долг. Всё потраченное придётся вернуть."},
+   {q:"По какому показателю честнее всего сравнить две кредитки?",o:["ПСК — полная стоимость кредита","Размер лимита","Дизайн карты","Количество дней в рекламе"],a:0,e:"ПСК учитывает ставку и обязательные платежи. Большой лимит и «до 120 дней» не говорят о цене."},
+   {tf:true,q:"«За обслуживание кредитки могут брать плату, даже если вы ею не пользуетесь».",a:true,e:"У многих карт есть плата за обслуживание. Часто её отменяют при условиях — например, при тратах от определённой суммы. Это всегда написано в тарифах."},
+   {q:"Вова не уложился в льготный период и держит долг 50 000 ₽ год. Ставка по кредитке — 39,9%, по потребкредиту было бы 22%. Сколько примерно он переплатит из-за кредитки?",o:["Около 9 000 ₽","Около 900 ₽","Около 20 000 ₽","Нисколько"],a:0,e:"50 000 × (39,9% − 22%) ≈ 8 950 ₽ за год. Вне льготного периода кредитка — один из самых дорогих способов занять."}]},
+
+ {film:"Обратный отсчёт",title:"Как работает льготный период",min:5,
+  cards:[
+   {t:"Льготный период — время, когда за покупки не начисляются проценты, если вернуть весь долг вовремя. В рекламе пишут «до 55», «до 100», «до 120 дней». Главное слово здесь — «до»."},
+   {t:"Первый тип: «расчётный + платёжный период». Месяц копятся покупки, затем даётся около 20–25 дней на погашение. Купили в первый день расчётного периода — получили максимум. Купили в последний — только платёжный период.",
+    viz:'<div class="vz"><div class="vbar"><i style="width:55%;background:var(--gold);color:var(--film)">Расчётный 30 дн</i><i style="width:45%;background:var(--teal);color:var(--film)">Платёжный 25 дн</i></div><p class="vcap">Покупка в 1-й день → до 55 дней без процентов. Покупка в 30-й день → только 25.</p></div>'},
+   {t:"Второй тип: «с первой покупки». Отсчёт начинается с первой траты, и всё, что потрачено за это время, нужно вернуть к концу срока. Покупка на 90-й день не получает своих 120 дней — её тоже надо вернуть к общей дате.",
+    viz:'<div class="vz"><div class="vbar"><i style="width:75%;background:var(--sky);color:var(--film)">Покупки</i><i style="width:25%;background:var(--tomato)">Вернуть всё</i></div><p class="vcap">День 1 — первая покупка, день 90 — ещё одна, день 120 — вернуть весь долг.</p></div>'},
+   {t:"Даже в льготный период банк ждёт минимальный платёж каждый месяц. Пропустили — штраф, а у многих банков ещё и потеря льготного периода."},
+   {t:"Не вернули всю сумму к сроку — у многих банков проценты начисляются на всю сумму за весь период, начиная с даты покупки. Поэтому «почти всё вернул» иногда стоит так же, как «ничего не вернул». Точные правила — в тарифах вашей карты."}],
+  rule:"Ориентируйтесь на дату окончания льготного периода в приложении банка, а не на рекламные «до 120 дней».",
+  pro:"Поставьте напоминание за 7 дней до конца льготного периода и автоплатёж полной суммы. Переводы между банками иногда идут 1–3 дня, а опоздание даже на день может стоить процентов за весь срок.",
+  q:[
+   {q:"Карта «до 55 дней»: 30 дней расчётный период и 25 — платёжный. Вова купил телевизор в последний день расчётного периода. Сколько у него дней без процентов?",o:["25","55","30","0"],a:0,e:"Покупка в конце расчётного периода получает только платёжный период — 25 дней."},
+   {q:"Карта «120 дней с первой покупки». Первая покупка — 1 марта, вторая — 20 июня. До какого срока вернуть вторую покупку без процентов?",o:["Примерно до 29 июня — вместе со всем долгом","До 18 октября — у каждой покупки свои 120 дней","Срока нет","До конца года"],a:0,e:"Отсчёт идёт от первой покупки: всё потраченное нужно вернуть к концу этих 120 дней. У отдельных карт правила могут отличаться — проверяйте тарифы."},
+   {tf:true,q:"«В льготный период можно ничего не платить до последнего дня».",a:false,e:"Минимальный платёж нужно вносить каждый месяц. Без него — штраф и, у многих банков, потеря льготного периода."},
+   {tf:true,q:"«Если не вернуть всю сумму в срок, у многих банков проценты начислят на весь долг с даты покупки».",a:true,e:"Так работает большинство карт: льготный период сгорает целиком. Поэтому важно гасить долг полностью."},
+   {q:"Где надёжнее всего узнать дату окончания льготного периода?",o:["В приложении банка или в выписке","В рекламе карты","Посчитать от даты получения карты","Спросить у друга с такой же картой"],a:0,e:"Банк показывает точную дату и сумму для погашения без процентов. У каждой карты и каждого периода она своя."}]},
+
+ {film:"День сурка",title:"Ловушка минимального платежа",min:4,
+  cards:[
+   {t:"Минимальный платёж — сумма, которую банк требует вносить каждый месяц, пока есть долг. Обычно это 3–8% от долга, часто плюс начисленные проценты. Точную сумму и дату банк показывает в приложении."},
+   {t:"Зачем он нужен? Так банк видит, что вы платите. Пропустили — штраф, запись о просрочке в кредитной истории, а у многих банков ещё и потеря льготного периода."},
+   {t:"А теперь ловушка. Минимальный платёж маленький, и кажется, что всё под контролем. Но если долг уже вне льготного периода, большая часть платежа уходит на проценты, и долг почти не уменьшается."},
+   {t:"Долг Вовы — 100 000 ₽ под 36% годовых. Проценты за месяц — 3 000 ₽. Он платит минимальные 3% — те же 3 000 ₽. Весь платёж уходит на проценты. Вова платит год, а долг стоит на месте, как в «Дне сурка».",
+    viz:'<div class="vz"><div class="vbar"><i style="width:100%;background:var(--tomato)">Проценты 3 000 ₽</i></div><p class="vcap">Платёж 3 000 ₽ → на погашение самого долга: 0 ₽.</p></div>'},
+   {t:"Как выйти. В льготный период — минимальный платёж каждый месяц и полное погашение к сроку. Если льготный период уже сгорел — платите сильно больше минимума: каждый рубль сверху уменьшает сам долг."}],
+  rule:"Минимальный платёж спасает от штрафов, но не от процентов.",
+  pro:"Рядом с минимальным платежом многие банки показывают сумму «для погашения без процентов». Ориентируйтесь на неё, а не на минимальную.",
+  q:[
+   {q:"Долг по кредитке — 40 000 ₽, минимальный платёж — 3% от долга. Сколько нужно внести?",o:["1 200 ₽","400 ₽","3 000 ₽","12 000 ₽"],a:0,e:"40 000 × 3% = 1 200 ₽. Если банк добавляет начисленные проценты, сумма будет больше."},
+   {tf:true,q:"«Если платить только минимальные 3%, долг закроется примерно за 33 месяца».",a:false,e:"Это было бы так без процентов. С процентами большая часть платежа уходит банку, и срок растягивается на годы — или долг не уменьшается вовсе."},
+   {q:"Вова на неделю пропустил минимальный платёж. Что, скорее всего, произойдёт?",o:["Штраф, запись в кредитной истории, возможна потеря льготного периода","Ничего, неделя — не срок","Банк спишет долг","Карту закроют навсегда"],a:0,e:"Даже короткая просрочка — это неустойка и отметка в кредитной истории. Поэтому платёж лучше ставить на автоплатёж."},
+   {q:"Долг 60 000 ₽ под 40% годовых вне льготного периода. Сколько процентов начислится за месяц?",o:["2 000 ₽","600 ₽","4 000 ₽","24 000 ₽"],a:0,e:"60 000 × 40% / 12 = 2 000 ₽ в месяц. Чтобы долг уменьшался, платить нужно заметно больше этой суммы."},
+   {tf:true,q:"«Минимальный платёж нужно вносить и в льготный период».",a:true,e:"Да. Льготный период освобождает от процентов, но не от ежемесячного платежа."}]},
+
+ {film:"Иллюзия обмана",title:"Снятие наличных и переводы",min:4,
+  cards:[
+   {t:"Кредитка создана для покупок. Снятие наличных и переводы — дорогие операции. Обычно это комиссия 3–6% плюс фиксированная сумма, например 290–590 ₽ за раз."},
+   {t:"Часто льготный период на снятие и переводы не действует: проценты начисляются с первого дня. У некоторых карт есть бесплатное снятие в первые дни или в пределах лимита в месяц — это всегда видно в тарифах."},
+   {t:"Квази-кэш — операции, которые банк приравнивает к снятию. Это переводы на другие карты и счета, пополнение электронных кошельков, оплата у букмекеров, покупка валюты. Комиссия как за снятие, хотя наличных вы не видели."},
+   {t:"Пример, который выглядит выгодным. Перевести 150 000 ₽ с кредитки на вклад под 14% на 2 месяца. Комиссия: 5,9% + 590 ₽ = 9 440 ₽. Доход по вкладу — около 3 500 ₽. Итог: минус 5 940 ₽.",
+    viz:'<div class="vz"><div class="vrow"><span>Доход по вкладу</span><b style="color:var(--teal)">+3 500 ₽</b></div><div class="vrow"><span>Комиссия за перевод</span><b style="color:var(--tomato)">−9 440 ₽</b></div><div class="vrow tot"><span>Итог</span><b style="color:var(--tomato)">−5 940 ₽</b></div></div>'}],
+  rule:"С кредитки выгодно только платить в магазине. Снимать и переводить — почти всегда дорого.",
+  pro:"Если наличные очень нужны, сравните варианты: иногда дешевле рассрочка в магазине или небольшой потребкредит, чем снятие с кредитки.",
+  q:[
+   {q:"Комиссия за снятие — 4,9% + 390 ₽. Вова снимает 10 000 ₽. Сколько он заплатит банку?",o:["880 ₽","490 ₽","390 ₽","4 900 ₽"],a:0,e:"10 000 × 4,9% = 490 ₽, плюс 390 ₽ — итого 880 ₽. Почти 9% от суммы."},
+   {tf:true,q:"«Перевод с кредитки на свою дебетовую карту бесплатный — ведь обе карты мои».",a:false,e:"Для банка это перевод с кредитного счёта, то есть квази-кэш. Комиссия обычно такая же, как за снятие."},
+   {q:"Какую операцию банк чаще всего считает квази-кэшем?",o:["Пополнение электронного кошелька","Покупку продуктов в супермаркете","Оплату такси картой","Покупку билетов в кино"],a:0,e:"Пополнение кошельков, переводы, покупка валюты и ставки обычно приравниваются к снятию."},
+   {q:"Друг советует Вове перевести 150 000 ₽ с кредитки на вклад под 14% на 2 месяца. Комиссия — 5,9% + 590 ₽. Что получится?",o:["Плюс около 3 500 ₽","Выйдет в ноль","Минус около 6 000 ₽","Плюс около 10 000 ₽"],a:2,e:"Комиссия 9 440 ₽ больше дохода по вкладу примерно в 2,7 раза."},
+   {tf:true,q:"«У некоторых кредиток есть бесплатное снятие наличных в пределах лимита в месяц».",a:true,e:"Такие условия бывают. Но и тогда проверьте, действует ли на снятые деньги льготный период."}]},
+
+ {film:"Джентльмены удачи",title:"Кредитка с выгодой",min:5,
+  cards:[
+   {t:"Можно ли на кредитке заработать? Да, если соблюдать правила. Все повседневные покупки — по кредитке, а зарплата лежит на накопительном счёте и приносит проценты."},
+   {t:"Перед концом льготного периода Вова переводит с накопительного счёта всю сумму и гасит долг полностью. Процентов по карте нет, на накопительном набежал доход, а ещё есть кешбэк.",
+    viz:'<div class="vz"><div class="vflow"><span>Зарплата</span><i>→</i><span>Накопительный счёт</span></div><div class="vflow"><span>Покупки</span><i>→</i><span>Кредитка, 0%</span></div><div class="vflow"><span>До срока</span><i>→</i><span>Гасим весь долг</span></div></div>'},
+   {t:"Сколько это даёт? Вова тратит 50 000 ₽ в месяц. Если на накопительном счёте под 14% в среднем лежит на 50 000 ₽ больше, это около 580 ₽ в месяц, или примерно 7 000 ₽ в год. Плюс кешбэк 1% — ещё около 6 000 ₽ в год."},
+   {t:"Три условия, без которых стратегия превращается в долг: минимальный платёж каждый месяц, полное погашение до конца льготного периода и траты не больше, чем вы потратили бы без карты."},
+   {t:"Эта схема подходит не всем. Если с кредиткой хочется тратить больше, лучше остаться на дебетовой карте. Выгода в сотни рублей не стоит долга под 40% годовых."}],
+  rule:"Кредитка выгодна, только если вы платите ей то, что и так потратили бы, и гасите всё к сроку.",
+  pro:"Настройте два автоплатежа: перевод зарплаты на накопительный счёт в день её прихода и полное погашение кредитки за 5–7 дней до конца льготного периода. Тогда схема работает без участия памяти.",
+  q:[
+   {q:"Вова тратит 30 000 ₽ в месяц по кредитке, а зарплата лежит на накопительном счёте под 12%. Сколько примерно он выиграет за месяц?",o:["300 ₽","3 600 ₽","30 ₽","1 200 ₽"],a:0,e:"30 000 × 12% / 12 = 300 ₽ в месяц, около 3 600 ₽ за год."},
+   {q:"Что Вова должен делать каждый месяц, даже в льготный период?",o:["Вносить минимальный платёж","Ничего — ведь льготный период","Снимать наличные","Закрывать и открывать карту"],a:0,e:"Минимальный платёж обязателен всегда, пока есть долг."},
+   {tf:true,q:"«С кредиткой можно тратить больше обычного — всё равно льготный период».",a:false,e:"Льготный период — это отсрочка, а не подарок. Всё потраченное придётся вернуть в срок."},
+   {q:"За 5 дней до конца льготного периода у Вовы на накопительном 45 000 ₽, а долг — 50 000 ₽. Что разумнее всего?",o:["Добавить 5 000 ₽ из других денег и погасить весь долг","Внести только минимальный платёж","Снять недостающее с этой же кредитки","Ничего страшного: проценты будут только на 5 000 ₽"],a:0,e:"У многих банков при неполном погашении проценты начисляются на весь долг за весь срок. Лучше закрыть полностью, а в следующем месяце тратить меньше."},
+   {tf:true,q:"«Автоплатёж полной суммы за несколько дней до срока снижает риск забыть о погашении».",a:true,e:"Автоплатёж — главная защита этой стратегии. Память подводит, автоплатёж — нет."}]},
+
+ {film:"Назад в будущее",title:"Кредитная история и закрытие карты",min:4,
+  cards:[
+   {t:"Каждый платёж по кредитке попадает в кредитную историю. Платите вовремя — репутация растёт. Просрочки остаются в истории надолго: запись хранится 7 лет."},
+   {t:"Лимит карты влияет на новые кредиты. Банки учитывают его при расчёте долговой нагрузки, даже если сейчас вы ничего не должны. Лишние кредитки «на всякий случай» могут помешать, например, при ипотеке."},
+   {t:"Как правильно закрыть кредитку: погасить весь долг, написать заявление о закрытии счёта (а не только карты), дождаться закрытия и взять справку об отсутствии задолженности. Разрезанная карта — ещё не закрытый счёт."},
+   {t:"Тревожные сигналы, что кредитка вредит: вы гасите одну карту другой, платите только минимальные платежи, не помните общий долг. Тогда — стоп новым тратам, план погашения и разговор с банком о реструктуризации."}],
+  rule:"Кредитная история — ваше финансовое будущее. Не держите лишних карт и закрывайте счёт правильно.",
+  pro:"Кредитную историю можно бесплатно запрашивать дважды в год в каждом бюро. Список бюро, где она хранится, есть на Госуслугах. Проверяйте раз в год, нет ли там чужих кредитов.",
+  q:[
+   {tf:true,q:"«Если разрезать кредитку, счёт закрыт и платить за обслуживание больше не нужно».",a:false,e:"Счёт закрывается только по заявлению. Пока он открыт, может начисляться плата за обслуживание."},
+   {q:"Через полгода Вова хочет взять ипотеку. У него три кредитки с общим лимитом 300 000 ₽, но долга нет. Что разумно сделать?",o:["Заранее закрыть лишние карты","Ничего — долга же нет","Оформить ещё одну карту","Снять весь лимит наличными"],a:0,e:"Банк учитывает лимиты при расчёте нагрузки. Лишние карты могут снизить одобренную сумму или ухудшить условия."},
+   {q:"Сколько хранится запись в кредитной истории?",o:["7 лет","1 год","3 года","Всю жизнь"],a:0,e:"Запись хранится 7 лет с последнего изменения. Одна просрочка может напоминать о себе долго."},
+   {q:"Какой признак говорит, что с кредиткой проблема?",o:["Гашу одну кредитку другой","Гашу всё к концу льготного периода","Получаю кешбэк","Плачу автоплатежом"],a:0,e:"Перекредитование одной карты другой — верный признак, что долг растёт быстрее, чем вы его гасите."},
+   {tf:true,q:"«После закрытия счёта стоит взять справку об отсутствии задолженности».",a:true,e:"Справка защищает от сюрпризов: ошибок банка и начислений после закрытия."}]}
+ ]},
+{id:"cushion",name:"Подушка и накопительный счёт",tag:"«Остров сокровищ»",
+ desc:"Зачем нужен запас, сколько откладывать, где хранить, как работает накопительный счёт и как собрать подушку с нуля",
+ cheer:"Теперь у вас есть запасной парашют на чёрный день",
+ check:{p:"накопительный счёт для подушки",i:[
+  "Начисление процентов на ежедневный, а не на минимальный остаток",
+  "Ставка после окончания приветственного периода",
+  "Условия повышенной ставки: подписка, траты, зарплата",
+  "Снятие в любой день без потери начисленных процентов",
+  "Банк в системе страхования вкладов",
+  "Отдельный банк или счёт без карты в кошельке"]},
+ lessons:[
+ {film:"Титаник",title:"Зачем нужна подушка",min:4,
+  cards:[
+   {t:"У Вовы сломался холодильник. Новый стоит 45 000 ₽, а свободных денег нет. Он думает: снять с кредитки или взять займ? Подушка безопасности как раз для таких айсбергов — это запас денег на непредвиденное."},
+   {t:"Что бывает в жизни: поломка техники или машины, болезнь, потеря работы, срочная поездка к родным. Без запаса каждая такая ситуация превращается в долг под 30% годовых и выше."},
+   {t:"Подушка — не инвестиции и не накопления на отпуск. Её задача — быть доступной в любой день. Доходность здесь на последнем месте."},
+   {t:"Подушка — это ещё и спокойствие. С запасом проще уйти с плохой работы, отказаться от невыгодного кредита и не паниковать, когда что-то сломалось."}],
+  rule:"Подушка — первый шаг финансового плана: сначала запас, потом инвестиции и крупные покупки.",
+  pro:"Назовите счёт с подушкой в приложении «Неприкосновенный запас». Такой счёт психологически сложнее тратить на мелочи.",
+  q:[
+   {q:"Какая трата — задача подушки?",o:["Срочный ремонт машины","Новый телефон на распродаже","Покупка акций","Отпуск на море"],a:0,e:"Подушка — на непредвиденное и необходимое. Распродажи и отпуск планируются отдельно."},
+   {tf:true,q:"«Кредитка с большим лимитом вполне заменяет подушку».",a:false,e:"Кредитка — это долг. В трудный момент она превращает проблему в кредит под 30–50% годовых."},
+   {q:"Вова потерял работу, поиск займёт 3 месяца. Его обязательные траты — 40 000 ₽ в месяц. Сколько нужно в подушке, чтобы продержаться?",o:["120 000 ₽","40 000 ₽","20 000 ₽","400 000 ₽"],a:0,e:"3 месяца × 40 000 ₽ = 120 000 ₽."},
+   {tf:true,q:"«Подушку лучше держать в акциях — там доходность выше».",a:false,e:"Акции могут подешеветь именно тогда, когда нужны деньги. Подушке нужна доступность и сохранность."},
+   {q:"У Вовы долг по кредитке под 35% и нет запаса. В каком порядке разумнее действовать?",o:["Небольшой запас на месяц трат → кредитка → полная подушка → инвестиции","Инвестиции → подушка → кредитка","Кредитка → инвестиции → подушка","Всё одновременно поровну"],a:0,e:"Небольшой запас защищает от новых долгов. Затем — дорогой долг, потом полная подушка и только после неё инвестиции."}]},
+
+ {film:"Семнадцать мгновений весны",title:"Сколько нужно на подушку",min:4,
+  cards:[
+   {t:"Размер подушки считают не от дохода, а от обязательных трат: жильё и коммуналка, еда, транспорт, связь, платежи по кредитам, лекарства, расходы на детей."},
+   {t:"Обычно советуют запас на 3–6 месяцев таких трат. Чем нестабильнее доход, тем больше нужен запас.",
+    viz:'<div class="vz"><div class="vrow"><span>Стабильная работа, два дохода в семье</span><b>3 мес.</b></div><div class="vrow"><span>Один доход, дети или ипотека</span><b>6 мес.</b></div><div class="vrow"><span>Фриланс, ИП, сезонный доход</span><b>6–12 мес.</b></div></div>'},
+   {t:"Пример. Обязательные траты Вовы — 45 000 ₽ в месяц. Подушка на 3 месяца — 135 000 ₽, на 6 месяцев — 270 000 ₽."},
+   {t:"Подушку пересчитывают раз в год и после крупных перемен: переезд, ребёнок, ипотека, смена работы. Траты выросли — растёт и запас."}],
+  rule:"Подушка = обязательные траты в месяц × 3–6. Чем нестабильнее доход, тем больше запас.",
+  pro:"Посчитайте обязательные траты по выписке банка за 3 последних месяца. Так цифра будет реальной, а не «примерно».",
+  q:[
+   {q:"Обязательные траты — 50 000 ₽ в месяц. Какая подушка нужна на 4 месяца?",o:["200 000 ₽","50 000 ₽","150 000 ₽","600 000 ₽"],a:0,e:"50 000 × 4 = 200 000 ₽."},
+   {q:"Кому нужна подушка побольше — на 6–12 месяцев?",o:["ИП с неровным доходом","Сотруднику в семье с двумя стабильными зарплатами","Студенту, который живёт с родителями","Всем одинаково"],a:0,e:"Когда доход скачет, нужен запас на долгий провал. Стабильные доходы позволяют обойтись меньшей подушкой."},
+   {tf:true,q:"«Подушка — это три зарплаты».",a:false,e:"Считают от обязательных трат, а не от дохода. Если тратите меньше, чем зарабатываете, подушка будет меньше трёх зарплат."},
+   {q:"Что не относится к обязательным тратам?",o:["Ресторан по выходным","Коммуналка","Платёж по кредиту","Продукты"],a:0,e:"Рестораны в трудный момент можно сократить. Подушка рассчитана на то, без чего не обойтись."},
+   {tf:true,q:"«Подушку стоит пересчитать после рождения ребёнка».",a:true,e:"С ребёнком обязательные траты растут, а значит, должен вырасти и запас."}]},
+
+ {film:"Бриллиантовая рука",title:"Где хранить запас",min:4,
+  cards:[
+   {t:"Три требования к месту для подушки: деньги можно забрать в любой день, они не теряют в цене и защищены. Доходность — только на четвёртом месте."},
+   {t:"Не каждое место подходит.",
+    viz:'<div class="vz"><div class="vrow"><span>Накопительный счёт</span><b style="color:var(--teal)">подходит</b></div><div class="vrow"><span>Вклад с частичным снятием</span><b style="color:var(--teal)">подходит</b></div><div class="vrow"><span>Немного наличных дома</span><b style="color:var(--gold)">на мелочи</b></div><div class="vrow"><span>Вклад на 3 года без снятия</span><b style="color:var(--tomato)">не подходит</b></div><div class="vrow"><span>Акции и облигации</span><b style="color:var(--tomato)">не подходит</b></div></div>'},
+   {t:"Удобная схема: небольшая сумма на карте на самый срочный случай, основная часть — на накопительном счёте. Если подушка большая, часть можно держать на вкладе с возможностью снятия."},
+   {t:"Подушку разумно держать в другом банке, не там, где зарплатная карта, и без карты в кошельке. Чем сложнее до неё дотянуться, тем реже она уходит на импульсивные покупки."}],
+  rule:"Подушка должна быть доступна в любой день и застрахована. Доходность — приятный бонус, а не цель.",
+  pro:"Проверьте, что банк входит в систему страхования вкладов: реестр есть на сайте Агентства по страхованию вкладов.",
+  q:[
+   {q:"Где хуже всего держать подушку?",o:["В акциях","На накопительном счёте","На вкладе с частичным снятием","Небольшую часть — наличными"],a:0,e:"Акции могут упасть в цене как раз тогда, когда понадобятся деньги."},
+   {tf:true,q:"«Деньги на накопительном счёте застрахованы так же, как вклад».",a:true,e:"Накопительные счета входят в систему страхования вкладов: до 1,4 млн ₽ в одном банке."},
+   {q:"Подушка Вовы — 300 000 ₽. Как её разумно разложить?",o:["20 000 ₽ на карте, остальное на накопительном счёте","Всё наличными дома","Всё в акциях","Всё на вкладе на 3 года без снятия"],a:0,e:"Немного под рукой на самый срочный случай, остальное — там, где деньги растут и доступны в любой день."},
+   {tf:true,q:"«Чем выше доходность, тем лучше место для подушки».",a:false,e:"Высокая доходность обычно означает риск или ограничения на снятие. Для подушки важнее доступность."},
+   {q:"Зачем подушку советуют держать в отдельном банке?",o:["Меньше соблазна потратить","Там всегда выше ставка","Так требует закон","Так меньше налог"],a:0,e:"Отдельный банк без карты в кошельке защищает запас от импульсивных трат."}]},
+
+ {film:"Матрица",title:"Как работает накопительный счёт",min:5,
+  cards:[
+   {t:"Накопительный счёт — что-то среднее между картой и вкладом. Пополнять и снимать можно в любой момент, а проценты начисляются — обычно раз в месяц."},
+   {t:"Главное в условиях — на какой остаток начисляют проценты. На ежедневный: каждый день считается отдельно. На минимальный за месяц: если хоть на день сняли почти всё, процент начислят только на этот минимум.",
+    viz:'<div class="vz"><p class="vcap">200 000 ₽ лежат месяц, но на один день Вова оставил 5 000 ₽</p><div class="vrow"><span>Ежедневный остаток</span><b style="color:var(--teal)">почти полный доход</b></div><div class="vrow"><span>Минимальный остаток</span><b style="color:var(--tomato)">доход как с 5 000 ₽</b></div></div>'},
+   {t:"Ставка по накопительному счёту не фиксирована. Банк может поменять её в любой момент — обычно вслед за ключевой ставкой ЦБ. Вклад, наоборот, фиксирует ставку на весь срок."},
+   {t:"Проценты обычно добавляются к сумме, и в следующем месяце доход чуть больше — это капитализация. Проценты по накопительным счетам облагаются налогом так же, как по вкладам: только сверх необлагаемого лимита."}],
+  rule:"Выбирайте счёт с начислением на ежедневный остаток: тогда снятие не обнуляет доход за месяц.",
+  pro:"Если у счёта начисление на минимальный остаток, держите там только сумму, которую не будете трогать весь месяц, а текущие траты — на карте.",
+  q:[
+   {q:"100 000 ₽ лежат на накопительном счёте под 12% годовых целый месяц. Какой примерно доход?",o:["1 000 ₽","12 000 ₽","100 ₽","10 000 ₽"],a:0,e:"100 000 × 12% / 12 = 1 000 ₽ за месяц."},
+   {q:"Счёт с начислением на минимальный остаток. Весь месяц там лежало 200 000 ₽, но на один день Вова оставил 5 000 ₽. На какую сумму начислят процент?",o:["5 000 ₽","200 000 ₽","Среднюю за месяц","Ни на какую"],a:0,e:"Минимальный остаток за месяц — 5 000 ₽. Один день почти обнулил доход."},
+   {tf:true,q:"«Ставка по накопительному счёту фиксирована, как по вкладу».",a:false,e:"Банк может изменить её в любой момент. Фиксированная ставка — преимущество вклада."},
+   {tf:true,q:"«С накопительного счёта можно снять деньги без потери уже начисленных процентов».",a:true,e:"Начисленное остаётся вашим. Это главное отличие от вклада."},
+   {q:"При одинаковой ставке что выгоднее?",o:["Начисление на ежедневный остаток","Начисление на минимальный остаток","Разницы нет","Зависит от цвета карты"],a:0,e:"Ежедневный остаток не наказывает за снятие: каждый день приносит свой доход."}]},
+
+ {film:"Мираж",title:"Приветственные ставки и подвохи",min:4,
+  cards:[
+   {t:"Банки привлекают клиентов крупной цифрой: «до 18%». Часто это приветственная ставка — только для новых клиентов и на первые 1–3 месяца. Потом ставка падает до базовой."},
+   {t:"Повышенная ставка часто зависит от условий: подписка банка, траты по карте от определённой суммы, зарплата в этом банке. Нет условия — ставка заметно ниже."},
+   {t:"«До 18%» может означать: на сумму до 300 000 ₽, первые 2 месяца, при подписке. Читайте условия целиком.",
+    viz:'<div class="vz"><p class="vcap">100 000 ₽ на год: 18% первые 2 месяца, потом 10%</p><div class="vrow"><span>2 месяца под 18%</span><b>≈3 000 ₽</b></div><div class="vrow"><span>10 месяцев под 10%</span><b>≈8 300 ₽</b></div><div class="vrow tot"><span>Итого за год</span><b style="color:var(--gold)">≈11 300 ₽, а не 18 000</b></div></div>'},
+   {t:"Можно «переезжать» туда, где сейчас выгоднее, и ставить напоминание об окончании акции. Главное, чтобы переезд не стоил денег и подушка оставалась доступной."}],
+  rule:"Смотрите на ставку после окончания акции и на условия — так видна реальная доходность.",
+  pro:"В день открытия счёта ставьте в календарь дату окончания приветственной ставки и сравнивайте предложения за неделю до неё.",
+  q:[
+   {q:"18% первые 2 месяца, потом 10%. 100 000 ₽ лежат год. Какой примерно доход?",o:["≈11 300 ₽","18 000 ₽","10 000 ₽","3 000 ₽"],a:0,e:"≈3 000 ₽ за 2 месяца и ≈8 300 ₽ за остальные 10. Крупная цифра действует недолго."},
+   {tf:true,q:"«Надпись „до 18%“ значит, что все получат 18% на любую сумму».",a:false,e:"«До» — это максимум при определённых условиях: срок, сумма, подписка, траты."},
+   {q:"Повышенная ставка действует при тратах по карте от 30 000 ₽ в месяц. Вова тратит 10 000 ₽. Что будет?",o:["Начислят базовую ставку","Всё равно повышенную","Счёт закроют","Начислят штраф"],a:0,e:"Условие не выполнено — действует базовая ставка."},
+   {q:"Что проверить первым, увидев «до 20%»?",o:["Срок, сумму и условия повышенной ставки","Цвет приложения","Отзывы о дизайне карты","Ничего — цифра всё объясняет"],a:0,e:"Срок акции, лимит суммы и условия определяют, сколько вы получите на самом деле."},
+   {tf:true,q:"«Если банк снизил ставку по накопительному счёту, деньги можно перевести в другой банк без потери начисленного».",a:true,e:"В отличие от вклада, со счёта можно уйти в любой день, сохранив уже начисленные проценты."}]},
+
+ {film:"Москва слезам не верит",title:"Собираем подушку с нуля",min:5,
+  cards:[
+   {t:"Подушку собирают не из «остатков в конце месяца» — их почти никогда нет. Работает правило «сначала заплати себе»: в день зарплаты фиксированная сумма уходит на накопительный счёт."},
+   {t:"Сколько откладывать? 10% дохода — хороший старт. Если есть дорогие долги, сначала соберите небольшой запас на месяц трат, затем гасите долги, затем доводите подушку до цели."},
+   {t:"Пример. Вова получает 70 000 ₽ и откладывает 10% — 7 000 ₽ в месяц. Цель — 135 000 ₽.",
+    viz:'<div class="vz"><div class="vrow"><span>Откладывать 10% — 7 000 ₽</span><b>≈18 месяцев</b></div><div class="vrow"><span>Откладывать 15% — 10 500 ₽</span><b>≈12 месяцев</b></div><p class="vcap">С учётом процентов на накопительном счёте под 12%.</p></div>'},
+   {t:"Ускорители: премии, налоговые вычеты, кешбэк, продажа ненужных вещей — сразу в подушку. А если пришлось потратить часть запаса, восстановите её в первую очередь."}],
+  rule:"Откладывайте в день зарплаты автоматически — так подушка растёт без силы воли.",
+  pro:"Если 10% кажется много, начните с 5%, а через 3 месяца поднимите до 10%. Привычка важнее суммы.",
+  q:[
+   {q:"Зарплата — 60 000 ₽. Сколько отложить, если правило — 10%?",o:["6 000 ₽","600 ₽","10 000 ₽","16 000 ₽"],a:0,e:"60 000 × 10% = 6 000 ₽."},
+   {q:"Цель — 120 000 ₽, Вова откладывает 10 000 ₽ в месяц. Сколько месяцев понадобится без учёта процентов?",o:["12","10","6","24"],a:0,e:"120 000 / 10 000 = 12 месяцев. С процентами — немного быстрее."},
+   {tf:true,q:"«Лучше откладывать то, что осталось в конце месяца».",a:false,e:"Траты подстраиваются под доступные деньги, и к концу месяца обычно не остаётся ничего."},
+   {q:"Вова получил налоговый вычет 15 000 ₽, а подушка ещё не собрана. Куда разумнее направить деньги?",o:["В подушку","На новый телефон","В акции","Дать в долг знакомому"],a:0,e:"Неожиданные деньги — лучший ускоритель подушки."},
+   {tf:true,q:"«Если пришлось потратить часть подушки, её стоит восстановить в первую очередь».",a:true,e:"Подушка работает, только когда она полная. Пока её нет, любая неприятность снова станет долгом."}]}
+ ]},
+{id:"deposit",name:"Вклады",tag:"«Назад в будущее»",
+ desc:"Ставка и капитализация, досрочное снятие, страхование, налог на проценты, инфляция и лестница вкладов",
+ cheer:"Ваши деньги научились работать на вас",
+ check:{p:"вклад",i:[
+  "Эффективная ставка с учётом капитализации",
+  "Что будет с процентами при досрочном закрытии",
+  "Можно ли пополнять и частично снимать",
+  "Автопролонгация и ставка при продлении",
+  "Сумма в одном банке вместе с процентами — не больше 1,4 млн ₽",
+  "Банк в реестре Агентства по страхованию вкладов"]},
+ lessons:[
+ {film:"Начало",title:"Как работает вклад",min:4,
+  cards:[
+   {t:"Вклад — это договор. Вы отдаёте банку деньги на срок, банк фиксирует ставку и в конце возвращает сумму с процентами. Ставка не меняется до конца срока, даже если ключевая ставка ЦБ упадёт."},
+   {t:"Проценты бывают простые — выплачиваются в конце срока или на отдельную карту. И с капитализацией — добавляются к вкладу, и следующий доход считается уже с них.",
+    viz:'<div class="vz"><p class="vcap">100 000 ₽ под 12% на год</p><div class="vrow"><span>Выплата в конце срока</span><b>112 000 ₽</b></div><div class="vrow"><span>Ежемесячная капитализация</span><b style="color:var(--teal)">≈112 683 ₽</b></div></div>'},
+   {t:"Эффективная ставка — доходность с учётом капитализации. Банки часто пишут её рядом: «12% (эффективная 12,68%)». Сравнивайте вклады именно по ней."},
+   {t:"Виды вкладов. Без пополнения и снятия — обычно самая высокая ставка. С пополнением или с частичным снятием — ставка ниже, зато больше гибкости."}],
+  rule:"Ставка по вкладу фиксирована на весь срок. Сравнивайте вклады по эффективной ставке.",
+  pro:"Если ставки в экономике растут, выбирайте вклады покороче, чтобы через несколько месяцев переложиться под более высокий процент. Если падают — подлиннее, чтобы зафиксировать высокий.",
+  q:[
+   {q:"100 000 ₽ под 12% годовых на год с выплатой процентов в конце. Сколько будет через год?",o:["112 000 ₽","124 000 ₽","101 000 ₽","120 000 ₽"],a:0,e:"100 000 + 12% = 112 000 ₽. С ежемесячной капитализацией было бы около 112 683 ₽."},
+   {tf:true,q:"«Если ЦБ снизит ключевую ставку, ставка по моему уже открытому вкладу тоже снизится».",a:false,e:"Ставка по вкладу зафиксирована договором до конца срока."},
+   {q:"Какой вклад обычно даёт самую высокую ставку?",o:["Без пополнения и снятия","С частичным снятием","С пополнением и снятием","До востребования"],a:0,e:"Чем меньше гибкости, тем дороже банк платит за ваши деньги."},
+   {tf:true,q:"«Эффективная ставка учитывает капитализацию процентов».",a:true,e:"Поэтому при капитализации эффективная ставка всегда выше номинальной."},
+   {q:"Два вклада: «12%, выплата в конце» и «11,8%, ежемесячная капитализация (эффективная 12,5%)». Что выгоднее на год?",o:["Второй — у него выше эффективная ставка","Первый — у него выше номинальная","Одинаково","Невозможно сравнить"],a:0,e:"Сравнивают эффективные ставки: 12,5% больше 12%."}]},
+
+ {film:"Побег из Шоушенка",title:"Досрочное снятие",min:4,
+  cards:[
+   {t:"Главный минус вклада: если забрать деньги до срока, проценты обычно пересчитают по ставке «до востребования» — часто 0,01%. Сами деньги вернут, но доход почти пропадёт."},
+   {t:"Пример. 300 000 ₽ на год под 14%. Через 10 месяцев деньги понадобились.",
+    viz:'<div class="vz"><div class="vrow"><span>Ожидаемый доход за 10 месяцев</span><b style="color:var(--teal)">≈35 000 ₽</b></div><div class="vrow"><span>При досрочном закрытии</span><b style="color:var(--tomato)">≈25 ₽</b></div></div>'},
+   {t:"Как защититься: не класть на вклад деньги, которые могут понадобиться раньше срока; выбирать вклады с частичным снятием; разбивать крупную сумму на несколько вкладов, чтобы закрыть только один."},
+   {t:"Перед досрочным закрытием прочитайте условия. У некоторых вкладов есть льготные условия после определённого срока. И сравните: может быть, выгоднее взять нужную сумму из подушки и дождаться окончания вклада."}],
+  rule:"На вклад кладут только деньги, которые точно не понадобятся до конца срока.",
+  pro:"Крупную сумму разбейте на 3–4 вклада. Понадобятся деньги — закроете один, а остальные продолжат приносить доход.",
+  q:[
+   {q:"300 000 ₽ под 14% на год. Сколько примерно процентов набежало за 10 месяцев?",o:["≈35 000 ₽","≈42 000 ₽","≈3 500 ₽","≈14 000 ₽"],a:0,e:"300 000 × 14% × 10/12 ≈ 35 000 ₽. При досрочном закрытии этот доход почти исчезнет."},
+   {tf:true,q:"«При досрочном закрытии обычного вклада я потеряю часть самих денег».",a:false,e:"Обычно возвращают всю сумму вклада, а теряются проценты. Но условия бывают разными — читайте договор."},
+   {q:"Зачем 300 000 ₽ разбить на три вклада по 100 000 ₽?",o:["Чтобы при необходимости закрыть только один","Чтобы ставка была выше","Чтобы не платить налог","Так требует банк"],a:0,e:"Гибкость: остальные вклады продолжат приносить доход."},
+   {q:"Через 2 месяца Вове нужна сумма на свадьбу друга. Куда положить деньги?",o:["На накопительный счёт","На вклад на год без снятия","В акции","На вклад на 3 года"],a:0,e:"На короткий срок с риском досрочного снятия лучше накопительный счёт."},
+   {tf:true,q:"«Перед досрочным закрытием вклада стоит прочитать его условия».",a:true,e:"У некоторых вкладов есть льготные условия при досрочном снятии после определённого срока."}]},
+
+ {film:"Крепкий орешек",title:"Страхование вкладов",min:4,
+  cards:[
+   {t:"Вклады в российских банках застрахованы государством через Агентство по страхованию вкладов. Если у банка отзовут лицензию, вернут до 1,4 млн ₽ на человека в одном банке вместе с процентами."},
+   {t:"Что застраховано: вклады, накопительные счета, деньги на картах и текущих счетах, в том числе у ИП и малого бизнеса. Что не застраховано: акции и облигации, страхование жизни, металлические счета, деньги в микрофинансовых организациях."},
+   {t:"Лимит считается по каждому банку отдельно. 2 млн ₽ в одном банке защищены только на 1,4 млн, а по 1 млн ₽ в двух банках — полностью. Выплаты начинаются через банк-агент не позднее 14 дней после отзыва лицензии."},
+   {t:"Особый случай: если деньги на счёте от продажи жилья, наследства или по решению суда, лимит временно, на 3 месяца, повышается до 10 млн ₽. Сохраните документы о происхождении денег."}],
+  rule:"В одном банке держите не больше 1,4 млн ₽ вместе с будущими процентами.",
+  pro:"Считайте лимит с процентами: 1,35 млн ₽ под 10% на год к концу срока превратятся в 1,485 млн ₽ — и часть окажется вне страховки.",
+  q:[
+   {q:"У Вовы 2 000 000 ₽ на вкладах в одном банке. Банк лишился лицензии. Сколько вернёт Агентство?",o:["1 400 000 ₽","2 000 000 ₽","700 000 ₽","Ничего"],a:0,e:"Страховка покрывает до 1,4 млн ₽ в одном банке. Остальное — в очереди кредиторов, без гарантий."},
+   {tf:true,q:"«Инвестиционное страхование жизни застраховано так же, как вклад».",a:false,e:"Страхование жизни, акции и облигации не входят в систему страхования вкладов."},
+   {q:"1 350 000 ₽ под 10% на год в одном банке. Застрахована ли вся сумма к концу срока?",o:["Нет, с процентами сумма превысит 1,4 млн ₽","Да, страхуется только сам вклад","Да, проценты не считаются","Да, если банк крупный"],a:0,e:"Лимит считается с процентами: 1 485 000 ₽ больше 1,4 млн."},
+   {tf:true,q:"«Лимит 1,4 млн ₽ считается по каждому банку отдельно».",a:true,e:"Поэтому крупные суммы делят между несколькими банками."},
+   {q:"Что не застраховано Агентством по страхованию вкладов?",o:["Облигации на брокерском счёте","Накопительный счёт","Деньги на зарплатной карте","Вклад ИП"],a:0,e:"Ценные бумаги — инвестиции, их стоимость может падать. Защиты от этого нет."}]},
+
+ {film:"Не может быть!",title:"Налог на проценты",min:5,
+  cards:[
+   {t:"Проценты по вкладам и накопительным счетам облагаются налогом, но не все. Есть необлагаемый лимит: 1 млн ₽ × максимальная ключевая ставка на 1-е число месяцев года."},
+   {t:"Пример. Если максимальная ключевая ставка в году была 16%, без налога можно получить 160 000 ₽ процентов. С суммы сверх этого платят НДФЛ 13%.",
+    viz:'<div class="vz"><div class="vrow"><span>Проценты за год по всем банкам</span><b>210 000 ₽</b></div><div class="vrow"><span>Необлагаемый лимит при ставке 16%</span><b>160 000 ₽</b></div><div class="vrow tot"><span>Налог 13% с 50 000 ₽</span><b style="color:var(--tomato)">6 500 ₽</b></div></div>'},
+   {t:"Проценты по всем банкам складываются. Учитываются в том году, когда их выплатили: вклад на 2 года с выплатой в конце даст весь доход в одном году."},
+   {t:"Декларацию подавать не нужно. Банки сами передают данные в налоговую, она считает налог и присылает уведомление в личный кабинет. Оплатить — до 1 декабря следующего года."}],
+  rule:"Налог на проценты платится только сверх необлагаемого лимита и по уведомлению из налоговой.",
+  pro:"Если вклад заканчивается в конце декабря, а лимит этого года почти исчерпан, выберите срок, чтобы проценты пришли уже в январе — они попадут в следующий год.",
+  q:[
+   {q:"Проценты за год — 210 000 ₽, необлагаемый лимит — 160 000 ₽. Сколько составит налог 13%?",o:["6 500 ₽","27 300 ₽","20 800 ₽","0 ₽"],a:0,e:"(210 000 − 160 000) × 13% = 6 500 ₽."},
+   {tf:true,q:"«Чтобы заплатить налог с процентов, нужно подать декларацию».",a:false,e:"Банки передают данные сами, налоговая присылает уведомление."},
+   {q:"До какого срока оплатить налог с процентов за прошлый год?",o:["До 1 декабря","До 30 апреля","До 31 декабря","До 15 июля"],a:0,e:"Налог по уведомлению оплачивается до 1 декабря следующего года."},
+   {tf:true,q:"«Проценты по накопительным счетам тоже входят в расчёт налога».",a:true,e:"Учитываются проценты по всем вкладам и счетам во всех банках."},
+   {q:"Вклад на 2 года с выплатой процентов в конце срока. Когда проценты учтут для налога?",o:["В году выплаты","Поровну в каждом году","В году открытия","Не учтут вовсе"],a:0,e:"Доход считается полученным в момент выплаты."}]},
+
+ {film:"Унесённые ветром",title:"Инфляция и реальная доходность",min:4,
+  cards:[
+   {t:"Инфляция — рост цен. Если цены выросли на 8%, на ту же сумму можно купить примерно на 8% меньше. Деньги без процентов тихо теряют силу."},
+   {t:"Реальная доходность = ставка − инфляция. Вклад под 14% при инфляции 8% даёт около +6% реального роста. Вклад под 7% при инфляции 9% — около −2%: денег больше, а купить на них можно меньше.",
+    viz:'<div class="vz"><div class="vrow"><span>14% − 8% инфляции</span><b style="color:var(--teal)">≈ +6%</b></div><div class="vrow"><span>7% − 9% инфляции</span><b style="color:var(--tomato)">≈ −2%</b></div><div class="vrow"><span>Наличные под матрасом</span><b style="color:var(--tomato)">− вся инфляция</b></div></div>'},
+   {t:"Ставки по вкладам движутся вслед за ключевой ставкой ЦБ. Когда ключевая ставка высокая, вклады обычно обгоняют инфляцию. Когда её снижают, ставки по новым вкладам падают."},
+   {t:"Поэтому важен момент. Ждёте снижения ставок — зафиксируйте высокую ставку на длинный срок. Ждёте роста — выбирайте короткие вклады или накопительный счёт."}],
+  rule:"Сравнивайте доходность не с нулём, а с инфляцией.",
+  pro:"Следите за решениями ЦБ по ключевой ставке: банки пересматривают ставки по вкладам за несколько дней до и после них.",
+  q:[
+   {q:"Вклад — 12% годовых, инфляция — 9%. Какая примерно реальная доходность?",o:["+3%","+21%","−3%","+12%"],a:0,e:"12% − 9% ≈ 3% реального роста."},
+   {tf:true,q:"«Деньги, которые лежат дома, сохраняют свою покупательную способность».",a:false,e:"Их номинал не меняется, но цены растут — купить на них со временем можно меньше."},
+   {q:"Ставки начали снижаться. Что разумнее сделать со свободными деньгами на год?",o:["Зафиксировать текущую ставку на длинном вкладе","Держать на карте без процентов","Открыть вклад на 1 месяц","Снять наличными"],a:0,e:"Длинный вклад сохранит высокую ставку, даже если новые вклады подешевеют."},
+   {tf:true,q:"«Ставки по вкладам обычно следуют за ключевой ставкой ЦБ».",a:true,e:"Банки ориентируются на ключевую ставку, когда устанавливают ставки по вкладам и кредитам."},
+   {q:"Вклад под 7% при инфляции 9%. Что происходит с деньгами?",o:["Покупательная способность падает примерно на 2%","Растёт на 16%","Растёт на 7%","Не меняется"],a:0,e:"Рублей становится больше, но они дешевеют быстрее, чем растут."}]},
+
+ {film:"Укрощение строптивого",title:"Лестница вкладов и выбор срока",min:5,
+  cards:[
+   {t:"Лестница вкладов — способ получить и ставку, и гибкость. Сумму делят на несколько вкладов с разными сроками: например, 3, 6, 9 и 12 месяцев.",
+    viz:'<div class="vz"><div class="vbar"><i style="width:25%;background:var(--sky);color:var(--film)">3 мес</i><i style="width:25%;background:var(--teal);color:var(--film)">6 мес</i><i style="width:25%;background:var(--gold);color:var(--film)">9 мес</i><i style="width:25%;background:var(--tomato)">12 мес</i></div><p class="vcap">400 000 ₽ = 4 вклада по 100 000 ₽. Каждые 3 месяца один из них заканчивается.</p></div>'},
+   {t:"Каждые несколько месяцев один вклад заканчивается. Деньги можно забрать без потери процентов или переложить на год вперёд по текущей ставке. Так часть суммы всегда скоро будет доступна."},
+   {t:"Удобная схема для всех денег: подушка — на накопительном счёте, цели на 1–3 года — на вкладах, долгие цели — в инвестициях, например на ИИС."},
+   {t:"Перед открытием проверьте автопролонгацию. Многие вклады продлеваются сами, но по ставке на дату продления — она может быть заметно ниже. Иногда выгоднее забрать деньги и открыть новый вклад."}],
+  rule:"Делите сумму на несколько вкладов с разными сроками — так вы получаете и доход, и доступ к деньгам.",
+  pro:"Ставьте в календарь дату окончания каждого вклада и за неделю сравнивайте предложения. Автопролонгация почти никогда не бывает самым выгодным вариантом.",
+  q:[
+   {q:"400 000 ₽ разделили на 4 вклада: на 3, 6, 9 и 12 месяцев. Как часто один из них заканчивается?",o:["Каждые 3 месяца","Раз в год","Каждый месяц","Никогда"],a:0,e:"Это и есть лестница: регулярный доступ к части денег без потери процентов."},
+   {tf:true,q:"«При автопролонгации вклад всегда продлевается по прежней ставке».",a:false,e:"Обычно — по ставке, которая действует на дату продления."},
+   {q:"Куда разумнее положить деньги на первый взнос за машину через 2 года?",o:["На вклад или лестницу вкладов","В акции","Держать наличными","На карту без процентов"],a:0,e:"Для цели на 1–3 года важны сохранность и предсказуемый доход."},
+   {q:"Где держать подушку безопасности?",o:["На накопительном счёте","На вкладе на 3 года без снятия","В лестнице из 12-месячных вкладов","В акциях"],a:0,e:"Подушка должна быть доступна в любой день."},
+   {tf:true,q:"«Перед окончанием вклада стоит сравнить предложения других банков».",a:true,e:"Новые вклады часто дают ставку выше, чем ставка автопролонгации."}]}
+ ]},
+{id:"loan",name:"Потребительский кредит",tag:"«Иллюзия обмана»",
+ desc:"Реальная цена кредита, страховка, как устроен платёж, как гасить досрочно, когда это невыгодно и что делать, если платить нечем",
+ cheer:"Долги больше не командуют вами",
+ check:{p:"кредит",i:[
+  "ПСК в рамке на первой странице договора",
+  "Обязательна ли страховка и сколько она стоит",
+  "Ставка с отказом от страховки",
+  "Итоговая переплата за весь срок",
+  "Как подать заявление на досрочное погашение",
+  "Платёж по всем кредитам — не больше 40–50% дохода"]},
+ lessons:[
+ {film:"Иллюзия обмана",title:"Реальная цена кредита",min:5,
+  cards:[
+   {t:"Вове нужно 300 000 ₽. В рекламе — «от 9,9%». Но «от» значит «для самых надёжных клиентов». Реальную цену показывает ПСК — полная стоимость кредита. По закону она указана в рамке в правом верхнем углу первой страницы договора."},
+   {t:"Переплата — всё, что вы отдадите сверх суммы кредита. 300 000 ₽ на 3 года под 20% — это платёж около 11 150 ₽ в месяц и переплата около 101 000 ₽."},
+   {t:"Чем дольше срок, тем меньше платёж и тем больше переплата. Маленький платёж кажется удобным, но обходится дороже.",
+    viz:'<div class="vz"><p class="vcap">300 000 ₽ под 20%</p><div class="vrow"><span>На 3 года: ≈11 150 ₽ в месяц</span><b>переплата ≈101 000 ₽</b></div><div class="vrow"><span>На 5 лет: ≈7 950 ₽ в месяц</span><b style="color:var(--tomato)">переплата ≈177 000 ₽</b></div></div>'},
+   {t:"Кредит оправдан, когда покупка сохраняет ценность или приносит доход: обучение, инструмент для работы, срочное лечение. Кредит на отпуск или новый телефон — это покупка в рассрочку по цене на треть дороже."}],
+  rule:"Смотрите на ПСК и итоговую переплату, а не на ставку в рекламе и размер платежа.",
+  pro:"Попросите банк показать график платежей до подписания. В последней строке — сколько вы отдадите в сумме. Эта цифра отрезвляет лучше любой ставки.",
+  q:[
+   {q:"Где по закону указана полная стоимость кредита?",o:["В рамке в правом верхнем углу первой страницы договора","В рекламе банка","На последней странице мелким шрифтом","Её нужно считать самому"],a:0,e:"ПСК обязательно указывается в рамке на первой странице, рядом — сумма в рублях."},
+   {q:"Платёж 11 150 ₽ в месяц на 36 месяцев за кредит 300 000 ₽. Какая переплата?",o:["≈101 000 ₽","≈36 000 ₽","≈300 000 ₽","≈11 000 ₽"],a:0,e:"11 150 × 36 ≈ 401 400 ₽. Минус 300 000 ₽ — около 101 000 ₽ переплаты."},
+   {tf:true,q:"«Чем меньше ежемесячный платёж, тем выгоднее кредит».",a:false,e:"Меньший платёж обычно означает более долгий срок и большую переплату."},
+   {q:"Для чего кредит оправдан скорее всего?",o:["Курсы, после которых вырастет доход","Новый телефон, потому что старый надоел","Отпуск","Подарок на праздник"],a:0,e:"Кредит окупается, когда покупка приносит доход или сохраняет ценность."},
+   {tf:true,q:"«Ставка „от 9,9%“ в рекламе — это ставка, которую получит каждый».",a:false,e:"«От» — минимальная ставка для лучших заёмщиков. Вашу ставку банк назначит после проверки."}]},
+
+ {film:"Двойная страховка",title:"Страховка и период охлаждения",min:4,
+  cards:[
+   {t:"Вместе с кредитом часто предлагают страховку жизни и здоровья. Обычно она добровольная. Банк может дать ставку ниже со страховкой — сравнивайте ПСК с ней и без неё, а не только ставку."},
+   {t:"От добровольной страховки, оформленной вместе с кредитом, можно отказаться в течение 30 дней и вернуть деньги. Но если в договоре написано, что без страховки ставка выше, банк может её поднять."},
+   {t:"Если вы досрочно погасили кредит полностью, можно вернуть часть стоимости страховки за оставшийся срок, если она оформлялась для обеспечения кредита. Подайте заявление страховщику."},
+   {t:"У самого кредита тоже есть «период охлаждения». Потребкредит можно вернуть в течение 14 дней после получения, а целевой — в течение 30 дней, заплатив проценты только за фактические дни."}],
+  rule:"Сравнивайте кредит со страховкой и без неё по ПСК. От лишней страховки можно отказаться в течение 30 дней.",
+  pro:"Спросите в банке две цифры: ПСК со страховкой и ПСК без неё. Если разница в пользу страховки мала, а сама страховка дорогая — откажитесь.",
+  q:[
+   {q:"Кредит со страховкой — ставка 16%, но страховка стоит 30 000 ₽. Без страховки — 19%. Как честно сравнить?",o:["По ПСК обоих вариантов","По ставке: 16% меньше","По размеру платежа","По сроку"],a:0,e:"ПСК учитывает и ставку, и обязательные платежи. Дешёвая ставка с дорогой страховкой может оказаться дороже."},
+   {tf:true,q:"«От добровольной страховки по кредиту можно отказаться в течение 30 дней».",a:true,e:"Это период охлаждения. Но проверьте, не повысится ли при отказе ставка."},
+   {q:"Вова взял потребкредит и через 10 дней передумал. Что он может сделать?",o:["Вернуть кредит, заплатив проценты только за 10 дней","Ничего, договор подписан","Вернуть только через суд","Вернуть, заплатив штраф 10%"],a:0,e:"Потребкредит можно вернуть в течение 14 дней без уведомления банка, заплатив проценты за фактические дни."},
+   {tf:true,q:"«После полного досрочного погашения можно вернуть часть страховки за оставшийся срок».",a:true,e:"Если страховка оформлялась для обеспечения кредита — да, по заявлению страховщику."},
+   {q:"Что сделать перед отказом от страховки?",o:["Проверить в договоре, не повысится ли ставка","Ничего, отказ всегда выгоден","Закрыть кредит","Сменить банк"],a:0,e:"Иногда без страховки ставка растёт так, что отказ невыгоден. Нужно посчитать."}]},
+
+ {film:"Время",title:"Как устроен платёж",min:5,
+  cards:[
+   {t:"Большинство потребкредитов — с аннуитетным платежом: каждый месяц вы платите одинаковую сумму. Но внутри платежа соотношение меняется."},
+   {t:"В начале срока большая часть платежа уходит на проценты, потому что долг большой. Ближе к концу — почти всё идёт на погашение самого долга.",
+    viz:'<div class="vz"><p class="vcap">300 000 ₽ под 20% на 3 года, платёж 11 150 ₽</p><p class="vcap">Первый платёж</p><div class="vbar"><i style="width:45%;background:var(--tomato)">Проценты 5 000</i><i style="width:55%;background:var(--teal);color:var(--film)">Долг 6 150</i></div><p class="vcap">Последний платёж</p><div class="vbar"><i style="width:3%;background:var(--tomato)"></i><i style="width:97%;background:var(--teal);color:var(--film)">Долг ≈10 970</i></div></div>'},
+   {t:"Бывает и дифференцированный платёж: долг гасится равными частями, а проценты считаются на остаток. Первые платежи самые большие, потом уменьшаются. Переплата меньше, но в начале нагрузка выше."},
+   {t:"Главный вывод: досрочное погашение выгоднее всего в первой половине срока, пока основная часть платежа уходит на проценты. В конце срока экономия заметно меньше."}],
+  rule:"Гасить досрочно выгоднее в начале срока: тогда вы сокращаете долг, с которого начисляются проценты.",
+  pro:"В приложении банка откройте график платежей и посмотрите столбцы «проценты» и «основной долг». Сразу станет видно, сколько вы отдаёте банку каждый месяц.",
+  q:[
+   {q:"Долг 300 000 ₽ под 20% годовых. Сколько процентов в первом платеже?",o:["5 000 ₽","60 000 ₽","500 ₽","11 150 ₽"],a:0,e:"300 000 × 20% / 12 = 5 000 ₽. Остальная часть платежа идёт в счёт долга."},
+   {tf:true,q:"«При аннуитете в каждом платеже одинаковая доля процентов».",a:false,e:"Сумма платежа одинаковая, но доля процентов со временем уменьшается."},
+   {q:"Когда досрочное погашение даёт самую большую экономию?",o:["В первой половине срока","В последний месяц","Всегда одинаково","Только после половины срока"],a:0,e:"В начале проценты начисляются на большой долг, поэтому уменьшение долга экономит больше."},
+   {q:"Чем дифференцированный платёж отличается от аннуитета?",o:["Первые платежи больше, потом уменьшаются, переплата меньше","Платёж одинаковый весь срок","Проценты не начисляются","Он есть только у ипотеки"],a:0,e:"Долг гасится равными частями, поэтому проценты быстро снижаются."},
+   {tf:true,q:"«В графике платежей можно увидеть, какая часть платежа идёт на проценты».",a:true,e:"График показывает разбивку каждого платежа на проценты и основной долг."}]},
+
+ {film:"Форсаж",title:"Досрочное погашение: как правильно",min:5,
+  cards:[
+   {t:"По закону вы можете гасить потребкредит досрочно — частично или полностью — без штрафов. Нужно подать заявление в приложении или в отделении. Срок уведомления указан в договоре: он не может быть больше 30 дней, а многие банки принимают заявление в день платежа."},
+   {t:"При частичном погашении банк спросит, что уменьшить: срок или платёж. Уменьшение срока экономит больше процентов. Уменьшение платежа снижает ежемесячную нагрузку."},
+   {t:"Пример. Кредит 300 000 ₽ под 20% на 3 года. Через год Вова вносит досрочно 100 000 ₽.",
+    viz:'<div class="vz"><div class="vrow"><span>Уменьшить срок: осталось ≈12 платежей вместо 24</span><b style="color:var(--teal)">экономия ≈35 000 ₽</b></div><div class="vrow"><span>Уменьшить платёж: ≈6 060 ₽ вместо 11 150 ₽</span><b>экономия ≈22 000 ₽</b></div></div>'},
+   {t:"Порядок действий: подать заявление, держать нужную сумму на счёте к дате списания, проверить новый график. После полного погашения — взять справку о закрытии кредита и отсутствии долга."}],
+  rule:"Хотите максимум экономии — уменьшайте срок. Нужна передышка — уменьшайте платёж.",
+  pro:"Удобная середина: уменьшать платёж, но продолжать платить прежнюю сумму. Так нагрузка по договору ниже, а долг уходит быстрее.",
+  q:[
+   {tf:true,q:"«Банк может взять штраф за досрочное погашение потребкредита».",a:false,e:"По закону досрочное погашение потребкредита возможно без штрафов и комиссий."},
+   {q:"Что сэкономит больше процентов при частичном досрочном погашении?",o:["Уменьшение срока","Уменьшение платежа","Одинаково","Ни то, ни другое"],a:0,e:"При уменьшении срока вы быстрее избавляетесь от долга, и проценты начисляются меньше месяцев."},
+   {q:"Вове тяжело платить 11 150 ₽ в месяц, и он вносит досрочно 100 000 ₽. Что ему важнее выбрать?",o:["Уменьшение платежа","Уменьшение срока","Ничего не выбирать","Новый кредит"],a:0,e:"Когда цель — снизить нагрузку, уменьшают платёж. Экономия меньше, но жить легче."},
+   {q:"Что сделать после полного досрочного погашения?",o:["Взять справку о закрытии кредита и отсутствии долга","Ничего","Сразу взять новый кредит","Разрезать карту"],a:0,e:"Справка защищает от ошибок банка и копеечных «хвостов» по процентам."},
+   {tf:true,q:"«Для досрочного погашения нужно подать заявление в банк».",a:true,e:"Без заявления банк спишет только обычный платёж, а лишние деньги останутся на счёте."}]},
+
+ {film:"Обратная сторона Луны",title:"Когда гасить досрочно невыгодно",min:5,
+  cards:[
+   {t:"Досрочное погашение — не всегда лучший ход. Первое правило: не отдавайте банку последние деньги. Без подушки любая поломка заставит снова занимать — и, скорее всего, дороже."},
+   {t:"Второе: сначала самые дорогие долги. Если есть кредитка под 35%, займ МФО и кредит под 18%, лишние деньги — на кредитку и займ. Дешёвую ипотеку — в последнюю очередь."},
+   {t:"Третье: когда ставка по кредиту ниже доходности вклада. Например, льготная или семейная ипотека под 2–6%. Свободные деньги на вкладе принесут больше, чем досрочное погашение сэкономит.",
+    viz:'<div class="vz"><p class="vcap">500 000 ₽ свободных денег, ипотека под 6%, вклад под 14%</p><div class="vrow"><span>Погасить ипотеку досрочно</span><b>экономия ≈30 000 ₽ в год</b></div><div class="vrow"><span>Положить на вклад</span><b style="color:var(--teal)">доход ≈70 000 ₽ в год</b></div></div>'},
+   {t:"Четвёртое: по ипотеке государство возвращает 13% с уплаченных процентов — до 390 000 ₽. Реальная ставка становится ниже, и досрочное погашение выгодно ещё меньше. А в конце срока аннуитета проценты уже маленькие, и экономия от досрочки небольшая."}],
+  rule:"Досрочно гасят самые дорогие долги и только после того, как собрана подушка.",
+  pro:"Перед досрочным погашением сравните две цифры: ставку по кредиту и ставку лучшего вклада. Если вклад выше — подумайте ещё раз.",
+  q:[
+   {q:"У Вовы 200 000 ₽ — все его сбережения — и кредит под 18%. Что разумнее?",o:["Оставить подушку, а досрочно гасить только сверх неё","Отдать всё банку","Взять ещё кредит","Положить всё в акции"],a:0,e:"Без подушки любая неприятность снова превратится в долг."},
+   {q:"Кредитка под 35%, потребкредит под 18% и ипотека под 6%. Куда в первую очередь направить лишние деньги?",o:["На кредитку","На ипотеку","На потребкредит","Поровну"],a:0,e:"Каждый рубль, внесённый в самый дорогой долг, экономит больше всего."},
+   {tf:true,q:"«Семейную ипотеку под 6% всегда выгодно гасить досрочно».",a:false,e:"Если вклады дают больше 6%, свободные деньги выгоднее держать на вкладе."},
+   {q:"500 000 ₽ под 14% на вкладе дадут за год примерно:",o:["70 000 ₽","7 000 ₽","140 000 ₽","30 000 ₽"],a:0,e:"500 000 × 14% = 70 000 ₽ до налога. Экономия на ипотеке под 6% — около 30 000 ₽."},
+   {tf:true,q:"«В конце срока аннуитетного кредита досрочное погашение экономит меньше, чем в начале».",a:true,e:"Ближе к концу проценты в платеже уже маленькие."}]},
+
+ {film:"Титаник",title:"Нагрузка, рефинансирование и если платить нечем",min:5,
+  cards:[
+   {t:"Долговая нагрузка — доля дохода, которая уходит на кредиты. До 30% — комфортно. 30–50% — тяжело. Больше 50% — опасно: банки неохотно одобряют новые кредиты, а любая неприятность ведёт к просрочке."},
+   {t:"Рефинансирование — новый кредит под меньшую ставку, которым гасят старый. Имеет смысл, если ставка ниже хотя бы на несколько пунктов. Сравнивайте по ПСК и берите ровно сумму долга, без «добора на отпуск»."},
+   {t:"Если платить стало нечем, не прячьтесь от банка и не берите займ в МФО. Напишите в банк заявление на реструктуризацию: отсрочка или снижение платежа. При падении дохода больше чем на 30% по закону можно оформить кредитные каникулы — в пределах лимитов по сумме кредита."},
+   {t:"Крайний вариант — банкротство. Внесудебное через МФЦ бесплатно при долге от 25 000 ₽ до 1 млн ₽ и определённых условиях. Это серьёзные последствия для кредитной истории, поэтому сначала — переговоры с банком."}],
+  rule:"Если на кредиты уходит больше половины дохода — пора гасить и договариваться с банком, а не занимать.",
+  pro:"Попросите свой банк снизить ставку, показав одобренное предложение конкурента. Банку часто выгоднее уступить, чем потерять клиента.",
+  q:[
+   {q:"Доход Вовы — 80 000 ₽, платежи по кредитам — 44 000 ₽. Какая у него нагрузка?",o:["55% — опасно","30% — комфортно","44% — нормально","80%"],a:0,e:"44 000 / 80 000 = 55%. Больше половины дохода уходит банкам."},
+   {q:"Кредит под 24%, предлагают рефинансирование под 17% и «добрать» 100 000 ₽. Что разумно?",o:["Рефинансировать ровно на сумму долга","Взять с добором","Отказаться от рефинансирования","Взять займ в МФО"],a:0,e:"Цель — платить меньше. Добор — это новый долг, который съест выгоду."},
+   {tf:true,q:"«Если платить нечем, лучше не отвечать на звонки банка».",a:false,e:"Чем раньше вы обратитесь в банк, тем больше вариантов: реструктуризация, каникулы, отсрочка."},
+   {q:"Доход Вовы упал на 40%. На что он может рассчитывать по закону?",o:["Кредитные каникулы в пределах лимитов","Списание всего долга","Новый кредит без проверки","Ни на что"],a:0,e:"Кредитные каникулы можно оформить при снижении дохода более чем на 30%."},
+   {tf:true,q:"«Займ в МФО, чтобы заплатить по кредиту, — хороший выход».",a:false,e:"Ставки МФО в разы выше. Так долг только растёт."}]}
+ ]},
+{id:"tax",name:"Налоги и вычеты",tag:"«Ирония судьбы»",
+ desc:"Как устроен НДФЛ, вычеты за лечение, учёбу и спорт, за квартиру, ИИС-3, программа долгосрочных сбережений и как подать заявление",
+ cheer:"Государство теперь возвращает вам ваши деньги",
+ check:{p:"вычет без ошибок",i:[
+  "Вы платили НДФЛ 13–15% в том году, за который просите вычет",
+  "Договор и документы об оплате на ваше имя",
+  "Справка для налоговой от клиники, вуза или фитнес-клуба",
+  "Лимиты: 150 000 ₽ социальных, 2 млн ₽ за жильё, 400 000 ₽ на долгосрочные сбережения",
+  "Срок — не больше трёх лет назад",
+  "Подача в личном кабинете налоговой, без посредников"]},
+ lessons:[
+ {film:"Служебный роман",title:"Как устроен НДФЛ",min:4,
+  cards:[
+   {t:"С зарплаты Вовы удерживают НДФЛ — налог на доходы. Работодатель платит его сам, поэтому «на руки» Вова получает уже после налога."},
+   {t:"Ставка зависит от годового дохода: 13% — до 2,4 млн ₽ в год, с суммы сверх — 15%, а с очень больших доходов ещё выше. Для большинства ставка — 13%.",
+    viz:'<div class="vz"><p class="vcap">Оклад 80 000 ₽ в месяц</p><div class="vrow"><span>Налог 13%</span><b>10 400 ₽</b></div><div class="vrow"><span>На руки</span><b>69 600 ₽</b></div><div class="vrow tot"><span>НДФЛ за год</span><b style="color:var(--gold)">124 800 ₽</b></div></div>'},
+   {t:"Налоговый вычет — способ вернуть часть уже уплаченного НДФЛ, если вы потратились на то, что государство поддерживает: лечение, учёбу, спорт, жильё, долгосрочные сбережения."},
+   {t:"Главное ограничение: вернуть можно не больше, чем вы заплатили. Нет официальной зарплаты — нет НДФЛ, а значит, и вычета. Доход самозанятого облагается другим налогом, поэтому вычеты по НДФЛ с него не получить."}],
+  rule:"Вычет возвращает часть уплаченного НДФЛ, но не больше налога, который вы реально заплатили.",
+  pro:"Посмотрите в личном кабинете налоговой раздел «Доходы»: там видно, сколько НДФЛ за вас заплатили за каждый год. Это ваш потолок возврата.",
+  q:[
+   {q:"Оклад — 60 000 ₽ в месяц. Сколько НДФЛ 13% удержат за месяц?",o:["7 800 ₽","6 000 ₽","13 000 ₽","780 ₽"],a:0,e:"60 000 × 13% = 7 800 ₽. На руки — 52 200 ₽."},
+   {tf:true,q:"«Вычет можно получить, даже если я не платил НДФЛ».",a:false,e:"Вычет — это возврат уже уплаченного налога. Нечего вернуть — нет вычета."},
+   {q:"За год с Вовы удержали 124 800 ₽ НДФЛ, а положенный вычет — 130 000 ₽. Сколько вернут за этот год?",o:["124 800 ₽","130 000 ₽","0 ₽","5 200 ₽"],a:0,e:"Не больше уплаченного налога. Остаток имущественного вычета можно перенести на следующие годы."},
+   {tf:true,q:"«Ставка НДФЛ 15% применяется только к части дохода сверх 2,4 млн ₽ в год».",a:true,e:"Шкала прогрессивная: повышенная ставка действует только на превышение."},
+   {q:"Кто обычно платит НДФЛ с зарплаты?",o:["Работодатель, удерживая его из зарплаты","Сам сотрудник раз в год","Банк","Никто"],a:0,e:"Работодатель — налоговый агент: удерживает налог и перечисляет его в бюджет."}]},
+
+ {film:"Доживём до понедельника",title:"Вычеты за лечение, учёбу и спорт",min:5,
+  cards:[
+   {t:"Социальные вычеты возвращают 13% расходов на лечение, обучение и спорт. Общий лимит — 150 000 ₽ расходов в год, то есть до 19 500 ₽ возврата."},
+   {t:"Лечение и лекарства: свои, супруга, родителей и детей. Дорогостоящее лечение из специального перечня — без лимита. Нужна справка об оплате медицинских услуг для налоговой от клиники."},
+   {t:"Обучение: своё — в любой форме, детей, братьев и сестёр до 24 лет — очно. На каждого ребёнка отдельный лимит — 110 000 ₽ в год. Спорт: фитнес-клубы и секции, которые есть в официальном перечне Минспорта.",
+    viz:'<div class="vz"><div class="vrow"><span>Лечение 100 000 ₽</span><b>вернут 13 000 ₽</b></div><div class="vrow"><span>Лечение 120 000 + учёба 80 000 ₽</span><b>лимит 150 000 → 19 500 ₽</b></div><div class="vrow"><span>Учёба ребёнка 110 000 ₽</span><b>отдельно 14 300 ₽</b></div></div>'},
+   {t:"Вернуть деньги можно за три последних года. Всё больше клиник, вузов и клубов сами передают данные в налоговую — тогда вычет оформляется в упрощённом порядке, без справок."}],
+  rule:"Социальные вычеты — 13% от расходов до 150 000 ₽ в год. Заявить их можно за три последних года.",
+  pro:"Сохраните договоры и чеки за лечение и учёбу за три года и проверьте, не забыли ли вы что-то заявить. Деньги часто «лежат» именно там.",
+  q:[
+   {q:"Вова заплатил за лечение 100 000 ₽. Сколько можно вернуть?",o:["13 000 ₽","100 000 ₽","19 500 ₽","1 300 ₽"],a:0,e:"100 000 × 13% = 13 000 ₽."},
+   {q:"Лечение — 120 000 ₽, своя учёба — 80 000 ₽. Сколько вернут максимум?",o:["19 500 ₽","26 000 ₽","13 000 ₽","200 000 ₽"],a:0,e:"Общий лимит социальных вычетов — 150 000 ₽. 150 000 × 13% = 19 500 ₽."},
+   {tf:true,q:"«Вычет за учёбу ребёнка до 24 лет на очной форме положен родителю».",a:true,e:"Да, с отдельным лимитом 110 000 ₽ в год на каждого ребёнка."},
+   {tf:true,q:"«Вычет за спорт положен за любой абонемент в любом зале».",a:false,e:"Только за организации из перечня Минспорта и за определённые услуги."},
+   {q:"За какой период можно заявить социальный вычет?",o:["За три последних года","Только за прошлый год","За 10 лет","Только в год оплаты"],a:0,e:"Подать можно за три предыдущих года."}]},
+
+ {film:"Москва слезам не верит",title:"Вычет за квартиру",min:5,
+  cards:[
+   {t:"При покупке жилья можно вернуть 13% от его стоимости, но не больше чем с 2 млн ₽, — до 260 000 ₽. Вычет переносится на следующие годы, пока не вернёте всю сумму."},
+   {t:"Если квартира в ипотеке, есть второй вычет — на уплаченные проценты: 13% от процентов до 3 млн ₽, то есть до 390 000 ₽. Его получают по мере того, как платите проценты.",
+    viz:'<div class="vz"><div class="vrow"><span>За покупку (лимит 2 млн ₽)</span><b>до 260 000 ₽</b></div><div class="vrow"><span>За проценты по ипотеке (лимит 3 млн ₽)</span><b>до 390 000 ₽</b></div><div class="vrow tot"><span>Всего</span><b style="color:var(--gold)">до 650 000 ₽</b></div></div>'},
+   {t:"Основной вычет можно «добрать» по нескольким объектам, пока не исчерпан лимит 2 млн ₽. Вычет по процентам — только по одному объекту. Супруги получают вычет каждый в пределах своего лимита."},
+   {t:"Как получать: раз в год по декларации — крупной суммой, или через работодателя — тогда с зарплаты не удерживают НДФЛ и она каждый месяц больше на 13%."}],
+  rule:"За покупку жилья вернут до 260 000 ₽, за проценты по ипотеке — ещё до 390 000 ₽.",
+  pro:"Если квартира куплена в браке, каждый супруг может заявить вычет до 2 млн ₽. Распределите доли так, чтобы оба получили максимум.",
+  q:[
+   {q:"Квартира стоит 5 млн ₽. Какой максимальный вычет за покупку?",o:["260 000 ₽","650 000 ₽","500 000 ₽","2 000 000 ₽"],a:0,e:"Лимит — 2 млн ₽ расходов: 2 000 000 × 13% = 260 000 ₽."},
+   {q:"За год Вова заплатил 200 000 ₽ процентов по ипотеке. Сколько можно вернуть за этот год?",o:["26 000 ₽","200 000 ₽","390 000 ₽","2 600 ₽"],a:0,e:"200 000 × 13% = 26 000 ₽. Общий лимит по процентам — 390 000 ₽ за весь срок."},
+   {tf:true,q:"«Если за год налога не хватило, остаток вычета за покупку сгорает».",a:false,e:"Остаток переносится на следующие годы."},
+   {tf:true,q:"«Вычет можно получать через работодателя каждый месяц».",a:true,e:"Тогда с зарплаты не удерживают НДФЛ, пока не исчерпан вычет за год."},
+   {q:"Квартира за 1,5 млн ₽. Что с оставшимися 500 000 ₽ лимита основного вычета?",o:["Можно использовать при покупке другого жилья","Сгорают","Переходят на ипотечный вычет","Можно отдать другу"],a:0,e:"Основной вычет можно добрать по другому объекту, пока не исчерпан лимит 2 млн ₽."}]},
+
+ {film:"Интерстеллар",title:"ИИС-3: вычет и доход без налога",min:5,
+  cards:[
+   {t:"Индивидуальный инвестиционный счёт третьего типа — ИИС-3 — даёт сразу две льготы. Первая: вычет 13% с взносов до 400 000 ₽ в год, то есть до 52 000 ₽ возврата."},
+   {t:"Вторая: доход от инвестиций на счёте освобождается от налога — до 30 млн ₽ за всё время, если держать счёт минимальный срок."},
+   {t:"Минимальный срок зависит от года открытия: 5 лет для счетов, открытых в 2024–2026 годах. Дальше — на год больше каждый год, до 10 лет. Закрыли раньше — полученные вычеты придётся вернуть.",
+    viz:'<div class="vz"><div class="vrow"><span>Открыт в 2024–2026</span><b>5 лет</b></div><div class="vrow"><span>Открыт в 2027</span><b>6 лет</b></div><div class="vrow"><span>Открыт в 2031 и позже</span><b>10 лет</b></div></div>'},
+   {t:"Важные детали: у одного человека может быть до трёх ИИС-3. Лимит вычета 400 000 ₽ общий для всех ИИС-3 и программы долгосрочных сбережений. На счёте — только российские активы, а стоимость инвестиций может падать."}],
+  rule:"ИИС-3 — для денег, которые не понадобятся минимум 5 лет. Лимит вычета — 400 000 ₽ в год вместе с ПДС.",
+  pro:"Открыть счёт можно заранее и без денег: срок начинает идти с даты договора, а пополнить можно позже.",
+  q:[
+   {q:"Вова внёс на ИИС-3 300 000 ₽ за год. Сколько вычета можно получить при ставке 13%?",o:["39 000 ₽","52 000 ₽","30 000 ₽","300 000 ₽"],a:0,e:"300 000 × 13% = 39 000 ₽, если НДФЛ за год заплачен не меньше этой суммы."},
+   {q:"Взносы: 250 000 ₽ в программу долгосрочных сбережений и 250 000 ₽ на ИИС-3. С какой суммы вычет?",o:["400 000 ₽","500 000 ₽","250 000 ₽","Ни с какой"],a:0,e:"Лимит 400 000 ₽ общий для ИИС-3 и ПДС."},
+   {tf:true,q:"«ИИС-3, открытый в 2026 году, можно закрыть через 3 года без потери льгот».",a:false,e:"Для счетов, открытых в 2024–2026 годах, минимальный срок — 5 лет."},
+   {tf:true,q:"«Инвестиции на ИИС-3 могут подешеветь».",a:true,e:"Налоговые льготы не защищают от рыночного риска."},
+   {q:"Что будет, если закрыть ИИС-3 раньше срока?",o:["Вычеты придётся вернуть","Ничего","Вычеты удвоятся","Счёт продлится автоматически"],a:0,e:"Досрочное закрытие лишает льгот, и полученные вычеты возвращают государству."}]},
+
+ {film:"Белое солнце пустыни",title:"Программа долгосрочных сбережений",min:5,
+  cards:[
+   {t:"Программа долгосрочных сбережений — ПДС — работает через негосударственные пенсионные фонды. Вы делаете взносы, фонд их инвестирует, а государство добавляет своё."},
+   {t:"Плюсы: софинансирование от государства — до 36 000 ₽ в год, сумма зависит от дохода; налоговый вычет — в общем лимите 400 000 ₽ с ИИС-3; государственная гарантия сохранности — до 2,8 млн ₽."},
+   {t:"Когда можно получить деньги: через 15 лет участия или с 55 лет для женщин и 60 для мужчин. Варианты — пожизненные выплаты, выплаты на срок от 10 лет или единовременно, если накоплений немного. Досрочно — в особых жизненных ситуациях, например на дорогостоящее лечение."},
+   {t:"Важно: выплаты пожизненные не наследуются, а накопления до их назначения и срочные выплаты — наследуются. Для вычета людям предпенсионного возраста нужно держать договор минимум 5 лет, если он заключён в 2024–2026 годах."}],
+  rule:"ПДС — для долгих целей: деньги замораживаются на 15 лет, зато государство добавляет до 36 000 ₽ в год и даёт вычет.",
+  pro:"Чтобы получить максимальное софинансирование, узнайте у фонда, какой минимальный взнос в год нужен при вашем доходе, и вносите его до конца года.",
+  q:[
+   {q:"Сколько максимум может добавить государство к взносам в ПДС за год?",o:["До 36 000 ₽","До 400 000 ₽","До 2,8 млн ₽","Ничего"],a:0,e:"Софинансирование — до 36 000 ₽ в год, размер зависит от дохода участника."},
+   {tf:true,q:"«Деньги из ПДС можно забрать в любой момент без потерь».",a:false,e:"Без потерь — через 15 лет, с 55/60 лет или в особых жизненных ситуациях."},
+   {q:"Какой лимит вычета по взносам в ПДС?",o:["400 000 ₽ в год вместе с ИИС-3","150 000 ₽ вместе с лечением","2 млн ₽","Без лимита"],a:0,e:"Вычет на долгосрочные сбережения — общий лимит 400 000 ₽ для ПДС и ИИС-3."},
+   {tf:true,q:"«Накопления в ПДС наследуются до назначения выплат».",a:true,e:"Да. Не наследуется только уже назначенная пожизненная выплата."},
+   {q:"Какая гарантия сохранности у ПДС?",o:["До 2,8 млн ₽","До 1,4 млн ₽","Нет гарантии","До 10 млн ₽"],a:0,e:"Государство гарантирует сохранность средств в ПДС до 2,8 млн ₽ — вдвое больше, чем по вкладам."}]},
+
+ {film:"Операция «Ы»",title:"Как подать на вычет",min:4,
+  cards:[
+   {t:"Есть три способа получить вычет. Первый — упрощённый: банк, брокер, клиника или вуз сами передают данные в налоговую. Вам остаётся подтвердить заявление в личном кабинете. Проверка — около месяца."},
+   {t:"Второй — декларация 3-НДФЛ в личном кабинете налоговой. Заполняется онлайн, документы прикладываются сканами. Проверка — до трёх месяцев, деньги приходят обычно в течение месяца после неё."},
+   {t:"Третий — через работодателя. Налоговая подтверждает право на вычет, и работодатель перестаёт удерживать НДФЛ. Удобно для имущественного вычета: зарплата сразу больше."},
+   {t:"Подать можно за три последних года. Всё это бесплатно. Не платите посредникам, которые обещают «вернуть налог» за процент, и никому не передавайте пароль от Госуслуг."}],
+  rule:"Вычет оформляется бесплатно в личном кабинете налоговой. Срок — три года назад.",
+  pro:"В начале года зайдите в личный кабинет налоговой: там часто уже ждут заявления в упрощённом порядке. Их достаточно подписать.",
+  q:[
+   {q:"Какой способ самый быстрый, если банк передал данные о взносах на ИИС?",o:["Упрощённый — подтвердить заявление в личном кабинете","Декларация на бумаге","Через суд","Через посредника"],a:0,e:"Данные уже у налоговой, проверка короче."},
+   {tf:true,q:"«Подать на вычет можно только за прошлый год».",a:false,e:"Можно за три предыдущих года."},
+   {q:"Как сделать, чтобы зарплата сразу была больше на сумму вычета за квартиру?",o:["Получать вычет через работодателя","Подать декларацию","Ждать конца года","Открыть ИИС"],a:0,e:"Тогда с зарплаты не удерживают НДФЛ, пока не исчерпан вычет за год."},
+   {tf:true,q:"«Оформить вычет в личном кабинете налоговой можно бесплатно».",a:true,e:"Платить кому-то за подачу не нужно."},
+   {q:"Незнакомый «юрист» обещает вернуть налог за 20% и просит пароль от Госуслуг. Что делать?",o:["Отказаться и подать самостоятельно","Отдать пароль","Заплатить вперёд","Отправить копию паспорта"],a:0,e:"Пароль от Госуслуг даёт доступ ко всем вашим данным. Это частая схема мошенников."}]}
+ ]},
+{id:"fraud",name:"Защита от мошенников",tag:"«Поймай меня, если сможешь»",
+ desc:"Звонки «из банка», коды из СМС, поддельные сайты, взломанные мессенджеры, самозапрет и что делать, если вас обманули",
+ cheer:"Мошенникам здесь больше нечего ловить",
+ check:{p:"защиту от мошенников",i:[
+  "Номер банка — только с карты или из официального приложения",
+  "Коды из СМС, PIN и CVC — никому, никогда",
+  "Адрес сайта проверен перед вводом данных",
+  "Самозапрет на кредиты в Госуслугах",
+  "Лимиты на переводы и уведомления об операциях",
+  "Никаких приложений по просьбе звонящего"]},
+ lessons:[
+ {film:"Звонок",title:"Звонки «из банка» и «из полиции»",min:4,
+  cards:[
+   {t:"Вове звонят: «Служба безопасности банка. С вашей карты пытаются перевести деньги. Чтобы отменить операцию, назовите код из СМС». Голос уверенный, знает его имя и банк. Это классика мошенников."},
+   {t:"Маски бывают разные: банк, Центробанк, полиция, ФСБ, Госуслуги, сотовый оператор, «следователь по делу». Сценарий один — напугать и заставить действовать быстро."},
+   {t:"Четыре признака мошенника: торопит; пугает; просит держать разговор в секрете; просит код, перевод, данные карты или установить приложение. Хватит одного признака, чтобы положить трубку.",
+    viz:'<div class="vz"><div class="vrow"><span>«Срочно, иначе деньги пропадут»</span><b style="color:var(--tomato)">спешка</b></div><div class="vrow"><span>«На вас оформляют кредит»</span><b style="color:var(--tomato)">страх</b></div><div class="vrow"><span>«Никому не говорите, это тайна следствия»</span><b style="color:var(--tomato)">секретность</b></div><div class="vrow"><span>«Назовите код / переведите / установите»</span><b style="color:var(--tomato)">действие</b></div></div>'},
+   {t:"«Безопасного счёта» не существует. Ни банк, ни полиция, ни ЦБ никогда не просят переводить деньги. Что делать: положить трубку и самому позвонить в банк по номеру на обороте карты или из приложения."}],
+  rule:"Положите трубку и перезвоните в банк сами — по номеру с карты.",
+  pro:"Договоритесь с родителями и бабушками о «кодовом слове»: если кто-то звонит от вашего имени и просит денег, пусть спросят его.",
+  q:[
+   {q:"Звонок: «Служба безопасности банка, назовите код, чтобы отменить перевод». Что делать?",o:["Положить трубку и позвонить в банк по номеру с карты","Назвать код","Попросить назвать мои данные для проверки","Перевести деньги на безопасный счёт"],a:0,e:"Банк никогда не просит коды. Перезванивайте только сами."},
+   {tf:true,q:"«Если звонящий знает моё имя и последние цифры карты, это точно банк».",a:false,e:"Эти данные часто утекают из баз. Номер на экране тоже легко подделать."},
+   {tf:true,q:"«„Безопасный счёт“ в ЦБ существует, чтобы защитить деньги от взлома».",a:false,e:"Такого счёта нет. Это главная фраза мошенников."},
+   {q:"Какой признак мошенника?",o:["Просит держать разговор в секрете","Предлагает перезвонить по номеру с карты","Не просит никаких данных","Советует обратиться в отделение"],a:0,e:"Секретность нужна мошеннику, чтобы вы не посоветовались с близкими."},
+   {q:"«Следователь» говорит, что на вас пытаются оформить кредит, и просит взять его самому, чтобы «перехватить». Это:",o:["Мошенничество","Стандартная процедура полиции","Защита от мошенников","Требование банка"],a:0,e:"Полиция никогда не просит брать кредиты и переводить деньги."}]},
+
+ {film:"Код да Винчи",title:"Коды из СМС и пароли",min:4,
+  cards:[
+   {t:"Код из СМС — ваша электронная подпись. Назвали его — подписали операцию: перевод, кредит, вход в аккаунт. Отменить такую «подпись» почти невозможно."},
+   {t:"Никому и никогда: коды из СМС и push-уведомлений, PIN-код, три цифры с обратной стороны карты, пароли от банка и Госуслуг. Сотрудник банка их не спрашивает — у него есть всё необходимое."},
+   {t:"«Кода для отмены операции» не бывает. Всегда читайте текст СМС целиком: там обычно написано, что вы подтверждаете — например, «Вход в аккаунт» или «Оформление кредита». Это часто и выдаёт обман."},
+   {t:"Включите двухфакторную защиту в Госуслугах, почте и мессенджерах. Используйте разные пароли и не сохраняйте их в заметках телефона."}],
+  rule:"Код из СМС — это подпись. Тот, кто просит его назвать, — мошенник.",
+  pro:"В Telegram включите облачный пароль: тогда даже с кодом из СМС мошенник не сможет войти в ваш аккаунт.",
+  q:[
+   {tf:true,q:"«Сотрудник банка может попросить код из СМС для проверки личности».",a:false,e:"Банк никогда не спрашивает коды. У него и так есть ваши данные."},
+   {q:"Пришло СМС: «Код для входа в Госуслуги: 4821. Никому не сообщайте». Звонят и просят продиктовать — «для записи к врачу». Что это?",o:["Попытка угнать аккаунт Госуслуг","Обычная запись к врачу","Проверка от поликлиники","Ошибка системы"],a:0,e:"С доступом к Госуслугам мошенники могут оформлять займы и получать ваши данные."},
+   {q:"Что можно сообщать сотруднику банка, если вы сами ему позвонили?",o:["ФИО и кодовое слово по запросу","PIN-код","Код из СМС","Три цифры с обратной стороны карты"],a:0,e:"Банк может спросить ФИО и кодовое слово. PIN, CVC и коды — никогда."},
+   {tf:true,q:"«Читать текст СМС с кодом целиком — полезная привычка».",a:true,e:"В тексте написано, какую операцию вы подтверждаете."},
+   {q:"Как лучше всего защитить аккаунт мессенджера?",o:["Включить облачный пароль или двухфакторную защиту","Использовать короткий пароль","Сохранить пароль в заметках","Отключить уведомления"],a:0,e:"Второй фактор не даст войти даже тому, кто узнал код из СМС."}]},
+
+ {film:"Матрица",title:"Поддельные сайты и ссылки",min:4,
+  cards:[
+   {t:"Фишинг — поддельные сайты, похожие на банк, маркетплейс, Госуслуги или службу доставки. Цель — получить данные карты, пароль или код."},
+   {t:"Ловушки приходят в СМС, мессенджерах и почте: «Вы выиграли», «Посылка задержана, оплатите доставку», «Вам положена компенсация», «Подтвердите данные, иначе счёт заблокируют»."},
+   {t:"Проверяйте адрес сайта. Мошенники меняют одну букву или добавляют лишнее слово. Замочек в адресной строке и «https» не гарантируют, что сайт настоящий — он есть и у подделок.",
+    viz:'<div class="vz"><div class="vrow"><span>vashbank.ru</span><b style="color:var(--teal)">настоящий</b></div><div class="vrow"><span>vashbank-zashita.ru</span><b style="color:var(--tomato)">подделка</b></div><div class="vrow"><span>gosuslugi.ru</span><b style="color:var(--teal)">настоящий</b></div><div class="vrow"><span>gosusIugi.ru (с буквой I)</span><b style="color:var(--tomato)">подделка</b></div></div>'},
+   {t:"Продавец на сайте объявлений предлагает перейти в мессенджер и оплатить «безопасную сделку» по ссылке? Это обман. Платите только внутри официальной платформы и не вводите данные карты по ссылкам из сообщений."}],
+  rule:"Не переходите по ссылкам из сообщений. Открывайте приложение банка или вводите адрес сайта сами.",
+  pro:"Сохраните в закладках адреса своих банков и Госуслуг и открывайте сайты только оттуда.",
+  q:[
+   {q:"Пришло СМС: «Посылка задержана, оплатите 49 ₽ по ссылке». Что делать?",o:["Проверить посылку в официальном приложении службы доставки","Оплатить — сумма маленькая","Ввести данные карты для проверки","Переслать друзьям"],a:0,e:"Маленькая сумма — приманка. На поддельной странице украдут данные карты."},
+   {tf:true,q:"«Если в адресной строке есть замочек, сайт настоящий».",a:false,e:"Замочек значит только, что соединение шифруется. У подделок он тоже есть."},
+   {q:"Какой адрес, скорее всего, поддельный?",o:["gosusIugi.ru","gosuslugi.ru","Оба настоящие","Оба поддельные"],a:0,e:"В первом адресе вместо маленькой l — заглавная I."},
+   {q:"Продавец просит оплатить товар по ссылке в мессенджере, минуя площадку. Это:",o:["Мошенничество","Удобная безопасная сделка","Обычная практика","Требование площадки"],a:0,e:"Площадка защищает покупку, только если вы платите внутри неё."},
+   {tf:true,q:"«Безопаснее открыть приложение банка самому, чем перейти по ссылке из письма „от банка“».",a:true,e:"Так вы точно попадёте в настоящий банк."}]},
+
+ {film:"Маска",title:"Мессенджеры и поддельные голоса",min:4,
+  cards:[
+   {t:"Вове пишет друг: «Срочно займи 15 000 до завтра, потом объясню». Стиль похож, фото настоящее. Но аккаунт друга могли взломать — это одна из самых частых схем."},
+   {t:"Нейросети умеют подделывать голос и даже видео. Мошенники присылают голосовое «от мамы» или звонят видео «от руководителя». Если просят деньги или данные — проверяйте."},
+   {t:"Ещё одна схема: «Проголосуй за мою дочку в конкурсе, пришли код из СМС». Код даёт вход в ваш аккаунт, и уже от вашего имени просят денег у ваших друзей."},
+   {t:"Как проверить: позвоните человеку обычным звонком на известный номер, задайте вопрос, ответ на который знаете только вы двое. Настоящий друг не обидится на проверку."}],
+  rule:"Просьба о деньгах в мессенджере — повод позвонить человеку, а не переводить.",
+  pro:"Договоритесь с близкими: о деньгах всегда договариваемся голосом по обычному звонку, а не сообщениями.",
+  q:[
+   {q:"Друг пишет в мессенджере: «Срочно займи 15 000». Что сделать первым?",o:["Позвонить другу обычным звонком","Сразу перевести","Перевести половину","Отправить данные карты"],a:0,e:"Аккаунты часто взламывают. Короткий звонок всё прояснит."},
+   {tf:true,q:"«Если голос в голосовом сообщении похож на мамин, это точно мама».",a:false,e:"Нейросети подделывают голос по нескольким записям. Перезвоните."},
+   {q:"Просят прислать код из СМС, чтобы проголосовать в конкурсе. Что произойдёт, если отправить?",o:["Мошенники войдут в ваш аккаунт","Голос засчитают","Ничего","Придёт приз"],a:0,e:"Код — это вход в аккаунт. Дальше от вашего имени начнут просить деньги."},
+   {q:"«Руководитель» пишет в Telegram с нового аккаунта и просит срочно оплатить счёт. Что делать?",o:["Связаться с руководителем по привычному каналу","Оплатить — начальник просит","Переслать коллегам","Ответить кодом"],a:0,e:"Схема «фейковый босс» очень распространена. Проверяйте по знакомому номеру."},
+   {tf:true,q:"«Задать вопрос, ответ на который знаете только вы двое, — хороший способ проверки».",a:true,e:"Мошенник не знает ваших общих воспоминаний."}]},
+
+ {film:"Один дома",title:"Самозапрет и настройки защиты",min:4,
+  cards:[
+   {t:"Самозапрет на кредиты — бесплатная защита в Госуслугах. Если он включён, банки и МФО не выдадут на вас новый кредит или займ. Снять запрет можно в любой момент, когда кредит действительно нужен."},
+   {t:"Настройте приложение банка: лимиты на переводы и снятие, уведомления о каждой операции, отключите ненужные способы входа. Для покупок в интернете удобно держать отдельную карту с небольшой суммой."},
+   {t:"Никогда не устанавливайте приложения по просьбе звонящего. Программы удалённого доступа дают мошеннику полный контроль над телефоном, включая банк."},
+   {t:"Подключите у оператора бесплатную защиту от спам-звонков и проверяйте, какие приложения имеют доступ к СМС и экрану."}],
+  rule:"Включите самозапрет на кредиты и лимиты на переводы — это бесплатно и закрывает самые опасные схемы.",
+  pro:"Помогите включить самозапрет пожилым родственникам: именно на них чаще всего оформляют чужие кредиты.",
+  q:[
+   {q:"Где включить самозапрет на кредиты?",o:["В Госуслугах","В любом банкомате","В полиции","В салоне связи"],a:0,e:"Самозапрет устанавливается через Госуслуги бесплатно."},
+   {tf:true,q:"«Самозапрет навсегда лишает возможности взять кредит».",a:false,e:"Его можно снять в любой момент, когда кредит действительно нужен."},
+   {q:"Звонящий из «банка» просит установить приложение для «защиты счёта». Что это?",o:["Мошенничество — так получают доступ к телефону","Новая функция банка","Требование ЦБ","Обновление безопасности"],a:0,e:"Программы удалённого доступа дают мошеннику управление вашим телефоном."},
+   {q:"Как защитить основную карту при покупках в интернете?",o:["Завести отдельную карту с небольшой суммой","Платить основной картой","Хранить данные карты в браузере","Отправлять данные продавцу в мессенджере"],a:0,e:"Даже если данные украдут, потеря будет небольшой."},
+   {tf:true,q:"«Уведомления о каждой операции помогают быстро заметить чужой перевод».",a:true,e:"Чем раньше вы заметите операцию, тем больше шансов её оспорить."}]},
+
+ {film:"Место встречи изменить нельзя",title:"Если вас всё-таки обманули",min:4,
+  cards:[
+   {t:"Первые минуты решают. Сразу позвоните в банк по номеру с карты или через приложение и заблокируйте карту. Смените пароли от банка, почты и Госуслуг."},
+   {t:"Если деньги списали без вашего согласия, сообщите банку как можно быстрее — не позже следующего дня после уведомления об операции — и подайте заявление о несогласии с ней. Чем быстрее, тем больше шансов вернуть деньги."},
+   {t:"Подайте заявление в полицию — лично в отделении. Сохраните скриншоты переписки, номера телефонов, выписку по операции. Если на вас оформили кредит — сообщите в банк-кредитор и запросите кредитную историю."},
+   {t:"Берегитесь второго обмана. После кражи часто звонят «юристы» или «сотрудники ЦБ», которые обещают вернуть деньги за предоплату. Это те же мошенники."}],
+  rule:"Заблокируйте карту, сообщите в банк в тот же день и подайте заявление в полицию.",
+  pro:"Сохраните номер горячей линии своего банка в контактах под понятным именем — в стрессе его будет проще найти.",
+  q:[
+   {q:"Вова заметил чужой перевод со своей карты. Что сделать первым?",o:["Позвонить в банк и заблокировать карту","Подождать до утра","Написать в соцсети","Позвонить по номеру из СМС"],a:0,e:"Блокировка останавливает новые списания."},
+   {tf:true,q:"«Сообщить банку об операции, которую вы не совершали, можно в течение месяца без последствий».",a:false,e:"Сообщать нужно как можно быстрее — не позже следующего дня после уведомления."},
+   {q:"Что сохранить для заявления в полицию?",o:["Скриншоты переписки, номера, выписку","Ничего не нужно","Только PIN-код","Пароль от банка"],a:0,e:"Доказательства помогают расследованию и спору с банком."},
+   {q:"После кражи звонит «юрист» и обещает вернуть деньги за предоплату 10 000 ₽. Это:",o:["Второй обман","Помощь государства","Служба банка","Гарантированный возврат"],a:0,e:"Пострадавших специально находят повторно."},
+   {tf:true,q:"«Если на вас оформили кредит мошенники, стоит запросить кредитную историю».",a:true,e:"Так вы увидите все чужие кредиты и сможете оспорить их."}]}
+ ]}
+];
+
+// ---------- Слонёнок Вова (в режиссёрском берете) ----------
+function vova(mood){
+  const eyes = mood==="happy"
+    ? '<path d="M42 52q6-7 12 0M66 52q6-7 12 0" stroke="#1B1430" stroke-width="4" fill="none" stroke-linecap="round"/>'
+    : mood==="sad"
+    ? '<ellipse cx="48" cy="53" rx="5" ry="6" fill="#1B1430"/><ellipse cx="72" cy="53" rx="5" ry="6" fill="#1B1430"/><circle cx="50" cy="51" r="1.8" fill="#fff"/><circle cx="74" cy="51" r="1.8" fill="#fff"/><path d="M40 43l10 3M80 43l-10 3" stroke="#1B1430" stroke-width="3" stroke-linecap="round"/>'
+    : '<ellipse cx="48" cy="53" rx="5.5" ry="7" fill="#1B1430"/><ellipse cx="72" cy="53" rx="5.5" ry="7" fill="#1B1430"/><circle cx="50" cy="50" r="2.2" fill="#fff"/><circle cx="74" cy="50" r="2.2" fill="#fff"/>';
+  const mouth = mood==="happy" ? '<path d="M70 76q6 7 12 1" stroke="#1B1430" stroke-width="3" fill="#E8553D" stroke-linecap="round"/>'
+    : mood==="sad" ? '<path d="M71 80q5-4 10 0" stroke="#1B1430" stroke-width="3" fill="none" stroke-linecap="round"/>'
+    : '<path d="M71 77q5 4 10 0" stroke="#1B1430" stroke-width="3" fill="none" stroke-linecap="round"/>';
+  const arms = mood==="happy"
+    ? '<path d="M36 98q-12-10-10-22" stroke="#8C9BC4" stroke-width="9" fill="none" stroke-linecap="round"/><path d="M84 98q12-10 10-22" stroke="#8C9BC4" stroke-width="9" fill="none" stroke-linecap="round"/>'
+    : '<ellipse cx="37" cy="104" rx="6" ry="9" fill="#8C9BC4"/><ellipse cx="83" cy="104" rx="6" ry="9" fill="#8C9BC4"/>';
+  return `<svg class="hero" viewBox="0 0 120 127" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Слонёнок Вова">
+  <ellipse cx="60" cy="123" rx="30" ry="4" fill="#000" opacity=".3"/>
+  ${arms}
+  <ellipse cx="60" cy="102" rx="26" ry="20" fill="#AEBBDD"/><ellipse cx="60" cy="106" rx="15" ry="12" fill="#CCD5EE"/>
+  <rect x="42" y="112" width="12" height="11" rx="5" fill="#8C9BC4"/><rect x="66" y="112" width="12" height="11" rx="5" fill="#8C9BC4"/>
+  <ellipse cx="24" cy="56" rx="21" ry="25" fill="#8C9BC4"/><ellipse cx="25" cy="57" rx="13" ry="16" fill="#F3A5B6"/>
+  <ellipse cx="96" cy="56" rx="21" ry="25" fill="#8C9BC4"/><ellipse cx="95" cy="57" rx="13" ry="16" fill="#F3A5B6"/>
+  <path d="M34 82q26 10 52 0l-3 8q-23 8-46 0z" fill="#E8553D"/><path d="M78 86l9 13-12-2z" fill="#B23A26"/>
+  <circle cx="60" cy="54" r="31" fill="#AEBBDD"/>
+  <path d="M30 34q8-20 32-20t30 16q-4 6-14 4-20-6-48 0z" fill="#F2B632"/><circle cx="64" cy="13" r="4" fill="#BF8710"/>
+  ${eyes}
+  <circle cx="38" cy="66" r="5" fill="#F3A5B6" opacity=".8"/><circle cx="82" cy="66" r="5" fill="#F3A5B6" opacity=".8"/>
+  <path d="M53 64q-3 22 7 30 8 5 12-2" stroke="#AEBBDD" stroke-width="12" fill="none" stroke-linecap="round"/>
+  <path d="M55 72q2 6 6 7M56 81q3 4 7 5" stroke="#8C9BC4" stroke-width="2" fill="none" stroke-linecap="round"/>
+  ${mouth}
+  </svg>`;
+}
+const I={
+  flame:'<svg viewBox="0 0 32 32"><path d="M16 3c1 6 9 9 9 17a9 9 0 0 1-18 0c0-5 3-7 4-11 1 3 2 4 4 5 1-4 0-7 1-11z" fill="#E8553D"/><path d="M16 15c1 3 5 5 5 9a5 5 0 0 1-10 0c0-3 3-5 5-9z" fill="#F2B632"/></svg>',
+  token:'<svg viewBox="0 0 32 32"><circle cx="16" cy="17" r="12" fill="#BF8710"/><circle cx="16" cy="15" r="12" fill="#F2B632"/><circle cx="16" cy="15" r="8.5" fill="none" stroke="#BF8710" stroke-width="1.5" stroke-dasharray="2 2"/><path d="M16 9.5l1.7 3.6 3.9.4-2.9 2.6.8 3.9-3.5-2-3.5 2 .8-3.9-2.9-2.6 3.9-.4z" fill="#BF8710"/></svg>',
+  xp:'<svg viewBox="0 0 32 32"><path d="M16 3l3.6 8 8.4.9-6.3 5.7 1.8 8.4L16 21.6 8.5 26l1.8-8.4L4 11.9l8.4-.9z" fill="#7F96FF"/></svg>',
+  star:'<svg viewBox="0 0 32 32"><path d="M16 3l3.6 8 8.4.9-6.3 5.7 1.8 8.4L16 21.6 8.5 26l1.8-8.4L4 11.9l8.4-.9z" fill="#F2B632"/></svg>',
+  starOff:'<svg viewBox="0 0 32 32"><path d="M16 3l3.6 8 8.4.9-6.3 5.7 1.8 8.4L16 21.6 8.5 26l1.8-8.4L4 11.9l8.4-.9z" fill="#3E3366"/></svg>',
+  lock:'<svg viewBox="0 0 32 32"><rect x="7" y="14" width="18" height="14" rx="3" fill="#6E6494"/><path d="M11 14v-3a5 5 0 0 1 10 0v3" stroke="#6E6494" stroke-width="4" fill="none"/></svg>',
+  popcorn:'<svg class="big" viewBox="0 0 48 48"><path d="M10 18h28l-4 26H14z" fill="#E8553D"/><path d="M15 18l2 26M24 18v26M33 18l-2 26" stroke="#FFF4E2" stroke-width="3"/><g fill="#FFF4E2"><circle cx="14" cy="15" r="5"/><circle cx="22" cy="11" r="6"/><circle cx="31" cy="13" r="5.5"/><circle cx="35" cy="17" r="4"/><circle cx="18" cy="16" r="4"/></g><circle cx="26" cy="15" r="3" fill="#F2B632"/></svg>',
+  popEmpty:'<svg class="big" viewBox="0 0 48 48"><path d="M10 18h28l-4 26H14z" fill="#3E3366"/><path d="M15 18l2 26M24 18v26M33 18l-2 26" stroke="#271E42" stroke-width="3"/></svg>',
+  x:'<svg viewBox="0 0 32 32"><path d="M8 8l16 16M24 8L8 24" stroke="currentColor" stroke-width="4" stroke-linecap="round"/></svg>',
+  clap:'<svg viewBox="0 0 32 32"><rect x="4" y="13" width="24" height="15" rx="2" fill="#B5A9CF"/><path d="M4 8l22-5 1.5 6-22 5z" fill="#FFF4E2"/><path d="M8 7l3 5M14 5.6l3 5M20 4.2l3 5" stroke="#1B1430" stroke-width="2.5"/></svg>',
+  reel:'<svg class="ic" viewBox="0 0 56 56"><circle cx="28" cy="28" r="22" fill="#7F96FF"/><circle cx="28" cy="28" r="4" fill="#1B1430"/><g fill="#1B1430"><circle cx="28" cy="15" r="6"/><circle cx="28" cy="41" r="6"/><circle cx="15" cy="28" r="6"/><circle cx="41" cy="28" r="6"/></g></svg>',
+  prompter:'<svg class="ic" viewBox="0 0 56 56"><rect x="8" y="12" width="40" height="28" rx="4" fill="#2CB8A2"/><path d="M15 21h26M15 28h20M15 34h14" stroke="#0E0A1A" stroke-width="3" stroke-linecap="round"/><path d="M22 40l-4 8M34 40l4 8" stroke="#2CB8A2" stroke-width="4" stroke-linecap="round"/></svg>',
+  chair:'<svg class="ic" viewBox="0 0 56 56"><path d="M14 10h28v18H14z" fill="#E8553D"/><path d="M14 10h28" stroke="#B23A26" stroke-width="3"/><rect x="10" y="28" width="36" height="6" rx="2" fill="#F2B632"/><path d="M14 34l-4 14M42 34l4 14M18 34l20 14M38 34L18 48" stroke="#BF8710" stroke-width="3" stroke-linecap="round"/><text x="28" y="23" text-anchor="middle" font-family="Oswald,Arial" font-size="8" font-weight="700" fill="#FFF4E2">РЕЖ.</text></svg>',
+  award:'<svg viewBox="0 0 64 64"><circle cx="32" cy="20" r="11" fill="#F2B632"/><path d="M32 13l2 4.5 4.8.5-3.6 3.2 1 4.8L32 23.5 27.8 26l1-4.8-3.6-3.2 4.8-.5z" fill="#BF8710"/><path d="M26 30h12l-2 16h-8z" fill="#F2B632"/><rect x="20" y="46" width="24" height="10" rx="2" fill="#E8553D"/></svg>'
+};
+
+
+
+// ---------- состояние ----------
+const LEVELS=[[0,"Статист"],[150,"Актёр массовки"],[450,"Актёр второго плана"],[900,"Звезда экрана"],[1500,"Народный артист"],[2100,"Легенда кино"]];
+const key=(m,i)=>MODULES[m].id+"-"+i;
+const modDone=(m)=>!MODULES[m].soon&&MODULES[m].lessons.every((_,i)=>key(m,i) in S.done);
+const AWARDS=[
+ {t:"Дебют",d:"Первая серия",ok:s=>Object.keys(s.done).length>=1},
+ {t:"С первого дубля",d:"Серия без ошибок",ok:s=>Object.values(s.done).some(d=>d.best===d.of)},
+ {t:"Неделя в прокате",d:"7 дней подряд",ok:s=>s.bestStreak>=7},
+ {t:"Модуль снят",d:"Все серии модуля",ok:s=>MODULES.some((_,m)=>modDone(m))},
+ {t:"Аншлаг",d:"Антракт после модуля",ok:s=>Object.keys(s.chests||{}).length>=1},
+ {t:"Золотая плёнка",d:"Модуль без ошибок",ok:s=>MODULES.some((M,m)=>!M.soon&&M.lessons.every((_,i)=>{const d=s.done[key(m,i)];return d&&d.best===d.of;}))}];
+const KEY="finprivychka-v3";
+let S={started:false,xp:0,coins:0,done:{},streak:0,bestStreak:0,last:null,freezes:0,pro:{},chests:{}};
+try{
+  const r=localStorage.getItem(KEY);
+  if(r)S=Object.assign(S,JSON.parse(r));
+  else{const o=localStorage.getItem("finprivychka-v2");if(o){const p=JSON.parse(o);
+    ["started","xp","coins","streak","bestStreak","last","freezes"].forEach(k=>{if(p[k]!==undefined)S[k]=p[k];});}}
+}catch(e){}
+function save(){try{localStorage.setItem(KEY,JSON.stringify(S));}catch(e){}}
+const ymd=d=>d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0");
+const today=()=>ymd(new Date());
+const dayDiff=(a,b)=>Math.round((new Date(b+"T12:00")-new Date(a+"T12:00"))/864e5);
+(function(){
+  if(!S.last||!S.streak)return;
+  const missed=dayDiff(S.last,today())-1;
+  if(missed<=0)return;
+  if(S.freezes>=missed){S.freezes-=missed;S.last=ymd(new Date(Date.now()-864e5));setTimeout(()=>toast("Запасная бобина сохранила вашу серию"),600);}
+  else S.streak=0;
+  save();
+})();
+function unlocked(m,i){
+  if(MODULES[m].soon)return false;
+  if(i>0)return key(m,i-1) in S.done;
+  return m===0||modDone(m-1);
+}
+function current(){
+  for(let m=0;m<MODULES.length;m++){if(MODULES[m].soon)continue;
+    for(let i=0;i<MODULES[m].lessons.length;i++)if(!(key(m,i) in S.done))return [m,i];}
+  return null;
+}
+const $=id=>document.getElementById(id);
+const pad=n=>String(n).padStart(2,"0");
+const starsOf=(best,of)=>best===of?3:best>=of-1?2:1;
+
+function renderTop(){
+  $("topava").innerHTML=vova("happy");
+  $("streak").innerHTML=I.flame+S.streak;
+  $("coins").innerHTML=I.token+S.coins;
+  $("xp").innerHTML=I.xp+S.xp;
+}
+
+
+const FLAG='<svg viewBox="0 0 26 32"><rect x="2" y="2" width="3" height="30" fill="#B5A9CF"/><path d="M5 3h18l-4 6 4 6H5z" fill="#2CB8A2"/></svg>';
+const totalLessons=()=>MODULES.reduce((a,M)=>a+M.lessons.length,0);
+const doneCount=()=>MODULES.reduce((a,M,m)=>a+M.lessons.filter((_,i)=>key(m,i) in S.done).length,0);
+function journeyHtml(fromDone){
+  const tot=totalLessons(),done=doneCount(),start=fromDone===undefined?done:fromDone;
+  const p=done/tot*100,p0=start/tot*100;let acc=0;
+  const st=MODULES.map((M,m)=>{acc+=M.lessons.length;const pos=acc/tot*100;
+    if(m===MODULES.length-1)return `<span class="tst flag" style="left:${pos}%" aria-label="Цель">${FLAG}</span>`;
+    return `<span class="tst${modDone(m)?" on":""}" style="left:${pos}%">${m+1}</span>`;}).join("");
+  const nm=MODULES.filter((_,m)=>modDone(m)).length;
+  return `<div class="journey"><div class="j-top"><b>Путь к финансовой грамотности</b><span>${Math.round(p)}%</span></div>
+    <div class="track" data-to="${p}"><div class="tline"><i style="width:${p0}%"></i></div>${st}<span class="tme" style="left:${p0}%">${vova("happy")}</span></div>
+    <p class="note">${done} из ${tot} серий · модулей пройдено: ${nm} из ${MODULES.length}</p></div>`;
+}
+function animateTrack(root){
+  const t=root.querySelector(".track");if(!t)return;
+  setTimeout(()=>{const p=t.dataset.to+"%";t.querySelector(".tline i").style.width=p;t.querySelector(".tme").style.left=p;},300);
+}
+function confetti(){
+  const cols=["#F2B632","#2CB8A2","#E8553D","#7F96FF","#FFF4E2"];
+  return `<div class="confetti" aria-hidden="true">${Array.from({length:44},(_,k)=>`<i style="left:${(Math.random()*100).toFixed(1)}%;background:${cols[k%5]};animation-delay:${(Math.random()*1.2).toFixed(2)}s;animation-duration:${(2.6+Math.random()*2).toFixed(2)}s"></i>`).join("")}</div>`;
+}
+
+// ---------- лента ----------
+function renderPath(){
+  const cur=current();let h=journeyHtml()+`<button class="frame dreamlink" id="todream"><span class="num" style="background:var(--gold);color:var(--film)"><small>ПЛАН</small>★</span><span class="txt"><b>${S.dream&&S.dream.plan?"Мой план мечты":"Когда сбудется ваша мечта?"}</b><span>${S.dream&&S.dream.plan?"Отметить, сколько отложили":"Посчитаем по вашим тратам за 3 минуты"}</span></span></button>`;
+  MODULES.forEach((M,m)=>{
+    if(M.soon){
+      h+=`<div class="clap soon"><div class="clap-top"></div><div class="clap-body"><small>Модуль ${m+1} · ${M.tag}</small><b>${M.name}</b>
+        <span class="badge-soon">В производстве</span><ul>${M.plan.map(p=>`<li>${p}</li>`).join("")}</ul></div></div>`;
+      return;
+    }
+    const n=M.lessons.filter((_,i)=>key(m,i) in S.done).length;
+    h+=`<div class="clap"><div class="clap-top"></div><div class="clap-body"><small>Модуль ${m+1} · ${M.tag}</small><b>${M.name}</b><span>${M.desc}</span>
+      <div class="mod-prog"><div class="bar"><i style="width:${n/M.lessons.length*100}%"></i></div><span>${n}/${M.lessons.length} серий</span></div>
+      <button class="btn ghost small btn-sheet" data-sheet="${m}">Шпаргалка модуля</button></div></div><div class="strip">`;
+    M.lessons.forEach((L,i)=>{
+      const d=S.done[key(m,i)],lock=!unlocked(m,i),isCur=cur&&cur[0]===m&&cur[1]===i;
+      const cls=d?"done":isCur?"cur":lock?"locked":"";
+      let st="";
+      if(d){const s=starsOf(d.best,d.of);st=`<span class="st" aria-label="${s} из 3 звёзд">${[0,1,2].map(k=>k<s?I.star:I.starOff).join("")}</span>`;}
+      else if(isCur)st=`<span class="go-tag">МОТОР!</span>`;
+      else if(lock)st=`<span class="st">${I.lock}</span>`;
+      h+=`<button class="frame ${cls}" data-m="${m}" data-i="${i}" aria-label="Серия ${i+1}: ${L.title}">
+        <span class="num"><small>СЕРИЯ</small>${pad(i+1)}</span>
+        <span class="txt"><b>${L.title}</b><span>«${L.film}» · ≈${L.min} мин</span></span>${st}</button>`;
+    });
+    const open=S.chests[M.id],ready=modDone(m)&&!open;
+    h+=`<button class="frame intermission ${ready?"ready":""}" data-chest="${m}">${open?I.popEmpty:I.popcorn}
+      <span class="txt"><b>Антракт</b><span>${open?"Попкорн съеден":ready?"Заберите ведёрко: +30 жетонов":"Откроется после всех серий модуля"}</span></span></button></div>`;
+    if(m===0)h+=`<div class="cameo">${vova("idle")}<p>Один хозяйственный кот из Простоквашино копил на корову, а не тратил на ерунду. С кредиткой так же: сначала план, потом покупки.</p></div>`;
+  });
+  if(!cur)h=`<div class="card" style="align-items:center;text-align:center"><b class="disp" style="font-size:22px;color:var(--gold)">Все доступные серии сняты</b><p class="muted">Новые модули уже в производстве. Пока пересматривайте серии, чтобы закрепить правила.</p></div>`+h;
+  $("path").innerHTML=h;
+  $("path").querySelectorAll("[data-i]").forEach(b=>b.onclick=()=>{
+    const m=+b.dataset.m,i=+b.dataset.i;
+    if(!unlocked(m,i)){toast("Эта серия откроется после предыдущей");return;}
+    openLesson(m,i);
+  });
+  $("path").querySelectorAll("[data-chest]").forEach(b=>b.onclick=()=>{
+    const M=MODULES[+b.dataset.chest];
+    if(S.chests[M.id]){toast("Попкорн уже съеден");return;}
+    if(!modDone(+b.dataset.chest)){toast("Антракт начнётся после всех серий модуля");return;}
+    S.chests[M.id]=true;S.coins+=30;save();renderAll();toast("Антракт! +30 жетонов");
+  });
+  $("path").querySelectorAll("[data-sheet]").forEach(b=>b.onclick=()=>openSheet(+b.dataset.sheet));
+  const td=$("todream");if(td)td.onclick=()=>showView("dream");
+}
+function openSheet(m){
+  const M=MODULES[m];
+  $("modalIn").innerHTML=`<b class="disp" style="font-size:22px">Шпаргалка: ${M.name}</b>
+    <div class="card check"><b class="disp" style="font-size:16px">Как выбрать ${M.check.p}</b><ul>${M.check.i.map((t,k)=>`<li><input type="checkbox" id="ms-${m}-${k}"><label for="ms-${m}-${k}">${t}</label></li>`).join("")}</ul></div>
+    <div class="card"><b class="disp" style="font-size:16px">Мораль каждой серии</b>${M.lessons.map((L,i)=>`<p><b style="color:var(--gold)">${i+1}.</b> ${L.rule}</p>`).join("")}</div>
+    <button class="btn wide" id="mclose">Закрыть</button>`;
+  $("modal").hidden=false;$("mclose").onclick=()=>$("modal").hidden=true;
+}
+$("modal").onclick=e=>{if(e.target.id==="modal")$("modal").hidden=true;};
+
+// ---------- серия ----------
+let V=null;
+const LET=["А","Б","В","Г"];
+function shuffle(a){for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
+function openLesson(m,i){track("lesson_start",{lesson:key(m,i)});V={m,i,step:"title",ci:0,qi:0,sel:null,checked:false,correct:0,hints:{},ord:{}};$("lesson").hidden=false;document.body.style.overflow="hidden";renderLesson();}
+function closeLesson(){V=null;$("lesson").hidden=true;$("sheet").hidden=true;document.body.style.overflow="";renderAll();}
+function pct(){const L=MODULES[V.m].lessons[V.i],tot=L.cards.length+L.q.length+1;
+  let p=V.step==="title"?0:V.step==="card"?V.ci+1:V.step==="q"?L.cards.length+1+V.qi+(V.checked?1:0):tot;return p/tot*100;}
+function lessonTop(){return `<div class="lbar"><button class="x" id="lx" aria-label="Закрыть">${I.x}</button><div class="lprog"><i style="width:${pct()}%"></i></div></div>`;}
+function scrollTopL(){$("lesson").scrollTop=0;}
+
+function renderLesson(){
+  const M=MODULES[V.m],L=M.lessons[V.i],box=$("lessonIn");
+  if(V.step==="title"){
+    box.innerHTML=lessonTop()+`<div class="title-card"><small>${M.name} · серия ${V.i+1}</small><b>«${L.film}»</b><span>${L.title}</span></div>
+      <div class="talk">${vova("idle")}<div class="speech tail">Сначала ${L.cards.length} коротких карточки теории, потом ${L.q.length} заданий. Примерно ${L.min} минуты. Мотор!</div></div>`;
+    sheet("",`<button class="btn wide" id="go">Начать серию</button>`);
+    $("go").onclick=()=>{V.step="card";V.ci=0;renderLesson();scrollTopL();};
+  }
+  else if(V.step==="card"){
+    const c=L.cards[V.ci],last=V.ci===L.cards.length-1;
+    box.innerHTML=lessonTop()+`<span class="stepcap">Теория · карточка ${V.ci+1} из ${L.cards.length}</span>
+      ${V.ci===0?`<div class="talk">${vova("idle")}<div class="speech tail">${c.t}</div></div>`:`<div class="subtitle">${c.t}</div>`}
+      ${c.viz||""}
+      ${last?`<div class="rule"><small>Мораль серии</small><p>${L.rule}</p></div>`:""}`;
+    sheet("",`<div class="sheet-row">${V.ci>0?'<button class="btn ghost small" id="back">Назад</button>':""}<button class="btn" id="go">${last?"К заданиям":"Дальше"}</button></div>`);
+    $("go").onclick=()=>{if(last){V.step="q";V.qi=0;}else V.ci++;renderLesson();scrollTopL();};
+    const bk=$("back");if(bk)bk.onclick=()=>{V.ci--;renderLesson();scrollTopL();};
+  }
+  else if(V.step==="q"){
+    const q=L.q[V.qi],gone=V.hints[V.qi];
+    const right=q.tf?(q.a?0:1):q.a;
+    const opts=q.tf?["Правда","Миф"]:q.o;
+    box.innerHTML=lessonTop()+`<div class="take">${I.clap}Дубль ${V.qi+1} из ${L.q.length}</div>
+      ${q.tf?'<span class="qtag">Правда или миф?</span>':""}
+      <div class="talk">${vova(V.checked?(V.sel===right?"happy":"sad"):"idle")}<div class="speech tail">${q.q}</div></div>
+      <div class="${q.tf?"tfrow":"opts"}" id="opts"></div>`;
+    const order=q.tf?[0,1]:(V.ord[V.qi]||(V.ord[V.qi]=shuffle(q.o.map((_,x)=>x))));
+    order.forEach((k,pos)=>{const o=opts[k];
+      const b=document.createElement("button");b.className="opt";b.id=`opt-${V.m}-${V.i}-${V.qi}-${k}`;
+      if(q.tf)b.textContent=o;else{b.innerHTML=`<span class="k">${LET[pos]}</span><span></span>`;b.lastChild.textContent=o;}
+      if(gone===k){b.disabled=true;b.classList.add("gone");}
+      if(V.checked){b.disabled=true;if(k===right)b.classList.add("right");else if(k===V.sel)b.classList.add("miss");}
+      else if(V.sel===k)b.classList.add("sel");
+      b.onclick=()=>{if(V.checked||gone===k)return;V.sel=k;renderLesson();};
+      $("opts").appendChild(b);
+    });
+    if(!V.checked){
+      sheet("",`<div class="sheet-row">${q.tf?"":`<button class="btn teal small" id="hint" ${gone!==undefined||S.coins<5?"disabled":""}>Суфлёр · 5</button>`}<button class="btn" id="chk" ${V.sel===null?"disabled":""}>Снимаем!</button></div>`);
+      const hb=$("hint");if(hb)hb.onclick=useHint;
+      $("chk").onclick=()=>{V.checked=true;if(V.sel===right)V.correct++;renderLesson();};
+    }else{
+      const ok=V.sel===right,last=V.qi===L.q.length-1;
+      sheet(ok?"ok":"no",`<div class="verdict"><b>${ok?"Снято! Отличный дубль":"Стоп! Верно — "+(q.tf?opts[right]:LET[V.ord[V.qi].indexOf(right)])}</b><p>${q.e}</p></div>
+        <button class="btn wide ${ok?"teal":"tomato"}" id="go">${last?"На премьеру":"Следующий дубль"}</button>`);
+      $("go").onclick=()=>{if(last)finish();else{V.qi++;V.sel=null;V.checked=false;renderLesson();scrollTopL();}};
+    }
+  }
+  else if(V.step==="result"){
+    const r=V.result,proOpen=S.pro[key(V.m,V.i)],nxt=V.i<M.lessons.length-1,s=starsOf(r.correct,L.q.length);
+    const verdict=r.correct===L.q.length?"Шедевр! Снято с первого дубля":r.correct>=L.q.length-1?"Премьера удалась":"Премьера состоялась — пересмотрите мораль";
+    const fin=r.modFinished;
+    box.innerHTML=lessonTop()+`<div class="premiere">${vova(r.correct>=L.q.length-1?"happy":"idle")}
+      <div class="stars">${[0,1,2].map(k=>k<s?I.star:I.starOff).join("")}</div>
+      <h2 class="h" style="color:var(--gold)">${fin?"Модуль «"+M.name+"» снят!":verdict}</h2>
+      <p class="muted">«${L.film}» · ${r.correct} из ${L.q.length} верно${r.repeat?" · пересмотр без наград":""}</p></div>
+      <div class="tiles">
+        <div class="tile"><small>Слава</small><b style="color:var(--sky)">+${r.xp}</b></div>
+        <div class="tile"><small>Жетоны</small><b style="color:var(--gold)">+${r.coins}</b></div>
+        <div class="tile"><small>Дней подряд</small><b style="color:var(--tomato)">${S.streak}</b></div>
+      </div>
+      <div class="rule"><small>Мораль серии</small><p>${L.rule}</p></div>
+      ${fin?`<div class="card check"><b class="disp" style="font-size:17px">Шпаргалка: как выбрать ${M.check.p}</b><ul>${M.check.i.map((t,k)=>`<li><input type="checkbox" id="rc-${V.m}-${k}"><label for="rc-${V.m}-${k}">${t}</label></li>`).join("")}</ul></div>
+        <p class="muted" style="text-align:center">На ленте вас ждёт антракт с попкорном: +30 жетонов.</p>`:""}
+      <div class="card dir"><small>Комментарий режиссёра</small>${proOpen?`<p>${L.pro}</p>`:`<p class="muted">Практический лайфхак по теме серии.</p><button class="btn small" id="buypro" ${S.coins<15?"disabled":""}>Открыть за 15 жетонов</button>`}</div>
+      ${fbLink("Нашли ошибку или есть идея к этой серии?")}
+      <button class="btn ghost" id="tg">Скопировать для Telegram</button>`;
+    sheet("",`<button class="btn wide" id="go">${fin?"Дальше":nxt&&!r.repeat?"К ленте":"В фойе"}</button>`);
+    $("go").onclick=()=>{if(fin){V.step="celebrate";renderLesson();scrollTopL();}else closeLesson();};$("tg").onclick=()=>copyTg(V.m,V.i);
+    const bp=$("buypro");if(bp)bp.onclick=()=>{if(S.coins<15)return;S.coins-=15;S.pro[key(V.m,V.i)]=true;save();renderTop();renderLesson();toast("Комментарий режиссёра открыт");};
+  }
+  else if(V.step==="celebrate"){
+    const nm=MODULES.filter((_,m)=>modDone(m)).length,left=MODULES.length-nm,tot=totalLessons(),pc=Math.round(doneCount()/tot*100);
+    box.innerHTML=confetti()+`<div class="celebrate">
+      <div class="cel-hero">${vova("happy")}</div>
+      <span class="cel-kicker">Модуль ${V.m+1} из ${MODULES.length} пройден</span>
+      <h2 class="h" style="color:var(--gold)">«${M.name}» — снято!</h2>
+      <p class="cheer">${M.cheer}.</p>
+      ${journeyHtml(doneCount()-M.lessons.length)}
+      <p class="muted">${left?`Вы на ${pc}% пути к финансовой грамотности. Осталось модулей: ${left}. Следующий — «${MODULES[V.m+1]?MODULES[V.m+1].name:""}».`:"Вы прошли весь путь. Финансовая грамотность — ваша. Поздравляем с премьерой полного метра!"}</p>
+      <div class="signature">Режиссёр Вова<small>и съёмочная группа «Финпривычки»</small></div></div>`;
+    animateTrack(box);
+    sheet("",`<button class="btn wide" id="go">${left?"Продолжить путь":"В фойе"}</button>`);
+    $("go").onclick=closeLesson;
+  }
+  const lx=$("lx");if(lx)lx.onclick=closeLesson;
+}
+function sheet(kind,html){const s=$("sheet");s.className="sheet "+kind;$("sheetIn").innerHTML=html;s.hidden=false;}
+function useHint(){
+  const q=MODULES[V.m].lessons[V.i].q[V.qi];
+  if(q.tf||S.coins<5||V.hints[V.qi]!==undefined)return;
+  const wrong=q.o.map((_,k)=>k).filter(k=>k!==q.a&&k!==V.sel);
+  V.hints[V.qi]=wrong[Math.floor(Math.random()*wrong.length)];
+  S.coins-=5;save();renderTop();renderLesson();toast("Суфлёр подсказал: один вариант лишний");
+}
+function finish(){
+  const M=MODULES[V.m],L=M.lessons[V.i],k=key(V.m,V.i),first=!(k in S.done),c=V.correct,n=L.q.length;
+  const wasDone=modDone(V.m);
+  let xp=0,coins=0;
+  if(first){xp=c*10+(n-c)*2+(c===n?20:0);coins=10+(c===n?5:0);S.xp+=xp;S.coins+=coins;}
+  const prev=S.done[k];S.done[k]={best:Math.max(c,prev?prev.best:0),of:n};
+  const t=today();
+  if(S.last!==t){const y=ymd(new Date(Date.now()-864e5));S.streak=(S.last===y)?S.streak+1:1;S.last=t;}
+  S.bestStreak=Math.max(S.bestStreak,S.streak);save();renderTop();
+  V.step="result";V.result={correct:c,xp,coins,repeat:!first,modFinished:!wasDone&&modDone(V.m)};
+  if(first)track("lesson_done",{lesson:k,correct:c});if(V.result.modFinished)track("module_done",{module:M.id});renderLesson();scrollTopL();
+}
+
+// ---------- буфет и премии ----------
+function renderShop(){
+  $("it-freeze").innerHTML=`${I.reel}<div><b>Запасная бобина</b><p>Пропустили день — серия дней не прервётся. У вас: ${S.freezes} из 2</p></div><button class="btn small" id="bf">20</button>`;
+  $("it-hint").innerHTML=`${I.prompter}<div><b>Суфлёр</b><p>Убирает один неверный вариант. Вызывается прямо во время дубля.</p></div><span class="counter c-coin">${I.token}5</span>`;
+  $("it-pro").innerHTML=`${I.chair}<div><b>Комментарий режиссёра</b><p>Лайфхак к серии. Открывается после премьеры.</p></div><span class="counter c-coin">${I.token}15</span>`;
+  $("bf").onclick=()=>{
+    if(S.coins<20){toast("Нужно 20 жетонов — снимите ещё серию");return;}
+    if(S.freezes>=2){toast("Больше двух бобин в запасе не поместится");return;}
+    S.coins-=20;S.freezes++;save();renderAll();toast("Запасная бобина куплена");
+  };
+}
+function renderAwards(){
+  $("fbAwards").innerHTML=fbLink("Отзыв о курсе, ошибка или идея — нам важно");
+  let li=0;LEVELS.forEach((l,k)=>{if(S.xp>=l[0])li=k;});
+  $("lvname").textContent=LEVELS[li][1];
+  const nx=LEVELS[li+1];
+  $("lvnext").textContent=nx?`до «${nx[1]}»: ${nx[0]-S.xp} славы`:"высшее звание";
+  $("lvbar").style.width=(nx?((S.xp-LEVELS[li][0])/(nx[0]-LEVELS[li][0])*100):100)+"%";
+  $("awards").innerHTML=AWARDS.map(a=>`<div class="award${a.ok(S)?" on":""}">${I.award}<b>${a.t}</b>${a.d}</div>`).join("");
+}
+
+// ---------- telegram ----------
+function copyTg(m,i){
+  const M=MODULES[m],L=M.lessons[i],q=L.q.find(x=>!x.tf)||L.q[0];
+  let txt=`🎬 ${M.name}. Серия ${i+1}: «${L.film}»\n${L.title}\n\n${L.cards.map(c=>c.t).join("\n\n")}\n\n💡 Мораль: ${L.rule}\n\n❓ ${q.q}\n`;
+  txt+=q.tf?`Ответ: ${q.a?"правда":"миф"}`:q.o.map((o,k)=>`${k===q.a?"✅":"▫️"} ${o}`).join("\n");
+  txt+=`\n\nПояснение: ${q.e}`;
+  const done=()=>toast("Серия скопирована — вставьте её в Telegram");
+  try{navigator.clipboard.writeText(txt).then(done,()=>fallback(txt));}catch(e){fallback(txt);}
+}
+function fallback(txt){const ta=document.createElement("textarea");ta.value=txt;document.body.appendChild(ta);ta.select();
+  try{document.execCommand("copy");toast("Скопировано");}catch(e){toast("Не удалось скопировать");}ta.remove();}
+function toast(m){const el=$("toast");el.textContent=m;el.hidden=false;clearTimeout(el._t);el._t=setTimeout(()=>el.hidden=true,2600);}
+
+
+// =================== ПЛАН МЕЧТЫ ===================
+const GOALS=[
+ {t:"cushion",n:"Подушка безопасности",h:"Запас на непредвиденное",def:0},
+ {t:"flat",n:"Первый взнос на квартиру",h:"Своё жильё",def:600000},
+ {t:"car",n:"Машина",h:"Свобода передвижения",def:900000},
+ {t:"trip",n:"Путешествие",h:"Новые впечатления",def:150000},
+ {t:"edu",n:"Обучение",h:"Вложение в себя",def:120000},
+ {t:"repair",n:"Ремонт",h:"Уют дома",def:300000},
+ {t:"wedding",n:"Свадьба",h:"Большой день",def:400000},
+ {t:"custom",n:"Своя цель",h:"Что-то своё",def:100000}];
+const WHY=["Спокойствие и безопасность","Своё жильё и независимость","Время и комфорт","Новые впечатления","Рост дохода и карьера","Семья и близкие"];
+const TERMS=[[6,"6 мес"],[12,"1 год"],[24,"2 года"],[36,"3 года"],[60,"5 лет"]];
+const CATS=[
+ {id:"home",n:"Жильё и коммуналка",flex:0},
+ {id:"food",n:"Продукты",flex:0},
+ {id:"cafe",n:"Кафе и доставка еды",flex:1},
+ {id:"transport",n:"Транспорт и такси",flex:1},
+ {id:"subs",n:"Связь и подписки",flex:1},
+ {id:"shop",n:"Покупки и развлечения",flex:1},
+ {id:"loans",n:"Платежи по кредитам",flex:0},
+ {id:"other",n:"Прочее",flex:1}];
+const RANGES=[["0",0],["до 5 тыс",3000],["5–10 тыс",7500],["10–20 тыс",15000],["20–35 тыс",27000],["35 тыс+",45000]];
+const rub=n=>Math.round(n).toLocaleString("ru-RU").replace(/,/g," ")+" ₽";
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const MON=["январь","февраль","март","апрель","май","июнь","июль","август","сентябрь","октябрь","ноябрь","декабрь"];
+function monthLabel(off){const d=new Date();const m=d.getMonth()+Math.ceil(off);return MON[((m%12)+12)%12]+" "+(d.getFullYear()+Math.floor(m/12));}
+function termText(n){n=Math.ceil(n);const y=Math.floor(n/12),m=n%12;return [y?y+" г.":"",m?m+" мес.":""].filter(Boolean).join(" ")||"меньше месяца";}
+
+if(!S.dream)S.dream={goals:[],income:0,spend:{},cuts:{},rate:10,plan:false};
+let DW=null; // черновик мастера
+let SAMPLE=null;
+setTimeout(async()=>{try{if(window.claude&&claude.use){SAMPLE=await claude.use("sample");}}catch(e){SAMPLE=null;}
+  if(VIEW==="dream"&&!DW)renderDream();},0);
+
+function mustSpend(sp){return CATS.filter(c=>!c.flex).reduce((a,c)=>a+(+sp[c.id]||0),0);}
+function totalSpend(sp){return CATS.reduce((a,c)=>a+(+sp[c.id]||0),0);}
+function cutsSum(){const D=S.dream;return CATS.filter(c=>c.flex).reduce((a,c)=>a+(+D.spend[c.id]||0)*(+D.cuts[c.id]||0)/100,0);}
+function available(){const D=S.dream;return Math.max(0,D.income-totalSpend(D.spend)+cutsSum());}
+function cushionAmount(){const sp=S.dream.spend;return Math.round(["home","food","loans","transport","subs"].reduce((a,k)=>a+(+sp[k]||0),0)*3/1000)*1000||135000;}
+
+function computePlan(){
+  const D=S.dream,r=D.rate/1200,avail=available();
+  const goals=D.goals.map(g=>({...g,amount:g.t==="cushion"?(g.amount||cushionAmount()):g.amount}));
+  goals.forEach(g=>{const n=g.months,f=Math.pow(1+r,n);const rest=g.amount-g.saved*f;g.need=rest<=0?0:rest*r/(f-1);});
+  const sumNeed=goals.reduce((a,g)=>a+g.need,0);
+  const k=sumNeed<=avail||sumNeed===0?1:avail/sumNeed;
+  goals.forEach(g=>{
+    g.pay=g.need*k;
+    if(g.saved>=g.amount){g.eta=0;}
+    else if(g.pay<=0){g.eta=Infinity;}
+    else{const x=(g.amount+g.pay/r)/(g.saved+g.pay/r);g.eta=Math.log(x)/Math.log(1+r);}
+    g.onTime=g.eta<=g.months+0.01;
+  });
+  return {goals,avail,sumNeed,extra:Math.max(0,avail-sumNeed),short:Math.max(0,sumNeed-avail)};
+}
+function whereFor(g){
+  if(g.t==="cushion")return "накопительный счёт: деньги доступны в любой день";
+  if(g.months<=12)return "накопительный счёт или короткий вклад";
+  if(g.months<=36)return "вклады или лестница вкладов";
+  return "вклады, а часть — ИИС-3 с вычетом до 52 000 ₽ в год";
+}
+
+// ---------- экраны ----------
+function renderDream(){
+  const box=$("v-dream");if(!box)return;
+  if(DW){renderWizard(box);return;}
+  if(!S.dream.plan){
+    box.innerHTML=`<div class="poster" style="gap:12px">
+      <span class="studio">План мечты</span>${vova("happy")}
+      <h2 class="h" style="font-size:30px">Посчитаем, когда сбудется ваша <span style="color:var(--gold)">мечта</span></h2>
+      <p class="tag">Пять коротких шагов: цель, срок, ваши траты — по выписке или в пару кликов. В конце — сколько откладывать, куда и к какой дате вы дойдёте.</p></div>
+      <div class="credits"><div class="credit"><small>Время</small><b>3 минуты</b></div><div class="credit"><small>Регистрация</small><b>Не нужна</b></div></div>
+      <button class="btn wide" id="dstart">Начать</button>
+      <p class="note" style="text-align:center">Всё считается прямо на вашем устройстве и хранится только в этом браузере.</p>`;
+    $("dstart").onclick=()=>{track("dream_start");DW={step:1,sel:S.dream.goals.map(g=>g.t),gi:0,goals:JSON.parse(JSON.stringify(S.dream.goals))};renderDream();window.scrollTo({top:0});};
+    return;
+  }
+  renderDash(box);
+}
+
+function wizTop(step,title){
+  return `<div class="dsteps">${[1,2,3,4,5].map(k=>`<i class="${k<=step?"on":""}"></i>`).join("")}</div>
+    <span class="stepcap">Шаг ${step} из 5</span><h2 class="h" style="font-size:24px">${title}</h2>`;
+}
+function wizNav(back,nextLabel,nextDisabled){
+  return `<div class="sheet-row" style="margin-top:6px">${back?'<button class="btn ghost small" id="wback">Назад</button>':'<button class="btn ghost small" id="wcancel">Отмена</button>'}<button class="btn" id="wnext" ${nextDisabled?"disabled":""}>${nextLabel}</button></div>`;
+}
+function bindNav(onBack,onNext){
+  const b=$("wback");if(b)b.onclick=onBack;
+  const c=$("wcancel");if(c)c.onclick=()=>{DW=null;renderDream();};
+  $("wnext").onclick=onNext;
+}
+
+function renderWizard(box){
+  const st=DW.step;
+  if(st===1){
+    box.innerHTML=wizTop(1,"О чём вы мечтаете?")+`<p class="muted">Выберите одну или несколько целей.</p>
+      <div class="tiles2">${GOALS.map(g=>`<button class="gtile${DW.sel.includes(g.t)?" on":""}" data-g="${g.t}"><b>${g.n}</b><span>${g.h}</span></button>`).join("")}</div>`+wizNav(false,"Дальше",!DW.sel.length);
+    box.querySelectorAll("[data-g]").forEach(b=>b.onclick=()=>{const t=b.dataset.g;DW.sel=DW.sel.includes(t)?DW.sel.filter(x=>x!==t):[...DW.sel,t];renderWizard(box);});
+    bindNav(null,()=>{
+      DW.goals=DW.sel.map(t=>DW.goals.find(g=>g.t===t)||{t,name:GOALS.find(x=>x.t===t).n,amount:GOALS.find(x=>x.t===t).def,months:t==="cushion"?12:24,saved:0,why:""});
+      DW.gi=0;DW.step=2;renderWizard(box);window.scrollTo({top:0});});
+  }
+  else if(st===2){
+    const g=DW.goals[DW.gi],cushion=g.t==="cushion";
+    box.innerHTML=wizTop(2,`${esc(g.name)}: сколько и когда`)+`<span class="stepcap">Цель ${DW.gi+1} из ${DW.goals.length}</span>
+      ${g.t==="custom"?`<label class="fl" for="gname">Название цели</label><input class="inp" id="gname" maxlength="40" value="${esc(g.name==="Своя цель"?"":g.name)}" placeholder="Например, новый ноутбук">`:""}
+      ${cushion?`<div class="card"><p class="muted">Сумму подушки посчитаем сами: 3 месяца ваших обязательных трат — после шага с расходами.</p></div>`:
+      `<label class="fl" for="gamount">Сколько нужно, ₽</label><input class="inp" id="gamount" inputmode="numeric" value="${g.amount||""}">`}
+      <label class="fl">К какому сроку</label><div class="chips">${TERMS.map(([m,l])=>`<button class="chip${g.months===m?" on":""}" data-m="${m}">${l}</button>`).join("")}</div>
+      <label class="fl" for="gsaved">Уже накоплено, ₽</label><input class="inp" id="gsaved" inputmode="numeric" value="${g.saved||0}">
+      <label class="fl">Почему это важно для вас?</label><div class="chips">${WHY.map(w=>`<button class="chip${g.why===w?" on":""}" data-w="${esc(w)}">${w}</button>`).join("")}</div>
+      <input class="inp" id="gwhy" maxlength="80" placeholder="Или своими словами" value="${WHY.includes(g.why)?"":esc(g.why)}">`+wizNav(true,DW.gi<DW.goals.length-1?"Следующая цель":"Дальше");
+    const save=()=>{const a=$("gamount");if(a)g.amount=Math.max(0,parseInt(a.value.replace(/\D/g,""))||0);
+      g.saved=Math.max(0,parseInt($("gsaved").value.replace(/\D/g,""))||0);
+      const w=$("gwhy").value.trim();if(w)g.why=w;const n=$("gname");if(n)g.name=n.value.trim()||"Своя цель";};
+    box.querySelectorAll("[data-m]").forEach(b=>b.onclick=()=>{save();g.months=+b.dataset.m;renderWizard(box);});
+    box.querySelectorAll("[data-w]").forEach(b=>b.onclick=()=>{save();g.why=b.dataset.w;$("gwhy").value="";renderWizard(box);});
+    bindNav(()=>{save();if(DW.gi>0)DW.gi--;else DW.step=1;renderWizard(box);},
+      ()=>{save();if(!cushion&&!g.amount){toast("Укажите сумму цели");return;}
+        if(DW.gi<DW.goals.length-1){DW.gi++;}else{DW.step=3;DW.income=S.dream.income||0;DW.spend={...S.dream.spend};}
+        renderWizard(box);window.scrollTo({top:0});});
+  }
+  else if(st===3){
+    box.innerHTML=wizTop(3,"Доход и траты")+`
+      <label class="fl" for="dinc">Доход на руки в месяц, ₽</label><input class="inp" id="dinc" inputmode="numeric" value="${DW.income||""}" placeholder="Например, 70 000">
+      <p class="muted">Как посмотрим на траты?</p>
+      <div class="method"><button class="mcard" id="mupload"><b>Загрузить выписку</b><span>Скриншоты из приложения банка или файл: PDF, Excel, CSV</span></button>
+      <button class="mcard" id="mquick"><b>Ответить на вопросы</b><span>8 категорий, по одному касанию на каждую</span></button></div>
+      <div class="sheet-row" style="margin-top:6px"><button class="btn ghost small" id="wback">Назад</button></div>`;
+    const inc=()=>{DW.income=parseInt($("dinc").value.replace(/\D/g,""))||0;return DW.income>0;};
+    $("wback").onclick=()=>{inc();DW.step=2;DW.gi=DW.goals.length-1;renderWizard(box);};
+    $("mupload").onclick=()=>{if(!inc()){toast("Укажите доход в месяц");return;}DW.step="3u";renderWizard(box);};
+    $("mquick").onclick=()=>{if(!inc()){toast("Укажите доход в месяц");return;}DW.step="3q";renderWizard(box);};
+  }
+  else if(st==="3q"){
+    box.innerHTML=wizTop(3,"Сколько уходит в месяц")+`<p class="muted">Примерно — точность не нужна. Потом можно поправить цифры.</p>
+      ${CATS.map(c=>`<div class="qcat"><b>${c.n}</b><div class="chips">${RANGES.map(([l,v])=>`<button class="chip${(+DW.spend[c.id]||0)===v&&DW.spend[c.id]!==undefined?" on":""}" data-c="${c.id}" data-v="${v}">${l}</button>`).join("")}</div></div>`).join("")}`+wizNav(true,"Дальше");
+    box.querySelectorAll("[data-c]").forEach(b=>b.onclick=()=>{DW.spend[b.dataset.c]=+b.dataset.v;renderWizard(box);});
+    bindNav(()=>{DW.step=3;renderWizard(box);},()=>{CATS.forEach(c=>{if(DW.spend[c.id]===undefined)DW.spend[c.id]=0;});DW.step=4;DW.source="quick";renderWizard(box);window.scrollTo({top:0});});
+  }
+  else if(st==="3u"){
+    const ai=!!SAMPLE;
+    box.innerHTML=wizTop(3,"Загрузите выписку")+`
+      <div class="card"><p class="muted">${ai?"Скриншоты разберёт Claude с вашего разрешения: найдёт траты и разложит по категориям.":"Скриншоты в этой версии не разбираются — загрузите файл выписки или ответьте на вопросы."} Файлы PDF, Excel и CSV разбираются прямо на вашем устройстве. Ничего не сохраняется.</p>
+      <p class="note">Перед загрузкой можно закрыть номера карт и счетов — для расчёта они не нужны.</p></div>
+      <label class="drop" for="dfile"><b>Выбрать файлы</b><span>${ai?"Скриншоты, ":""}PDF, Excel, CSV</span></label>
+      <input type="file" id="dfile" multiple accept="${ai?"image/*,":""}.pdf,.csv,.txt,.xlsx,.xls" hidden>
+      <div id="dfiles" class="note"></div>
+      <label class="fl">За какой период выписка?</label><div class="chips">${[1,2,3].map(m=>`<button class="chip${(DW.period||1)===m?" on":""}" data-p="${m}">${m===1?"1 месяц":m+" месяца"}</button>`).join("")}</div>
+      <div id="dstatus" class="card" hidden></div>`+wizNav(true,"Разобрать траты",!(DW.files&&DW.files.length));
+    $("dfile").onchange=e=>{DW.files=[...e.target.files];renderWizard(box);};
+    if(DW.files&&DW.files.length)$("dfiles").textContent="Выбрано: "+DW.files.map(f=>f.name).join(", ");
+    box.querySelectorAll("[data-p]").forEach(b=>b.onclick=()=>{DW.period=+b.dataset.p;renderWizard(box);});
+    bindNav(()=>{DW.step=3;renderWizard(box);},()=>analyzeFiles(box));
+  }
+  else if(st===4){
+    const inc=DW.income,tot=totalSpend(DW.spend),free=inc-tot;
+    if(!DW.cuts)DW.cuts={...S.dream.cuts};
+    const cutTot=CATS.filter(c=>c.flex).reduce((a,c)=>a+(+DW.spend[c.id]||0)*(+DW.cuts[c.id]||0)/100,0);
+    box.innerHTML=wizTop(4,"Где можно найти деньги")+`
+      ${DW.note?`<div class="card"><small class="cel-kicker" style="letter-spacing:.12em">Что заметил Вова</small><p>${esc(DW.note)}</p></div>`:""}
+      <div class="card"><b class="disp" style="font-size:16px">Ваши траты в месяц</b>
+      ${CATS.map(c=>`<div class="erow"><label for="sp-${c.id}">${c.n}</label><input class="inp sm" id="sp-${c.id}" inputmode="numeric" value="${Math.round(+DW.spend[c.id]||0)}"></div>`).join("")}
+      <div class="vrow tot"><span>Всего трат</span><b>${rub(tot)}</b></div><div class="vrow"><span>Доход</span><b>${rub(inc)}</b></div>
+      <div class="vrow tot"><span>Свободно сейчас</span><b style="color:${free>0?"var(--teal)":"var(--tomato)"}">${rub(free)}</b></div></div>
+      <div class="card"><b class="disp" style="font-size:16px">Готовы сократить?</b><p class="muted">Без жёсткой экономии — только то, что не испортит жизнь.</p>
+      ${CATS.filter(c=>c.flex&&(+DW.spend[c.id]||0)>0).map(c=>{const v=+DW.spend[c.id];return `<div class="qcat"><b>${c.n} · ${rub(v)}</b><div class="chips">${[0,15,30].map(p=>`<button class="chip${(+DW.cuts[c.id]||0)===p?" on":""}" data-cut="${c.id}" data-p="${p}">${p?"−"+p+"% → +"+rub(v*p/100):"Оставить"}</button>`).join("")}</div></div>`;}).join("")||'<p class="muted">Гибких трат почти нет — значит, резерв в доходе.</p>'}
+      <div class="vrow tot"><span>Можно откладывать в месяц</span><b style="color:var(--gold)">${rub(Math.max(0,free+cutTot))}</b></div></div>`+wizNav(true,"Показать план");
+    const readSpend=()=>CATS.forEach(c=>{DW.spend[c.id]=parseInt(($("sp-"+c.id).value||"0").replace(/\D/g,""))||0;});
+    box.querySelectorAll(".erow input").forEach(i=>i.onchange=()=>{readSpend();renderWizard(box);});
+    box.querySelectorAll("[data-cut]").forEach(b=>b.onclick=()=>{readSpend();DW.cuts[b.dataset.cut]=+b.dataset.p;renderWizard(box);});
+    bindNav(()=>{readSpend();DW.step=3;renderWizard(box);},()=>{readSpend();
+      const D=S.dream;D.income=DW.income;D.spend={...DW.spend};D.cuts={...DW.cuts};
+      D.goals=DW.goals.map(g=>({...g,amount:g.t==="cushion"?0:g.amount}));
+      D.goals.forEach(g=>{if(g.t==="cushion")g.amount=cushionAmount();});
+      if(!D.plan)track("dream_plan");D.plan=true;D.created=D.created||today();save();DW=null;renderDream();window.scrollTo({top:0});});
+  }
+}
+
+// ---------- разбор выписки ----------
+function loadScript(src){return new Promise((ok,no)=>{const s=document.createElement("script");s.src=src;s.onload=ok;s.onerror=()=>no(new Error("load"));document.head.appendChild(s);});}
+async function fileText(f){
+  const name=f.name.toLowerCase();
+  if(name.endsWith(".csv")||name.endsWith(".txt"))return await f.text();
+  if(name.endsWith(".xlsx")||name.endsWith(".xls")){
+    if(!window.XLSX)await loadScript("https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js");
+    const wb=XLSX.read(await f.arrayBuffer(),{type:"array"});
+    return wb.SheetNames.map(n=>XLSX.utils.sheet_to_csv(wb.Sheets[n])).join("\n");
+  }
+  if(name.endsWith(".pdf")){
+    if(!window.pdfjsLib){await loadScript("https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js");await loadScript("https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js");}
+    const doc=await pdfjsLib.getDocument({data:new Uint8Array(await f.arrayBuffer()),isEvalSupported:false}).promise;
+    let out="";for(let p=1;p<=Math.min(doc.numPages,40);p++){const pg=await doc.getPage(p);const tc=await pg.getTextContent();
+      let lastY=null,line="";tc.items.forEach(it=>{const y=Math.round(it.transform[5]);if(lastY!==null&&Math.abs(y-lastY)>2){out+=line+"\n";line="";}line+=it.str+" ";lastY=y;});out+=line+"\n";}
+    return out;
+  }
+  return "";
+}
+const KW={
+ food:/пят[её]роч|магнит|перекр[её]ст|ашан|лента|вкусвилл|дикси|окей|o'?key|metro|спар|spar|ярче|мария-ра|продукт|супермаркет|гастроном|fix price|светофор|красное.?белое/i,
+ cafe:/кафе|ресторан|кофе|coffee|бургер|burger|kfc|rostic|вкусно.?и.?точка|самокат|samokat|яндекс.?ед|eda|delivery|деливери|пицц|pizza|суши|додо|шоколадниц|столов|cafe|restaurant/i,
+ transport:/такси|taxi|метро|транспорт|азс|лукойл|газпромнефть|роснефть|ситидрайв|делимобиль|яндекс.?go|uber|тройка|парковк|ржд|аэрофлот|авиа/i,
+ subs:/мтс|билайн|мегафон|теле2|tele2|ростелеком|подписк|кинопоиск|ivi|okko|яндекс.?плюс|spotify|интернет|связь|apple\.com|google/i,
+ shop:/wildberries|вайлдберриз|ozon|озон|маркетплейс|dns|м\.?видео|эльдорадо|спортмастер|zara|lamoda|ламода|детский мир|леруа|ikea|hoff|золотое яблоко|летуаль|кино|театр|steam/i,
+ home:/жкх|жку|коммун|квартплат|управляющ|энерго|водоканал|аренд|газпром межрегионгаз|теплосет|домофон/i,
+ loans:/кредит|погашени|ипотек|займ|рассрочк/i};
+const INCOME=/зарплат|заработн|поступлен|зачислен|пополнен|возврат|кешб[еэ]к|cashback|перевод от|входящ/i;
+function localParse(text,months){
+  const sp={};CATS.forEach(c=>sp[c.id]=0);
+  const amt=/[-−–]?\s?\d{1,3}(?:[  ]\d{3})+(?:[.,]\d{1,2})?|[-−–]?\d{2,7}[.,]\d{2}/g;
+  text.split(/\r?\n/).forEach(line=>{
+    if(INCOME.test(line))return;
+    const clean=line.replace(/\d{2}[.\/]\d{2}[.\/]\d{2,4}/g," ").replace(/\d{1,2}:\d{2}(:\d{2})?/g," ");
+    const m=clean.match(amt);if(!m)return;
+    const v=Math.abs(parseFloat(m[0].replace(/[−–\s ]/g,"").replace(",",".")))||0;
+    if(!v||v>500000)return;
+    let cat="other";for(const k in KW){if(KW[k].test(line)){cat=k;break;}}
+    sp[cat]+=v;
+  });
+  Object.keys(sp).forEach(k=>sp[k]=Math.round(sp[k]/months/100)*100);
+  return sp;
+}
+async function analyzeFiles(box){
+  const stEl=$("dstatus");stEl.hidden=false;stEl.innerHTML=`<p>${vova("idle").replace("<svg","<svg style='width:60px;height:60px;float:left;margin-right:10px'")}Вова изучает выписку…</p>`;
+  $("wnext").disabled=true;
+  const months=DW.period||1,imgs=DW.files.filter(f=>f.type.startsWith("image/")),docs=DW.files.filter(f=>!f.type.startsWith("image/"));
+  const catList=CATS.map(c=>`${c.id} — ${c.n}`).join("; ");
+  const prompt=(src)=>`Ниже ${src} банковской выписки за ${months} мес. Найди только расходы (списания). Не считай доходы, переводы между своими счетами, пополнения накопительных счетов и вкладов. Распредели расходы по категориям: ${catList}. Посчитай сумму по каждой категории В СРЕДНЕМ ЗА МЕСЯЦ в рублях. Ответь только JSON такого вида: {"categories":{"home":0,"food":0,"cafe":0,"transport":0,"subs":0,"shop":0,"loans":0,"other":0},"note":"1–2 коротких предложения на русском: на что заметно уходят деньги и что можно сократить без ущерба"}`;
+  try{
+    let text="";for(const f of docs){text+=(await fileText(f))+"\n";}
+    let res=null;
+    if(SAMPLE&&(imgs.length||text.trim())){
+      try{
+        if(imgs.length){const lim=await SAMPLE.limits().catch(()=>null);if(!lim||!lim.images)throw {code:"images_unavailable"};
+          res=await SAMPLE.json(prompt("скриншоты")+(text?"\n\nДополнительно текст из файлов:\n"+text.slice(0,60000):""),{images:imgs.slice(0,lim.images.maxCount)});}
+        else res=await SAMPLE.json(prompt("текст")+"\n\n"+text.slice(0,120000));
+      }catch(e){res=null;if(imgs.length&&!text.trim()){stEl.innerHTML=`<p>Не получилось разобрать скриншоты${e&&e.code==="not_granted"?": доступ к Claude не разрешён":""}. Загрузите файл выписки или ответьте на вопросы.</p>`;$("wnext").disabled=false;return;}}
+    }else if(imgs.length&&!text.trim()){
+      stEl.innerHTML="<p>Скриншоты в этой версии не разбираются. Загрузите файл выписки (PDF, Excel, CSV) или вернитесь и ответьте на вопросы.</p>";$("wnext").disabled=false;return;
+    }
+    let sp;
+    if(res&&res.categories){sp={};CATS.forEach(c=>sp[c.id]=Math.max(0,Math.round((+res.categories[c.id]||0)/100)*100));DW.note=res.note?String(res.note).slice(0,300):"";}
+    else{sp=localParse(text,months);DW.note="";}
+    if(totalSpend(sp)===0){stEl.innerHTML="<p>Не нашёл в файле расходов. Возможно, формат выписки необычный — вернитесь и ответьте на вопросы, это займёт минуту.</p>";$("wnext").disabled=false;return;}
+    DW.spend=sp;DW.source="file";DW.step=4;DW.files=null;renderWizard(box);window.scrollTo({top:0});
+  }catch(e){stEl.innerHTML="<p>Не удалось прочитать файл. Попробуйте другой формат или ответьте на вопросы.</p>";$("wnext").disabled=false;}
+}
+
+// ---------- панель плана ----------
+function renderDash(box){
+  const D=S.dream,P=computePlan(),tot=P.goals.reduce((a,g)=>a+g.amount,0),sv=P.goals.reduce((a,g)=>a+Math.min(g.saved,g.amount),0),pct=tot?sv/tot*100:0;
+  const loanShare=D.income?(+D.spend.loans||0)/D.income:0;
+  const tips=[];
+  tips.push(`Настройте автоперевод <b>${rub(P.avail)}</b> на накопительный счёт в день зарплаты — это главный шаг всего плана.`);
+  CATS.filter(c=>c.flex&&+D.cuts[c.id]).forEach(c=>tips.push(`${c.n}: сократить на ${D.cuts[c.id]}% — это <b>+${rub((+D.spend[c.id])*D.cuts[c.id]/100)}</b> в месяц к мечте.`));
+  if(loanShare>0.3)tips.push(`На кредиты уходит ${Math.round(loanShare*100)}% дохода. Сначала гасите самый дорогой долг — смотрите модуль «Потребительский кредит».`);
+  if(!D.goals.some(g=>g.t==="cushion"))tips.push(`Добавьте подушку безопасности: без неё любая поломка отбросит вас от цели. Достаточно ${rub(cushionAmount())}.`);
+  if(P.short>0)tips.push(`Чтобы успеть всё к сроку, не хватает <b>${rub(P.short)}</b> в месяц. Варианты: сдвинуть срок, сократить гибкие траты ещё или направлять в план премии и вычеты.`);
+  else if(P.extra>1000)tips.push(`Вы успеваете всё к сроку, и остаётся ещё <b>${rub(P.extra)}</b> в месяц. Можно прийти к цели раньше или добавить новую мечту.`);
+  tips.push("Премии, налоговые вычеты и кешбэк — сразу в план. Они заметно приближают дату.");
+  box.innerHTML=`
+    <div class="journey"><div class="j-top"><b>До мечты</b><span>${Math.round(pct)}%</span></div>
+      <div class="track" data-to="${pct}"><div class="tline"><i style="width:${pct}%"></i></div><span class="tst flag" style="left:100%">${FLAG}</span><span class="tme" style="left:${pct}%">${vova("happy")}</span></div>
+      <p class="note">Накоплено ${rub(sv)} из ${rub(tot)} · откладываете ${rub(P.avail)} в месяц</p></div>
+    ${P.goals.map((g,i)=>{const p=g.amount?Math.min(100,g.saved/g.amount*100):0;const done=g.saved>=g.amount;
+      return `<div class="card goal">
+      <div class="g-head"><b>${esc(g.name)}</b><span class="badge-soon" style="margin:0;${done?"background:var(--teal);color:var(--film)":g.onTime?"":"background:var(--tomato);color:var(--ink)"}">${done?"Сбылось":g.onTime?"Успеваете":"Позже срока"}</span></div>
+      ${g.why?`<p class="muted">Ради: ${esc(g.why)}</p>`:""}
+      <div class="mod-prog"><div class="bar"><i style="width:${p}%"></i></div><span>${rub(g.saved)} / ${rub(g.amount)}</span></div>
+      ${done?"":`<div class="vrow"><span>Откладывать</span><b>${rub(g.pay)} в месяц</b></div>
+      <div class="vrow"><span>Цель будет достигнута</span><b style="color:${g.onTime?"var(--teal)":"var(--tomato)"}">${g.eta===Infinity?"нужны свободные деньги":monthLabel(g.eta)+" · через "+termText(g.eta)}</b></div>
+      ${g.onTime?"":`<p class="note">Чтобы успеть к сроку (${monthLabel(g.months)}), нужно ${rub(g.need)} в месяц.</p>`}
+      <p class="note">Где копить: ${whereFor(g)}.</p>
+      <div class="sheet-row"><input class="inp sm" id="add-${i}" inputmode="numeric" placeholder="Сколько отложили, ₽"><button class="btn small teal" data-add="${i}">Отложил</button></div>`}
+      </div>`;}).join("")}
+    <div class="card"><b class="disp" style="font-size:17px">Ваш план в пяти строках</b>${tips.slice(0,5).map((t,k)=>`<p><b style="color:var(--gold)">${k+1}.</b> ${t}</p>`).join("")}</div>
+    <div class="card" id="aibox" ${SAMPLE?"":"hidden"}><b class="disp" style="font-size:17px">Разбор от Вовы</b><p class="muted" id="aitext">Попросите Вову посмотреть ваш план и дать личные советы.</p><button class="btn small" id="aibtn">Спросить Вову</button></div>
+    <div class="credits"><div class="credit"><small>Доход</small><b>${rub(D.income)}</b></div><div class="credit"><small>Траты</small><b>${rub(totalSpend(D.spend))}</b></div></div>
+    <div class="sheet-row"><button class="btn ghost small" id="dedit">Изменить цели и траты</button><button class="btn ghost small" id="dreset">Начать заново</button></div>
+    ${fbLink("Как вам план мечты? Расскажите, что улучшить")}
+    <p class="note">Расчёт исходит из ставки ${D.rate}% годовых на накопления. Ставки меняются — это ориентир, а не обещание дохода.</p>`;
+  animateTrack(box);
+  box.querySelectorAll("[data-add]").forEach(b=>b.onclick=()=>{
+    const i=+b.dataset.add,v=parseInt(($("add-"+i).value||"").replace(/\D/g,""))||0;if(!v){toast("Введите сумму");return;}
+    const g=D.goals[i],was=g.saved<(g.t==="cushion"?(g.amount||cushionAmount()):g.amount);g.saved+=v;S.coins+=2;save();renderTop();
+    const amt=g.amount||cushionAmount();
+    if(was&&g.saved>=amt)happyEnd(g);else{toast(`+${rub(v)} к цели «${g.name}». Так держать!`);renderDream();}
+  });
+  $("dedit").onclick=()=>{DW={step:1,sel:D.goals.map(g=>g.t),gi:0,goals:JSON.parse(JSON.stringify(D.goals)),income:D.income,spend:{...D.spend},cuts:{...D.cuts}};renderDream();window.scrollTo({top:0});};
+  let confirmReset=false;
+  $("dreset").onclick=()=>{if(!confirmReset){confirmReset=true;$("dreset").textContent="Точно? Нажмите ещё раз";return;}
+    S.dream={goals:[],income:0,spend:{},cuts:{},rate:10,plan:false};save();renderDream();};
+  const ab=$("aibtn");if(ab)ab.onclick=async()=>{
+    ab.disabled=true;const out=$("aitext");out.textContent="Вова думает…";
+    const data={доход:D.income,траты:Object.fromEntries(CATS.map(c=>[c.n,+D.spend[c.id]||0])),откладывает_в_месяц:Math.round(P.avail),
+      цели:P.goals.map(g=>({цель:g.name,сумма:g.amount,накоплено:g.saved,срок_мес:g.months,почему:g.why,нужно_в_месяц:Math.round(g.need),успевает:g.onTime}))};
+    try{await SAMPLE(`Ты — слонёнок Вова, дружелюбный помощник по финансовой грамотности. Посмотри на план человека и дай 3–4 коротких, конкретных совета на русском: как быстрее прийти к целям, где разумно сэкономить, на что обратить внимание. Учитывай, почему цели для него важны. Без общих фраз, без рекомендаций конкретных банков и ценных бумаг, без давления. Каждый совет — с новой строки, начинай с «—».\n\nДанные:\n${JSON.stringify(data)}`,
+      {onText:({text})=>{out.textContent=text;}});}
+    catch(e){out.textContent=e&&e.code==="not_granted"?"Доступ к Claude не разрешён — разбор недоступен.":"Не получилось получить разбор. Попробуйте позже.";}
+    ab.disabled=false;
+  };
+}
+function happyEnd(g){
+  $("modalIn").innerHTML=confetti()+`<div class="celebrate"><div class="cel-hero">${vova("happy")}</div>
+    <span class="cel-kicker">Ваш хэппи-энд</span><h2 class="h" style="color:var(--gold)">Мечта сбылась: ${esc(g.name)}!</h2>
+    ${g.why?`<p class="cheer">Ради этого вы старались: «${esc(g.why)}».</p>`:""}
+    <p class="muted">Вы доказали себе главное — что умеете ставить цель и приходить к ней. Дальше будет только проще.</p>
+    <div class="signature">Режиссёр Вова<small>и съёмочная группа «Финпривычки»</small></div>
+    <button class="btn wide" id="mclose">Поставить новую цель</button></div>`;
+  $("modal").hidden=false;$("mclose").onclick=()=>{$("modal").hidden=true;renderDream();};
+}
+
+// ---------- навигация ----------
+let VIEW="path";
+function showView(v){VIEW=v;["path","dream","shop","awards"].forEach(x=>{$("v-"+x).hidden=x!==v;$("nv-"+x).classList.toggle("on",x===v);});if(v==="dream")renderDream();window.scrollTo({top:0});}
+document.querySelectorAll(".nav button").forEach(b=>b.onclick=()=>showView(b.dataset.v));
+function renderAll(){renderTop();renderPath();renderShop();renderAwards();}
+function showApp(app){
+  $("intro").hidden=app;$("top").hidden=!app;$("nav").hidden=!app;
+  if(app)showView(VIEW);else ["path","dream","shop","awards"].forEach(x=>$("v-"+x).hidden=true);
+  window.scrollTo({top:0});
+}
+$("introVova").innerHTML=vova("happy");
+$("start").onclick=()=>{if(!S.started)track("course_start");S.started=true;save();showApp(true);};
+$("about").onclick=()=>showApp(false);
+if(S.started)$("start").textContent="Продолжить просмотр";
+renderAll();
+showApp(!!S.started);
+</script>
+
+</body>
+</html>
